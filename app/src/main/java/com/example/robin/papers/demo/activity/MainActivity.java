@@ -22,7 +22,7 @@ public class MainActivity extends FragmentActivity {
     private FragmentTabHost mTabHost;
     private LayoutInflater mLayoutInflater;
 
-    //三个切换的页面的fragment
+    //三个切换的页面的fragment.
     private Class mFragmentArray[] = { TimeTableFragment.class,ResourceFragment.class, MyFragment.class,
             FindFragment.class };
 

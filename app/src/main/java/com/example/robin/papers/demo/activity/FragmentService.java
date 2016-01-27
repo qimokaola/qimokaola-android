@@ -14,7 +14,7 @@ import android.widget.Toast;
 import com.example.robin.papers.R;
 
 
-public class FindFragment extends Fragment {
+public class FragmentService extends Fragment {
 
     private LinearLayout upLoad,buyExp,xtfy,gradeRank,cloudPrint,fdyb,hdqqzl,fdjwc,fankui,kddl,plan,fdrclhw;
     @Nullable

@@ -8,10 +8,8 @@ import android.support.v4.app.FragmentTabHost;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TabHost;
-import android.widget.TextView;
 
 import com.example.robin.papers.R;
 import com.umeng.update.UmengUpdateAgent;
@@ -23,8 +21,8 @@ public class MainActivity extends FragmentActivity {
     private LayoutInflater mLayoutInflater;
 
     //三个切换的页面的fragment.
-    private Class mFragmentArray[] = { TimeTableFragment.class,ResourceFragment.class, FindFragment.class,
-            MyFragment.class };
+    private Class mFragmentArray[] = { FragmentTimeTable.class,FragmentResource.class, FragmentService.class,
+            FragmentMy.class };
 
     //tab栏图标 未点击时的图片
     private int mImageArray[] = { R.drawable.select_kebiao,R.drawable.select_bar_ziyuan, R.drawable.select_bar_fuwu,  R.drawable.select_img_bottom_bar_wolo};

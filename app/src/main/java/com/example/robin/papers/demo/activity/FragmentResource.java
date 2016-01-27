@@ -31,7 +31,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ResourceFragment extends Fragment {
+public class FragmentResource extends Fragment {
 
     private ListView courseNamelistView;      //课程名的listview
     private List<CourseName> courseNameList;   //存放课程名的数组list

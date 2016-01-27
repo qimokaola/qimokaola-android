@@ -54,12 +54,12 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".demo.activity.FindFragment"
+            android:name=".demo.activity.FragmentService"
             android:label="@string/title_activity_up_papers"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".demo.activity.ResourceFragment"
+            android:name=".demo.activity.FragmentResource"
             android:label="科目名"
             android:screenOrientation="portrait" >
         </activity>
@@ -74,7 +74,7 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".demo.activity.MyFragment"
+            android:name=".demo.activity.FragmentMy"
             android:label="@string/title_activity_my"
             android:screenOrientation="portrait" >
         </activity>
@@ -107,7 +107,7 @@
             android:label="@string/title_activity_orders" >
         </activity>
         <activity
-            android:name=".demo.activity.TimeTableFragment"
+            android:name=".demo.activity.FragmentTimeTable"
             android:label="@string/title_activity_time_table" >
         </activity>
         <activity

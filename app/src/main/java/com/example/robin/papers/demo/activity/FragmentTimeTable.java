@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 
 import com.example.robin.papers.R;
 
-public class TimeTableFragment extends Fragment {
+public class FragmentTimeTable extends Fragment {
 
     @Nullable
     @Override

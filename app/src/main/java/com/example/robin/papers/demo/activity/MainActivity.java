@@ -24,10 +24,8 @@ public class MainActivity extends FragmentActivity {
     private Class mFragmentArray[] = { FragmentTimeTable.class,FragmentResource.class, FragmentService.class,
             FragmentMy.class };
 
-    //tab栏图标 未点击时的图片
+    //tab栏图标
     private int mImageArray[] = { R.drawable.select_kebiao,R.drawable.select_bar_ziyuan, R.drawable.select_bar_fuwu,  R.drawable.select_img_bottom_bar_wolo};
-
-
 
     //tab栏的字
     private String mTextArray[] = { "课表","资源", "我的", "更多"};

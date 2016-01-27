@@ -107,7 +107,7 @@ public class FragmentService extends Fragment {
         fankui.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(),FanKuiHeZuo.class));
+                startActivity(new Intent(getActivity(),FanKuiHeZuoActivity.class));
             }
         });
 

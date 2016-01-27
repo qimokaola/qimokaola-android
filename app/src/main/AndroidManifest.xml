@@ -135,7 +135,7 @@
             android:label="@string/title_activity_kuai_di" >
         </activity>
         <activity
-            android:name=".demo.activity.FanKuiHeZuo"
+            android:name=".demo.activity.FanKuiHeZuoActivity"
             android:label="@string/title_activity_fan_kui_he_zuo" >
         </activity>
         <activity

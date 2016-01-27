@@ -1,0 +1,454 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F9FB"
+    >
+    <include layout="@layout/bar_find_fragment"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/upLoad"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/find_color"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_marginLeft="6dp"
+                    android:layout_gravity="center"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/cim"/>
+                <TextView
+                    android:layout_marginLeft="4dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:text="上传试卷或课件"
+                    android:textSize="@dimen/abc_text_size_large_material"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/buyExp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/find_color"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_gravity="center"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="6dp"
+                    android:src="@drawable/qsy"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="4dp"
+                    android:layout_gravity="center"
+                    android:text="抢大物实验"
+                    android:textSize="@dimen/abc_text_size_large_material"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cloudPrint"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/find_color"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_marginLeft="6dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ydy"/>
+                <TextView
+                    android:layout_marginLeft="4dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:text="打印上门"
+                    android:textSize="@dimen/abc_text_size_large_material"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/kddl"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/find_color"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_marginLeft="6dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/kddl"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:text="快递代领"
+                    android:textSize="@dimen/abc_text_size_large_material"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/hdqqzl"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/find_color"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_marginLeft="6dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/hdqczl"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:text="器材正装租赁"
+                    android:textSize="@dimen/abc_text_size_large_material"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/plan"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/find_color"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_marginLeft="6dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/fxq"/>
+                <TextView
+                    android:layout_marginLeft="4dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:text="四轴飞行器"
+                    android:textSize="@dimen/abc_text_size_large_material"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fankui"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/find_color"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_marginLeft="6dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/jyhhz"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:text="反馈或合作"
+                    android:textSize="@dimen/abc_text_size_large_material"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#F8F9FB"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:text="即将上线:"
+                    android:layout_marginLeft="6dp"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/gradeRank"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/find_color"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_marginLeft="6dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/zcpm"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:text="单学期绩点及排名查询"
+                    android:textSize="@dimen/abc_text_size_large_material"/>
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#F8F9FB"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:text="合作伙伴链接:"
+                    android:layout_marginLeft="6dp"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/xtfy"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/find_color"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="6dp"
+                    android:src="@drawable/xtfy"/>
+                <TextView
+                    android:layout_marginLeft="4dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:text="新庭芳苑论坛"
+                    android:textSize="@dimen/abc_text_size_large_material"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fdyb"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/find_color"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/yb"/>
+                <TextView
+                    android:layout_marginLeft="4dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:text="福大易班"
+                    android:textSize="@dimen/abc_text_size_large_material"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fdrclhw"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/find_color"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="6dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/zhaopin"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:text="福建人才联合网"
+                    android:textSize="@dimen/abc_text_size_large_material"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fdjwc"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/find_color"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="6dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/fdjwc"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:text="福大教务处"
+                    android:textSize="@dimen/abc_text_size_large_material"/>
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+    <!-- -->
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="@color/blue1"-->
+        <!-->-->
+        <!--<TextView-->
+            <!--android:id="@+id/firstLine"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="解放你的周六!"-->
+            <!--android:textSize="15sp"-->
+            <!--android:textColor="#FAFAFA"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_above="@+id/secondLine"-->
+            <!--/>-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="用软件帮你抢实验!"-->
+            <!--android:textSize="15sp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:id="@+id/secondLine"-->
+            <!--android:textColor="#FAFAFA"-->
+            <!--android:layout_above="@+id/buy"-->
+            <!--/>-->
+        <!--<ImageView-->
+            <!--android:layout_margin="5dp"-->
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_height="150dp"-->
+            <!--android:src="@drawable/buy"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentBottom="true"/>-->
+        <!--<Button-->
+            <!--android:id="@+id/buy"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="购买 抢实验服务"-->
+            <!--android:background="@drawable/goumai"-->
+            <!--android:padding="8dp"-->
+            <!--android:textSize="20sp"-->
+            <!--android:textColor="@color/blue1"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--/>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="#FAFAFA"-->
+        <!-->-->
+        <!--<TextView-->
+            <!--android:id="@+id/firstLine1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="上传分享你的历年卷!"-->
+            <!--android:textSize="15sp"-->
+            <!--android:textColor="@color/blue1"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_above="@+id/secondLine1"-->
+            <!--/>-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="实验帮你抢!!!!"-->
+            <!--android:textSize="15sp"-->
+            <!--android:textColor="@color/blue1"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:id="@+id/secondLine1"-->
+            <!--android:layout_above="@+id/upDetail"-->
+            <!--/>-->
+        <!--<ImageView-->
+            <!--android:layout_width="145dp"-->
+            <!--android:layout_height="145dp"-->
+            <!--android:layout_margin="5dp"-->
+            <!--android:src="@drawable/shang"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentBottom="true"/>-->
+
+        <!--<Button-->
+            <!--android:id="@+id/upDetail"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/shangchuan1"-->
+            <!--android:textSize="20sp"-->
+            <!--android:text="上传历年卷 课件"-->
+            <!--android:textColor="#FAFAFA"-->
+            <!--android:padding="8dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_margin="10dp"-->
+            <!--/>-->
+    <!--</RelativeLayout>-->
+
+        </LinearLayout>
+

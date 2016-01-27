@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#FFFFFF"
+    >
+    <include layout="@layout/bar_loaded_papers_option"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/detailType"
+                android:src="@drawable/other"
+                android:layout_marginBottom="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hello world"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:layout_marginTop="5dp"
+                android:id="@+id/detailname"
+                android:maxLines="2"
+                android:layout_marginBottom="20dp"
+                />
+
+            <Button
+                android:textColor="#ffff"
+                android:layout_margin="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="打开"
+                android:id="@+id/dakai"
+                android:background="@drawable/dakai"
+                android:textSize="@dimen/abc_text_size_large_material"
+                />
+
+            <Button
+                android:textColor="#ffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shanchu"
+                android:layout_margin="10dp"
+                android:padding="4dp"
+                android:text="删除"
+                android:id="@+id/shanchu"
+                android:textSize="@dimen/abc_text_size_large_material"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/wps"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 打开需安装WPS噢"
+            android:textColor="#979797"
+            android:layout_gravity="center_vertical"
+
+            />
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>

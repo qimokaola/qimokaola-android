@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#FFFFFF"
+    >
+    <include layout="@layout/bar_papers_operation"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/opDetailType"
+                android:src="@drawable/other"
+                android:layout_marginBottom="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="opretion"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:layout_marginTop="5dp"
+                android:id="@+id/opDetailname"
+                android:maxLines="2"
+                android:layout_marginBottom="20dp"
+                />
+
+            <Button
+                android:textColor="#ffff"
+                android:layout_margin="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="下载到手机"
+                android:id="@+id/opDownload"
+                android:background="@drawable/dakai"
+                android:textSize="@dimen/abc_text_size_large_material"
+                />
+
+            <Button
+                android:textColor="#ffff"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="发送到电脑"
+                android:id="@+id/opSend"
+                android:background="@drawable/dakai"
+                android:textSize="@dimen/abc_text_size_large_material"
+                />
+
+            <Button
+                android:visibility="gone"
+                android:textColor="#ffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shanchu"
+                android:layout_margin="10dp"
+                android:padding="4dp"
+                android:text="加到打印订单"
+                android:id="@+id/addToPrint"
+                android:textSize="@dimen/abc_text_size_large_material"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/option_shop_cue_ll"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/shop"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   打印订单请到购物车查看"
+            android:textColor="#979797"
+            android:layout_gravity="center_vertical"
+            />
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>
+

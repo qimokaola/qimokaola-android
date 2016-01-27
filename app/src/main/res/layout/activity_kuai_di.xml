@@ -1,0 +1,145 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/bar_kuai_di"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="快递短信(整个短信复制粘贴过来)"
+                android:id="@+id/kuai_di_message"
+                android:minLines="3"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/kuai_di_name"
+                android:layout_marginTop="4dp"
+                android:hint="收件人姓名"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="手机号"
+                android:layout_marginTop="4dp"
+                android:id="@+id/kuai_di_phone"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="宿舍地址(不支持5区)"
+                android:layout_marginTop="4dp"
+                android:id="@+id/kuai_di_adress"/>
+
+            <Button
+                android:id="@+id/kuai_di_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="提交订单"
+                android:textColor="#ffffff"
+                android:padding="4dp"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:background="@drawable/button"
+                />
+
+
+                <TextView
+                    android:layout_marginLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2元/个快递"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_horizontal"
+                    />
+
+            <LinearLayout
+                android:id="@+id/kuai_di_zhifubao_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                >
+                <ImageView
+                    android:id="@+id/kuai_di_zhifubao_iv"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/zfb"/>
+                <TextView
+                    android:layout_marginLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="596954885@qq.com"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="(点击支付宝帐号,下单后付款)"
+                android:layout_gravity="center"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_gravity="center"
+                android:text="付款时备注手机号即可. 每天17:30后开始配送, 当晚送达宿舍. 如遇未收到快递等问题, 请联系客服."/>
+
+
+
+            <LinearLayout
+                android:id="@+id/kuai_di_kefu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                >
+                <ImageView
+                    android:id="@+id/buy_exp_zfb_iv"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/kf"/>
+                <TextView
+                    android:layout_marginLeft="2dp"
+                    android:id="@+id/buy_exp_zfbnum_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2984859939"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/buy_exp_copy_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="(点击复制快递客服QQ帐号)"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

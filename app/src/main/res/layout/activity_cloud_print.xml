@@ -1,0 +1,138 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#484C4F"
+    android:orientation="vertical"
+    tools:context="com.example.robin.papers.demo.activity.CloudPrintActivity"
+    >
+    <include layout="@layout/bar_cloud_print"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+                <ImageView
+                    android:scaleType="fitStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/dayinjia"
+                    />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:textSize="17sp"
+                    android:layout_marginLeft="4dp"
+                    android:text="任意文件 宿舍 手机号 送达时间"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:layout_marginLeft="4dp"
+                android:text="发送到 QQ QQ邮箱 或 微信"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#ffffff"
+                android:textSize="10sp"
+                android:layout_marginLeft="4dp"
+                android:text="配送免费!!"/>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/cloud_print_weixin_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                >
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/weixin"/>
+                <TextView
+                    android:layout_marginLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:text="961727923"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="(点击复制微信号)"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:id="@+id/cloud_print_qq_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                >
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/qq"/>
+                <TextView
+                    android:layout_marginLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="961727923"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="(点击复制QQ号)"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"/>
+
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="(微信可在电脑浏览器 wx.qq.com 登录并发送文件)"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"/>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

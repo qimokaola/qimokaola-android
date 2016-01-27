@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <include layout="@layout/bar_register"/>
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/phoneNumber"
+        android:hint="手机号(帐号)"
+        android:layout_marginTop="30dp"
+        android:textSize="@dimen/abc_text_size_large_material"
+    >
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/getCode"
+        android:text="获取验证码"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:background="@drawable/button"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/code"
+        android:hint="输入验证码"
+        android:layout_marginTop="40dp"
+        android:textSize="20sp"
+        />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登录"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="10dp"
+        android:id="@+id/submit"
+        android:textSize="@dimen/abc_text_size_large_material"
+        android:background="@drawable/button"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        />
+
+
+</LinearLayout>

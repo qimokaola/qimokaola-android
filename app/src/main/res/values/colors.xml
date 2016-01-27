@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue1">#077BD2</color>
+    <color name="blue2">#165AED</color>
+    <color name="blue3">#161EED</color>
+    <color name="btned">#2B2B2B</color>
+    <color name="green1">#45C018</color>
+    <color name="red1">#FF3B2F</color>
+    <color name="gray1">#FAFAFA</color>
+    <color name="white">#ffffff</color>
+    <color name="gray2">#F8F9FB</color>
+    <color name="barcolor">#199EFD</color>
+    <color name="bottombarcolor1">#F9F9F9</color>
+    <color name="xixian">#A9ADB9</color>
+</resources>

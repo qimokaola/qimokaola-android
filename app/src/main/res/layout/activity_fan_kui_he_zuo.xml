@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hezuo"
+    >
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/back2"
+        android:id="@+id/fan_kui_he_zuo_back_iv"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:layout_above="@+id/fan_kui_he_zuo_qqnumber_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:text="有任何建议, 或想与我们合作, 都Q我吧!"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/fan_kui_he_zuo_qqnumber_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fan_kui_he_zuo_copy_tv"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:id="@+id/copyIvUp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/qq"/>
+        <TextView
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="596954885"
+            android:textSize="18sp"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fan_kui_he_zuo_copy_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:textSize="10sp"
+        android:text="(点击复制qq号)"/>
+
+
+</RelativeLayout>

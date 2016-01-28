@@ -18,7 +18,7 @@
             android:orientation="vertical">
 
             <com.example.robin.papers.demo.util.MyGridView
-                android:id="@+id/gridview"
+                android:id="@+id/gridviewServices"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:horizontalSpacing="0.0dip"
@@ -35,6 +35,17 @@
                 android:layout_marginTop="10dp"
                 android:paddingLeft="10dp"
                 />
+
+            <com.example.robin.papers.demo.util.MyGridView
+                android:id="@+id/gridviewLinks"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="0.0dip"
+                android:listSelector="@null"
+                android:numColumns="3"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="0.0dip" />
 
         </LinearLayout>
 

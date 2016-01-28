@@ -16,21 +16,26 @@ import com.example.robin.papers.demo.util.BaseViewHolder;
  */
 public class MyGridAdapter extends BaseAdapter {
     private Context mContext;
+    public String[] img_text;
+    public int[] imgs;
 
-    public String[] img_text = { "单期绩点", "大物实验", "打印上门", "快递代领", "器材正装", "表白神器",
-            "福大纪念品", "服务入驻" ,"投诉反馈"};
-    public int[] imgs = { R.drawable.zcpm,
-            R.drawable.qsy,
-            R.drawable.ydy,
-            R.drawable.kddl,
-            R.drawable.hdqczl,
-            R.drawable.fxq,
-            R.drawable.jyhhz,
-            R.drawable.jyhhz,
-            R.drawable.jyhhz };
 
-    public MyGridAdapter(Context mContext) {
+//    public String[] img_text = { "单期绩点", "大物实验", "打印上门", "快递代领", "器材正装", "表白神器",
+//            "福大纪念品", "服务入驻" ,"投诉反馈"};
+//    public int[] imgs = { R.drawable.zcpm,
+//            R.drawable.qsy,
+//            R.drawable.ydy,
+//            R.drawable.kddl,
+//            R.drawable.hdqczl,
+//            R.drawable.fxq,
+//            R.drawable.jyhhz,
+//            R.drawable.jyhhz,
+//            R.drawable.jyhhz };
+
+    public MyGridAdapter(Context mContext,String[] img_text_service,int[] imgs_service) {
         super();
+        img_text = img_text_service;
+        imgs = imgs_service;
         this.mContext = mContext;
     }
 

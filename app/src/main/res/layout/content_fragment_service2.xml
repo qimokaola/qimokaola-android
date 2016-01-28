@@ -11,7 +11,7 @@
         android:scrollbars="none" >
 
         <com.finddreams.alipay.MyGridView
-            android:id="@+id/gridview"
+            android:id="@+id/gridviewServices"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:horizontalSpacing="0.0dip"

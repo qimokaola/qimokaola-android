@@ -15,14 +15,29 @@
         android:layout_centerVertical="true"
         />
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/zhoushu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="第20周"
-        android:textSize="22sp"
-        android:textColor="#FFFFFF"
-        android:layout_centerInParent="true"
-        />
+        android:orientation="horizontal"
+        android:layout_centerInParent="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第20周"
+            android:textSize="22sp"
+            android:textColor="#FFFFFF"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dijizhou"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+
     <ImageView
         android:layout_width="30dp"
         android:layout_height="30dp"

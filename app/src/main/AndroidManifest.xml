@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.robin.papers" >
-
+    package="com.example.robin.papers">
     //添加短信验证的权限
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -18,7 +17,7 @@
         android:allowBackup="true"
         android:icon="@drawable/appicon"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <meta-data
             android:name="UMENG_APPKEY"
             android:value="56128c76e0f55aa3ff006c5c" />
@@ -29,7 +28,7 @@
         <activity
             android:name=".demo.activity.SplashActivity"
             android:label="福大历年卷"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -39,8 +38,7 @@
         <activity
             android:name=".demo.activity.QuickLoginActivity"
             android:label="登录"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
         //添加短信验证所需的activity信息
         <activity
             android:name="com.mob.tools.MobUIShell"
@@ -51,109 +49,89 @@
         <activity
             android:name=".demo.activity.RegisterActivity"
             android:label="@string/title_activity_register"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".demo.activity.FragmentService"
             android:label="@string/title_activity_up_papers"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".demo.activity.FragmentResource"
             android:label="科目名"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".demo.activity.PapersListActivity"
             android:label="@string/title_activity_papers_list"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".demo.activity.MainActivity"
             android:label="@string/title_activity_main"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".demo.activity.FragmentMy"
             android:label="@string/title_activity_my"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".demo.activity.LoadedPaperOptionActivity"
             android:label="@string/title_activity_paper_detail"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".demo.activity.UpLoadActivity"
             android:label="@string/title_activity_buy"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
 
         <service
             android:name="com.umeng.update.net.DownloadingService"
-            android:process=":DownloadingService" >
-        </service>
+            android:process=":DownloadingService"></service>
 
         <activity
             android:name="com.umeng.update.UpdateDialogActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-        </activity>
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
         <activity
             android:name=".demo.activity.OpActivity"
-            android:label="@string/title_activity_op" >
-        </activity>
+            android:label="@string/title_activity_op"></activity>
         <activity
             android:name=".demo.activity.OrdersSubmitActivity"
-            android:label="@string/title_activity_orders" >
-        </activity>
+            android:label="@string/title_activity_orders"></activity>
         <activity
             android:name=".demo.activity.FragmentTimeTable"
-            android:label="@string/title_activity_time_table" >
-        </activity>
+            android:label="@string/title_activity_time_table"></activity>
         <activity
             android:name=".demo.activity.OrderAddressActivity"
-            android:label="@string/title_activity_order_info" >
-        </activity>
+            android:label="@string/title_activity_order_info"></activity>
         <activity
             android:name=".demo.activity.BuyExpActivity"
-            android:label="@string/title_activity_buy_exp" >
-        </activity>
+            android:label="@string/title_activity_buy_exp"></activity>
         <activity
             android:name=".demo.activity.SubmitSuccessActivity"
-            android:label="@string/title_activity_submit_success" >
-        </activity>
+            android:label="@string/title_activity_submit_success"></activity>
         <activity
             android:name=".demo.activity.SubmitFailActivity"
-            android:label="@string/title_activity_submit_fail" >
-        </activity>
+            android:label="@string/title_activity_submit_fail"></activity>
         <activity
             android:name=".demo.activity.CloudPrintActivity"
-            android:label="@string/title_activity_cloud_print" >
-        </activity>
+            android:label="@string/title_activity_cloud_print"></activity>
         <activity
             android:name=".demo.activity.KuaiDiActivity"
-            android:label="@string/title_activity_kuai_di" >
-        </activity>
+            android:label="@string/title_activity_kuai_di"></activity>
         <activity
             android:name=".demo.activity.FanKuiHeZuoActivity"
-            android:label="@string/title_activity_fan_kui_he_zuo" >
-        </activity>
+            android:label="@string/title_activity_fan_kui_he_zuo"></activity>
         <activity
             android:name=".demo.activity.HangPaiActivity"
-            android:label="@string/title_activity_web_activity_test" >
-        </activity>
+            android:label="@string/title_activity_web_activity_test"></activity>
         <activity
             android:name=".demo.activity.XtfyActivity"
-            android:label="@string/title_activity_xtfy" >
-        </activity>
+            android:label="@string/title_activity_xtfy"></activity>
         <activity
             android:name=".demo.activity.QiCaiZuLinActivity"
-            android:label="@string/title_activity_qi_cai_zu_lin" >
-        </activity>
+            android:label="@string/title_activity_qi_cai_zu_lin"></activity>
         <activity
             android:name=".demo.activity.KuaiDiDaiLingActivity"
-            android:label="@string/title_activity_kuai_di_dai_ling" >
-        </activity>
+            android:label="@string/title_activity_kuai_di_dai_ling"></activity>
+        <activity
+            android:name=".demo.activity.FragmentService2"
+            android:label="@string/title_activity_fragment_service2"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

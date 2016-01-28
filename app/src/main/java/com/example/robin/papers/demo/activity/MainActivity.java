@@ -21,7 +21,7 @@ public class MainActivity extends FragmentActivity {
     private LayoutInflater mLayoutInflater;
 
     //三个切换的页面的fragment.
-    private Class mFragmentArray[] = { FragmentTimeTable.class,FragmentResource.class, FragmentService.class,
+    private Class mFragmentArray[] = { FragmentTimeTable.class,FragmentResource.class, FragmentService2.class,
             FragmentMy.class };
 
     //tab栏图标

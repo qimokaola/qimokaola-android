@@ -80,7 +80,7 @@ public class SplashActivity extends Activity {
                 SplashActivity.this.finish();
             }
 
-        }, 3000);
+        }, 500);
 
 
     }

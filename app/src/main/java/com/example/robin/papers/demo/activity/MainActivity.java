@@ -22,7 +22,7 @@ public class MainActivity extends FragmentActivity {
 
     //三个切换的页面的fragment.
     private Class mFragmentArray[] = { FragmentTimeTable.class,FragmentResource.class, FragmentService2.class,
-            FragmentMy.class };
+            FragmentLocalResource.class };
 
     //tab栏图标
     private int mImageArray[] = { R.drawable.select_kebiao,R.drawable.select_bar_ziyuan, R.drawable.select_bar_fuwu,  R.drawable.select_img_bottom_bar_wolo};

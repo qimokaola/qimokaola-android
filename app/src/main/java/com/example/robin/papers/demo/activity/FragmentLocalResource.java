@@ -19,7 +19,7 @@ import com.example.robin.papers.demo.adapter.LocalPaperAdapter;
 import com.example.robin.papers.demo.db.NotesDB;
 import com.example.robin.papers.demo.db.OrderDB;
 
-public class FragmentMy extends Fragment {
+public class FragmentLocalResource extends Fragment {
 
     private ListView localPapersListView;    //本地试卷列表view
     private LocalPaperAdapter adapter;

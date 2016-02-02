@@ -67,7 +67,7 @@
             android:label="@string/title_activity_main"
             android:screenOrientation="portrait"></activity>
         <activity
-            android:name=".demo.activity.FragmentMy"
+            android:name=".demo.activity.FragmentLocalResource"
             android:label="@string/title_activity_my"
             android:screenOrientation="portrait"></activity>
         <activity

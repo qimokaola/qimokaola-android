@@ -14,6 +14,7 @@ import java.util.List;
 
 /**
  * Created by Robin on 2015/9/25.
+ * 学院名列表适配器
  */
 public class CourseNameAdapter extends BaseAdapter {
 

@@ -45,8 +45,12 @@ import java.util.List;
 //试卷 课件 答案页面
 public class PapersListActivity extends Activity {
 
+    //试卷实体类集合
     private List<PapersInfo> papersInfoList;
+
+    //试卷列表listView
     private ListView papersListView;
+
     private ImageView backIv;
     private LinearLayout shuxin2;
 

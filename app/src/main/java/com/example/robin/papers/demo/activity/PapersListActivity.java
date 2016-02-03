@@ -54,9 +54,6 @@ public class PapersListActivity extends Activity {
     private ImageView backIv;
     private LinearLayout shuxin2;
 
-    private String academyUrlLeft = "http://121.42.177.33/document/";
-    private String academyNames;
-    private String courseNames;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,8 +72,6 @@ public class PapersListActivity extends Activity {
         });
 
         String path = getIntent().getStringExtra("url");
-        academyNames = getIntent().getStringExtra("academynames");
-        courseNames = getIntent().getStringExtra("coursenames");
 
         papersListView = (ListView) findViewById(R.id.papersListView);
         papersListView.setVisibility(View.GONE);
@@ -88,7 +83,7 @@ public class PapersListActivity extends Activity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 //url要重新组合
-                String paperurl = academyUrlLeft + academyNames + "/" + courseNames + "/" + papersInfoList.get(position).papername + "." +papersInfoList.get(position).type;
+                String paperurl =  papersInfoList.get(position).url + "." +papersInfoList.get(position).type;
                 String paperName = papersInfoList.get(position).papername;
                 String type = papersInfoList.get(position).type;
                 String wpurl = paperurl;
@@ -100,11 +95,10 @@ public class PapersListActivity extends Activity {
                 startActivity(opPage);
 
 
-                //弹出提示框 下载 or 发送
-//                showDownPanel(PapersListActivity.this,paperurl,paperName,type,wpurl);
+
             }
         });
-    }//oncreat 结束
+    }
 
 
     //显示下载还是发送到电脑的Dailog
@@ -282,9 +276,7 @@ public class PapersListActivity extends Activity {
                     papersInfo.papername = jsonObject.getString("papername");
                     papersInfo.type = jsonObject.getString("type");
                     papersInfo.size = jsonObject.getString("size");
-
-//                    papersInfo.url = jsonObject.getString("url");
-//                    papersInfo.wpurl = jsonObject.getString("wpurl");
+                    papersInfo.url = jsonObject.getString("url");
 
                     papersInfoList.add(papersInfo);
 

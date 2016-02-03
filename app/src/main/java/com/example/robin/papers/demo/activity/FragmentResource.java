@@ -47,8 +47,6 @@ public class FragmentResource extends Fragment {
     private LinearLayout refreshCircle;
 
     //该页面每个item是 学院名 和 该学院的每个课程的 json文件路径  从roots里读取课程名 拼接left和right
-    private String academyUrlLeft = "http://121.42.177.33/jsonlist/course/";
-    private String academyUrlRight = ".json";
 
     @Nullable
     @Override
@@ -76,7 +74,6 @@ public class FragmentResource extends Fragment {
                 String academyUrl = academyNameList.get(position).papersurl;
                 Intent toPapersListIntent = new Intent(getActivity(), CourseListActivity.class);
                 toPapersListIntent.putExtra("url", UrlUnicode.encode(academyUrl));
-                toPapersListIntent.putExtra("academyname",academyNameList.get(position).coursename);
                 startActivity(toPapersListIntent);
             }
         });
@@ -105,12 +102,8 @@ public class FragmentResource extends Fragment {
                 for (int i = 0;i<jsonArray.length();i++){
                     jsonObject = jsonArray.getJSONObject(i);
                     courseName = new CourseName();
-                    courseName.coursename = jsonObject.getString("coursename");
-
-                    //加上头和尾的字符串 成 完整的 学院下各个课程链接
-                    courseName.papersurl = academyUrlLeft + courseName.coursename + academyUrlRight;
-
-
+                    courseName.coursename = jsonObject.getString("academyname");
+                    courseName.papersurl = jsonObject.getString("url");
                     academyNameList.add(courseName);
                 }
             } catch (JSONException e) {

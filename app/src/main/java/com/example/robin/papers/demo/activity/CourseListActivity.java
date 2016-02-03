@@ -13,6 +13,7 @@ import android.widget.ListView;
 import com.example.robin.papers.R;
 import com.example.robin.papers.demo.adapter.CourseNameAdapter;
 import com.example.robin.papers.demo.model.CourseName;
+import com.example.robin.papers.demo.util.UrlUnicode;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -38,6 +39,10 @@ public class CourseListActivity extends Activity {
     private ImageView backIv;
     private LinearLayout shuxin;
 
+    private String academyUrlLeft = "http://121.42.177.33/jsonlist/document/";
+    private String academyUrlRight = ".json";
+    private String academyNames;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +59,8 @@ public class CourseListActivity extends Activity {
         });
 
         String majorListPath = getIntent().getStringExtra("url");
+        academyNames = getIntent().getStringExtra("academyname");
+
         majorNameListView = (ListView) findViewById(R.id.majorListView);
         majorNameListView.setVisibility(View.GONE);
 
@@ -65,7 +72,9 @@ public class CourseListActivity extends Activity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String academyUrl = majorNameList.get(position).papersurl;
                 Intent toPapersListIntent = new Intent(CourseListActivity.this, PapersListActivity.class);
-                toPapersListIntent.putExtra("url", academyUrl);
+                toPapersListIntent.putExtra("url", UrlUnicode.encode(academyUrl));
+                toPapersListIntent.putExtra("academynames",academyNames);
+                toPapersListIntent.putExtra("coursenames",majorNameList.get(position).coursename);
                 startActivity(toPapersListIntent);
             }
         });
@@ -87,7 +96,11 @@ public class CourseListActivity extends Activity {
                     jsonObject = jsonArray.getJSONObject(i);
                     courseName = new CourseName();
                     courseName.coursename = jsonObject.getString("coursename");
-                    courseName.papersurl = jsonObject.getString("papersurl");
+//                    courseName.papersurl = jsonObject.getString("papersurl");
+
+                    //加上头和尾的字符串 成 完整的 学院下各个课程链接
+                    courseName.papersurl = academyUrlLeft + courseName.coursename + academyUrlRight;
+
                     majorNameList.add(courseName);
                 }
             } catch (JSONException e) {

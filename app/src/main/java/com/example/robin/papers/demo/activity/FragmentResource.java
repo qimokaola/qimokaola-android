@@ -17,6 +17,7 @@ import android.widget.ListView;
 import com.example.robin.papers.R;
 import com.example.robin.papers.demo.adapter.CourseNameAdapter;
 import com.example.robin.papers.demo.model.CourseName;
+import com.example.robin.papers.demo.util.UrlUnicode;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -46,8 +47,8 @@ public class FragmentResource extends Fragment {
     private LinearLayout refreshCircle;
 
     //该页面每个item是 学院名 和 该学院的每个课程的 json文件路径  从roots里读取课程名 拼接left和right
-    public String academyUrlLeft = "http://121.42.177.33/jsonlist/course/";
-    public String academyUrlRight = ".json";
+    private String academyUrlLeft = "http://121.42.177.33/jsonlist/course/";
+    private String academyUrlRight = ".json";
 
     @Nullable
     @Override
@@ -74,7 +75,8 @@ public class FragmentResource extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String academyUrl = academyNameList.get(position).papersurl;
                 Intent toPapersListIntent = new Intent(getActivity(), CourseListActivity.class);
-                toPapersListIntent.putExtra("url", academyUrl);
+                toPapersListIntent.putExtra("url", UrlUnicode.encode(academyUrl));
+                toPapersListIntent.putExtra("academyname",academyNameList.get(position).coursename);
                 startActivity(toPapersListIntent);
             }
         });
@@ -104,10 +106,11 @@ public class FragmentResource extends Fragment {
                     jsonObject = jsonArray.getJSONObject(i);
                     courseName = new CourseName();
                     courseName.coursename = jsonObject.getString("coursename");
-                    courseName.papersurl = jsonObject.getString("papersurl");
 
                     //加上头和尾的字符串 成 完整的 学院下各个课程链接
-                    courseName.papersurl = academyUrlLeft + courseName.papersurl + academyUrlRight;
+                    courseName.papersurl = academyUrlLeft + courseName.coursename + academyUrlRight;
+
+
                     academyNameList.add(courseName);
                 }
             } catch (JSONException e) {
@@ -150,9 +153,9 @@ public class FragmentResource extends Fragment {
         }
 
         @Override
-        protected void onPostExecute(List<CourseName> courseNameslist) {
-            super.onPostExecute(courseNameslist);
-            CourseNameAdapter adapter = new CourseNameAdapter(getActivity(),courseNameslist);
+        protected void onPostExecute(List<CourseName> academyNameslist) {
+            super.onPostExecute(academyNameslist);
+            CourseNameAdapter adapter = new CourseNameAdapter(getActivity(),academyNameslist);
             academyNameListView.setAdapter(adapter);
             refreshCircle.setVisibility(View.GONE);
             academyNameListView.setVisibility(View.VISIBLE);

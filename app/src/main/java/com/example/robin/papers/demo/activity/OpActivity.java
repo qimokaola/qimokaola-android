@@ -18,6 +18,7 @@ import com.example.robin.papers.R;
 import com.example.robin.papers.demo.db.NotesDB;
 import com.example.robin.papers.demo.db.OrderDB;
 import com.example.robin.papers.demo.util.DownLoader;
+import com.example.robin.papers.demo.util.UrlUnicode;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -100,7 +101,7 @@ public class OpActivity extends Activity {
                     intent.setType("text/plain");
                     intent.setPackage("com.tencent.mobileqq");
                     intent.putExtra(Intent.EXTRA_SUBJECT, "分享");
-                    intent.putExtra(Intent.EXTRA_TEXT, wpurl);
+                    intent.putExtra(Intent.EXTRA_TEXT, paperName + ": "+ UrlUnicode.encode(wpurl));
                     intent.putExtra(Intent.EXTRA_TITLE, "发至电脑");
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(Intent.createChooser(intent, "选择\"发送到我的电脑\""));
@@ -176,11 +177,8 @@ public class OpActivity extends Activity {
                 localurl += ".doc";
                 file = new File(localurl);
                 try {
-                    Log.d("czw", "xiazaiqian");
-                    file = DownLoader.downloadFile(file, url);
-                    Log.d("czw","xiazaihou");
+                    file = DownLoader.downloadFile(file, UrlUnicode.encode(url));
                     addDB();
-                    Log.d("czw", "addhou");
                     return file;
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -189,7 +187,8 @@ public class OpActivity extends Activity {
                 localurl += ".ppt";
                 file = new File(localurl);
                 try {
-                    file = DownLoader.downloadFile(file,url);addDB();
+                    file = DownLoader.downloadFile(file,UrlUnicode.encode(url));
+                    addDB();
                     return file;
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -198,7 +197,8 @@ public class OpActivity extends Activity {
                 localurl += ".pdf";
                 file = new File(localurl);
                 try {
-                    file = DownLoader.downloadFile(file,url);addDB();
+                    file = DownLoader.downloadFile(file,UrlUnicode.encode(url));
+                    addDB();
                     return file;
                 } catch (Exception e) {
                     e.printStackTrace();

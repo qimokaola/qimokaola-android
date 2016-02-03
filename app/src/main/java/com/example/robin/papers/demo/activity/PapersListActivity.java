@@ -54,6 +54,10 @@ public class PapersListActivity extends Activity {
     private ImageView backIv;
     private LinearLayout shuxin2;
 
+    private String academyUrlLeft = "http://121.42.177.33/document/";
+    private String academyNames;
+    private String courseNames;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,7 +73,11 @@ public class PapersListActivity extends Activity {
                 finish();
             }
         });
+
         String path = getIntent().getStringExtra("url");
+        academyNames = getIntent().getStringExtra("academynames");
+        courseNames = getIntent().getStringExtra("coursenames");
+
         papersListView = (ListView) findViewById(R.id.papersListView);
         papersListView.setVisibility(View.GONE);
 
@@ -78,10 +86,12 @@ public class PapersListActivity extends Activity {
         papersListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String paperurl = papersInfoList.get(position).url;
+
+                //url要重新组合
+                String paperurl = academyUrlLeft + academyNames + "/" + courseNames + "/" + papersInfoList.get(position).papername + "." +papersInfoList.get(position).type;
                 String paperName = papersInfoList.get(position).papername;
                 String type = papersInfoList.get(position).type;
-                String wpurl = papersInfoList.get(position).wpurl;
+                String wpurl = paperurl;
                 Intent opPage = new Intent(PapersListActivity.this,OpActivity.class);
                 opPage.putExtra("paperurl",paperurl);
                 opPage.putExtra("type",type);
@@ -271,9 +281,10 @@ public class PapersListActivity extends Activity {
 
                     papersInfo.papername = jsonObject.getString("papername");
                     papersInfo.type = jsonObject.getString("type");
-                    papersInfo.url = jsonObject.getString("url");
-                    papersInfo.wpurl = jsonObject.getString("wpurl");
                     papersInfo.size = jsonObject.getString("size");
+
+//                    papersInfo.url = jsonObject.getString("url");
+//                    papersInfo.wpurl = jsonObject.getString("wpurl");
 
                     papersInfoList.add(papersInfo);
 

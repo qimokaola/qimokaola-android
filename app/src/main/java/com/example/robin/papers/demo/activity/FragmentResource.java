@@ -69,7 +69,7 @@ public class FragmentResource extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String academyUrl = academyNameList.get(position).papersurl;
-                Intent toPapersListIntent = new Intent(getActivity(), MajorListActivity.class);
+                Intent toPapersListIntent = new Intent(getActivity(), CourseListActivity.class);
                 toPapersListIntent.putExtra("url", academyUrl);
                 startActivity(toPapersListIntent);
             }

@@ -2,7 +2,6 @@ package com.example.robin.papers.demo.activity;
 
 import android.app.Activity;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -26,7 +25,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MajorListActivity extends Activity {
+public class CourseListActivity extends Activity {
 
     //专业列表的listView
     private ListView majorNameListView;
@@ -123,7 +122,7 @@ public class MajorListActivity extends Activity {
         @Override
         protected void onPostExecute(List<CourseName> courseNameslist) {
             super.onPostExecute(courseNameslist);
-            CourseNameAdapter adapter = new CourseNameAdapter(MajorListActivity.this,courseNameslist);
+            CourseNameAdapter adapter = new CourseNameAdapter(CourseListActivity.this,courseNameslist);
             majorNameListView.setAdapter(adapter);
             shuxin.setVisibility(View.GONE);
             majorNameListView.setVisibility(View.VISIBLE);

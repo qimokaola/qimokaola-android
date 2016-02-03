@@ -132,7 +132,7 @@
             android:name=".demo.activity.FragmentMe"
             android:label="@string/title_activity_fragment_service2"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".demo.activity.MajorListActivity"></activity>
+        <activity android:name=".demo.activity.CourseListActivity"></activity>
     </application>
 
 </manifest>

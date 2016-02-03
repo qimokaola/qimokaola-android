@@ -129,7 +129,7 @@
             android:name=".demo.activity.KuaiDiDaiLingActivity"
             android:label="@string/title_activity_kuai_di_dai_ling"></activity>
         <activity
-            android:name=".demo.activity.FragmentService2"
+            android:name=".demo.activity.FragmentMe"
             android:label="@string/title_activity_fragment_service2"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>

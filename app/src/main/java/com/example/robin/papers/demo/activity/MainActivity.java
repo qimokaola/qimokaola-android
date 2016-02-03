@@ -21,14 +21,13 @@ public class MainActivity extends FragmentActivity {
     private LayoutInflater mLayoutInflater;
 
     //三个切换的页面的fragment.
-    private Class mFragmentArray[] = { FragmentTimeTable.class,FragmentResource.class, FragmentService2.class,
-            FragmentLocalResource.class };
-
+    private Class mFragmentArray[] = { FragmentTimeTable.class,FragmentResource.class,
+            FragmentLocalResource.class, FragmentMe.class };
     //tab栏图标
-    private int mImageArray[] = { R.drawable.select_kebiao,R.drawable.select_bar_ziyuan, R.drawable.select_bar_fuwu,  R.drawable.select_img_bottom_bar_wolo};
+    private int mImageArray[] = { R.drawable.select_kebiao,R.drawable.select_bar_ziyuan, R.drawable.select_bar_bendi,  R.drawable.select_img_bottom_bar_wolo};
 
     //tab栏的字
-    private String mTextArray[] = { "课表","资源", "我的", "更多"};
+    private String mTextArray[] = { "课表","资源", "本地", "我咯"};
 
 
     @Override

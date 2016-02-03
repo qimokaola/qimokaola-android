@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:background="#F8F9FB"
     >
-    <include layout="@layout/bar_find_fragment"/>
+    <include layout="@layout/bar_me_fragment"/>
 
 
     <ScrollView

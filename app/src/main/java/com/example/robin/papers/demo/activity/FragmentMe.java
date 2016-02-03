@@ -11,7 +11,7 @@ import com.example.robin.papers.R;
 import com.example.robin.papers.demo.adapter.MyGridAdapter;
 import com.example.robin.papers.demo.util.MyGridView;
 
-public class FragmentService2 extends Fragment{
+public class FragmentMe extends Fragment{
 
     private MyGridView gridview_services,gridView_links;
 

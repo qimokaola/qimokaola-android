@@ -6,23 +6,29 @@
     >
 
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:gravity="center"
-        android:orientation="vertical">
+        >
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CourseName"
             android:id="@+id/bookName"
             android:layout_marginLeft="4dp"
             android:textSize="20sp"
             android:maxLines="1"
+            android:layout_centerVertical="true"
             />
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/into"
+            android:layout_centerVertical="true"/>
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>

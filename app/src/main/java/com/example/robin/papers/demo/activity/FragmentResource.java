@@ -40,10 +40,14 @@ public class FragmentResource extends Fragment {
     private List<CourseName> academyNameList;
 
     //读取学院列表的json文件的网络路径  roots.json
-    public static final String path = "http://121.42.177.33/jsonlist/roots.json";
+    public static final String path = "http://121.42.177.33/jsonlist/academy.json";
 
     //刷新时转动的小圆圈
     private LinearLayout refreshCircle;
+
+    //该页面每个item是 学院名 和 该学院的每个课程的 json文件路径  从roots里读取课程名 拼接left和right
+    public String academyUrlLeft = "http://121.42.177.33/jsonlist/course/";
+    public String academyUrlRight = ".json";
 
     @Nullable
     @Override
@@ -101,6 +105,9 @@ public class FragmentResource extends Fragment {
                     courseName = new CourseName();
                     courseName.coursename = jsonObject.getString("coursename");
                     courseName.papersurl = jsonObject.getString("papersurl");
+
+                    //加上头和尾的字符串 成 完整的 学院下各个课程链接
+                    courseName.papersurl = academyUrlLeft + courseName.papersurl + academyUrlRight;
                     academyNameList.add(courseName);
                 }
             } catch (JSONException e) {

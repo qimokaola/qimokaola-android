@@ -1,9 +1,11 @@
 package com.example.robin.papers.demo.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -56,6 +58,17 @@ public class CourseListActivity extends Activity {
         majorNameListView.setVisibility(View.GONE);
 
         new MajorAsnycTask().execute(majorListPath);
+
+        //点击监听 由学院跳转到专业列表页
+        majorNameListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String academyUrl = majorNameList.get(position).papersurl;
+                Intent toPapersListIntent = new Intent(CourseListActivity.this, PapersListActivity.class);
+                toPapersListIntent.putExtra("url", academyUrl);
+                startActivity(toPapersListIntent);
+            }
+        });
 
     }
 

@@ -20,17 +20,7 @@ public class MyGridAdapter extends BaseAdapter {
     public int[] imgs;
 
 
-//    public String[] img_text = { "单期绩点", "大物实验", "打印上门", "快递代领", "器材正装", "表白神器",
-//            "福大纪念品", "服务入驻" ,"投诉反馈"};
-//    public int[] imgs = { R.drawable.zcpm,
-//            R.drawable.qsy,
-//            R.drawable.ydy,
-//            R.drawable.kddl,
-//            R.drawable.hdqczl,
-//            R.drawable.fxq,
-//            R.drawable.jyhhz,
-//            R.drawable.jyhhz,
-//            R.drawable.jyhhz };
+
 
     public MyGridAdapter(Context mContext,String[] img_text_service,int[] imgs_service) {
         super();
@@ -65,8 +55,8 @@ public class MyGridAdapter extends BaseAdapter {
         }
         TextView tv = BaseViewHolder.get(convertView, R.id.tv_item);
         ImageView iv = BaseViewHolder.get(convertView, R.id.iv_item);
-        iv.setBackgroundResource(imgs[position]);
 
+        iv.setBackgroundResource(imgs[position]);
         tv.setText(img_text[position]);
         return convertView;
     }

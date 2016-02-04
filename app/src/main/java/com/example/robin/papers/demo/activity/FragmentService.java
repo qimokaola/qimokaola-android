@@ -118,7 +118,7 @@ public class FragmentService extends Fragment {
 //                Uri uri = Uri.parse("http://bbs.fzu.edu.cn/forum.php?forumlist=1&mobile=2");
 //                Intent it = new Intent(Intent.ACTION_VIEW, uri);
 //                startActivity(it);
-                startActivity(new Intent(getActivity(),XtfyActivity.class));
+                startActivity(new Intent(getActivity(),WebViewActivity.class));
             }
         });
 

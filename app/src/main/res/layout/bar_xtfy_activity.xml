@@ -16,9 +16,10 @@
         />
 
     <TextView
+        android:id="@+id/webview_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="新庭芳苑"
+        android:text="标题"
         android:textSize="22sp"
         android:textColor="#FFFFFF"
         android:layout_centerInParent="true"

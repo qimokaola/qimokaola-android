@@ -33,7 +33,7 @@ public class CourseListActivity extends Activity {
     //专业列表的listView
     private ListView majorNameListView;
 
-    //存放专业名的数组list
+    //存放专业名的CourseName实体组
     private List<CourseName> majorNameList;
 
     private ImageView backIv;

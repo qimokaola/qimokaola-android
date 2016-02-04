@@ -100,6 +100,9 @@ public class FragmentMe extends Fragment{
                     startActivity(toWebIntent);
                 } else if (serviceWebOrActivity[position]==2){
                     //跳转到activity
+                    if (text_service[position].equals("单期绩点")){
+                        startActivity(new Intent(getActivity(),SinglePeriodGPA.class));
+                    }
                 }else if (serviceWebOrActivity[position]==3){
                     //无响应
                 }

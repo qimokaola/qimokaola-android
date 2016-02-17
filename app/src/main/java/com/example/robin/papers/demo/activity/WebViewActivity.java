@@ -38,6 +38,7 @@ public class WebViewActivity extends Activity {
 
         webView.loadUrl(urls);
         webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setDomStorageEnabled(true);
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {

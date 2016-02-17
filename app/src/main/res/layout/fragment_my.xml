@@ -6,13 +6,26 @@
     >
 
     <include layout="@layout/bar_my_fragment"/>
-    <ListView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:id="@+id/localPapersList"
+        android:layout_height="match_parent"
         >
-    </ListView>
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/nofilesImg"
+            android:layout_width="157dp"
+            android:layout_height="201dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/nofiles"/>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/localPapersList"
+            >
+        </ListView>
+
+    </RelativeLayout>
+
 
 
 </LinearLayout>

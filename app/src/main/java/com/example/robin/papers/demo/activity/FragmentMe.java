@@ -20,60 +20,54 @@ public class FragmentMe extends Fragment{
 
 
     //福大服务的名字
-    public String[] text_service = { "单期绩点", "抢大物实验", "打印上门", "快递代领", "器材正装", "表白神器",
-            "福大纪念品", "服务入驻" ,"投诉反馈"};
+    public String[] text_service = { "上传资源","成绩查询", "抢大物实验", "打印上门", "快递代领", "器材正装", "表白神器",
+             "服务入驻" ,"投诉反馈"};
     //福大服务是网页还是本地activity  1为网页 2为activity 3是无响应
-    public int[] serviceWebOrActivity = {2,1,1,1,1,1,1,1,1};
+    public int[] serviceWebOrActivity = {1,1,1,1,1,1,1,1,1};
     //福大服务的图标
-    public int[] imgs_service = { R.drawable.zcpm,
+    public int[] imgs_service = {
+            R.drawable.cim,
+            R.drawable.zcpm,
             R.drawable.qsy,
             R.drawable.ydy,
             R.drawable.kddl,
             R.drawable.hdqczl,
             R.drawable.fxq,
             R.drawable.jyhhz,
-            R.drawable.jyhhz,
             R.drawable.jyhhz };
     //福大服务的网页路径
     public String[] urls_service = {
-            "",
+            "http://robinchen.mikecrm.com/f.php?t=ZmhFim",
+            "http://112.124.54.19/Score/index.html?identity=3ABD9A9A6B4622BEFDD35CA21905C0CB",
             "http://robinchen.mikecrm.com/f.php?t=CFGtnt",
-            "http://robinchen.mikecrm.com/f.php?t=hNU2E7",
-            "http://robinchen.mikecrm.com/f.php?t=CFGtnt",
-            "http://robinchen.mikecrm.com/f.php?t=hNU2E7",
-            "http://robinchen.mikecrm.com/f.php?t=CFGtnt",
-            "http://robinchen.mikecrm.com/f.php?t=hNU2E7",
-            "http://robinchen.mikecrm.com/f.php?t=CFGtnt",
-            "http://robinchen.mikecrm.com/f.php?t=hNU2E7"
+            "http://form.mikecrm.com/f.php?t=l7zy0t",
+            "http://form.mikecrm.com/f.php?t=39tiOz",
+            "http://form.mikecrm.com/f.php?t=jFGpR4",
+            "http://form.mikecrm.com/f.php?t=Q8R9Ag",
+            "http://robinchen.mikecrm.com/f.php?t=ahOWL2",
+            "http://robinchen.mikecrm.com/f.php?t=Fc00ps"
     };
 
 
     //友情链接的图标和名字
-    public String[] text_links = { "Papers主页","新庭芳苑", "福大易班", "教务处",
-            "大物实验","学工系统","人才联合网","申请友链"," "
+    public String[] text_links = { "Papers主页","空教室查询","百度翻译","新庭芳苑", "福大易班" ,"申请友链"
             };
     //友情链接是网页还是本地activity  1为网页 2为activity 3是无响应
-    public int[] linksWebOrActivity = {1,1,1,1,1,1,1,1,3};
+    public int[] linksWebOrActivity = {1,1,1,1,1,1};
     public int[] imgs_links = { R.drawable.zcpm,
+            R.drawable.kong,
+            R.drawable.fanyi,
             R.drawable.xtfy,
             R.drawable.yb,
-            R.drawable.fdjwc,
-            R.drawable.zhaopin,
-            R.drawable.zhaopin,
-            R.drawable.zhaopin,
-            R.drawable.zhaopin,
-            R.drawable.zhaopin
+            R.drawable.youlian
             };
     public String[] urls_links = {
-            "http://robinchen.mikecrm.com/f.php?t=CFGtnt",
-            "http://robinchen.mikecrm.com/f.php?t=hNU2E7",
-            "http://robinchen.mikecrm.com/f.php?t=CFGtnt",
-            "http://robinchen.mikecrm.com/f.php?t=hNU2E7",
-            "http://robinchen.mikecrm.com/f.php?t=CFGtnt",
-            "http://robinchen.mikecrm.com/f.php?t=hNU2E7",
-            "http://robinchen.mikecrm.com/f.php?t=CFGtnt",
-            "http://robinchen.mikecrm.com/f.php?t=hNU2E7",
-            "http://robinchen.mikecrm.com/f.php?t=hNU2E7"
+            "http://fzu2016.com/",
+            "http://112.124.56.216:8080/Super/emptyClass/index.html?identity=3ABD9A9A6B4622BEFDD35CA21905C0CB",
+            "http://fanyi.baidu.com/",
+            "http://bbs.fzu.edu.cn/forum.php?forumlist=1&mobile=2",
+            "http://59.77.233.33/",
+            "http://robinchen.mikecrm.com/f.php?t=foqK6Y"
     };
 
 

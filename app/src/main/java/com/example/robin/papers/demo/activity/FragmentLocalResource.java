@@ -27,7 +27,7 @@ public class FragmentLocalResource extends Fragment {
     private NotesDB notesDB;
     private OrderDB orderDB;
     private SQLiteDatabase dbReader;
-    private ImageView shopCar;
+    private ImageView shopCar,nofilesImg;
 
 //    private Button myCart;
 //    private Handler handler;
@@ -40,8 +40,9 @@ public class FragmentLocalResource extends Fragment {
     public View onCreateView(final LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_my, container, false);
         localPapersListView = (ListView) view.findViewById(R.id.localPapersList);
+        nofilesImg = (ImageView) view.findViewById(R.id.nofilesImg);
         //myCart = (Button) view.findViewById(R.id.myCart);
-        shopCar = (ImageView) view.findViewById(R.id.printShop);
+//        shopCar = (ImageView) view.findViewById(R.id.printShop);
         notesDB = new NotesDB(getActivity());
         orderDB = new OrderDB(getActivity());
         dbReader = notesDB.getWritableDatabase();
@@ -49,17 +50,17 @@ public class FragmentLocalResource extends Fragment {
 //        dbReader = notesDB.getReadableDatabase();
 
         if (isEmpty(dbReader)){
-            Toast.makeText(getActivity(),"无已下载文档,快去下载吧!",Toast.LENGTH_SHORT).show();
+            nofilesImg.setVisibility(View.VISIBLE);
         }
 
-        //购物车图标事件 进入订单详情页
-        shopCar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent toShopCar = new Intent(getActivity(),OrdersSubmitActivity.class);
-                startActivity(toShopCar);
-            }
-        });
+//        //购物车图标事件 进入订单详情页
+//        shopCar.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent toShopCar = new Intent(getActivity(),OrdersSubmitActivity.class);
+//                startActivity(toShopCar);
+//            }
+//        });
 
 //        localPapersListView.setItemsCanFocus(new Exception());
 

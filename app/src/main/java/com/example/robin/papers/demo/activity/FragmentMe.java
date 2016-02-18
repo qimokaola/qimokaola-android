@@ -54,7 +54,7 @@ public class FragmentMe extends Fragment{
             };
     //友情链接是网页还是本地activity  1为网页 2为activity 3是无响应
     public int[] linksWebOrActivity = {1,1,1,1,1,1};
-    public int[] imgs_links = { R.drawable.zcpm,
+    public int[] imgs_links = { R.drawable.home,
             R.drawable.kong,
             R.drawable.fanyi,
             R.drawable.xtfy,

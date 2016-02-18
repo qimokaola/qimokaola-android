@@ -83,7 +83,7 @@ public class PapersListActivity extends Activity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 //url要重新组合
-                String paperurl =  papersInfoList.get(position).url + "." +papersInfoList.get(position).type;
+                String paperurl =  papersInfoList.get(position).url;
                 String paperName = papersInfoList.get(position).papername;
                 String type = papersInfoList.get(position).type;
                 String wpurl = paperurl;

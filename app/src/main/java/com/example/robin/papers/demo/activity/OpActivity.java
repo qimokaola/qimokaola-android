@@ -81,11 +81,11 @@ public class OpActivity extends Activity {
             @Override
             public void onClick(View v) {
                 if (type.equals("zip")){
-                    Toast.makeText(getApplicationContext(),"zip文件只支持发送到电脑!!!",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"zip文件只支持发送到电脑噢",Toast.LENGTH_LONG).show();
                 }
                 if (type.equals("doc")||type.equals("ppt")||type.equals("pdf")){
                     new downAsnycTask().execute(paperurl, paperName, type, wpurl);
-                    Toast.makeText(getApplicationContext()," 开始下载,请稍后到\"我的\"中查看 ",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext()," 开始下载,请稍后到\"下载\"中查看 ",Toast.LENGTH_LONG).show();
                 }
             }
         });

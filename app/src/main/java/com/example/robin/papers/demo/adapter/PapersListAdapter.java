@@ -61,7 +61,13 @@ public class PapersListAdapter extends BaseAdapter {
         if (mlist.get(position).type.equals("doc")){
             viewHolder.docTypeImgView.setImageResource(R.drawable.doc);
         }
+        if (mlist.get(position).type.equals("docx")){
+            viewHolder.docTypeImgView.setImageResource(R.drawable.doc);
+        }
         if (mlist.get(position).type.equals("ppt")){
+            viewHolder.docTypeImgView.setImageResource(R.drawable.ppt);
+        }
+        if (mlist.get(position).type.equals("pptx")){
             viewHolder.docTypeImgView.setImageResource(R.drawable.ppt);
         }
         if (mlist.get(position).type.equals("pdf")){

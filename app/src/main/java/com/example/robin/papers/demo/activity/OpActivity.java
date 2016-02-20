@@ -58,7 +58,13 @@ public class OpActivity extends Activity {
         if (type.equals("doc")){
             typeIv.setImageResource(R.drawable.doc);
         }
+        if (type.equals("docx")){
+            typeIv.setImageResource(R.drawable.doc);
+        }
         if (type.equals("ppt")){
+            typeIv.setImageResource(R.drawable.ppt);
+        }
+        if (type.equals("pptx")){
             typeIv.setImageResource(R.drawable.ppt);
         }
         if (type.equals("pdf")){
@@ -83,7 +89,7 @@ public class OpActivity extends Activity {
                 if (type.equals("zip")){
                     Toast.makeText(getApplicationContext(),"zip文件只支持发送到电脑噢",Toast.LENGTH_LONG).show();
                 }
-                if (type.equals("doc")||type.equals("ppt")||type.equals("pdf")){
+                if (type.equals("doc")||type.equals("ppt")||type.equals("pdf")||type.equals("pptx")||type.equals("docx")){
                     new downAsnycTask().execute(paperurl, paperName, type, wpurl);
                     Toast.makeText(getApplicationContext()," 开始下载,请稍后到\"下载\"中查看 ",Toast.LENGTH_LONG).show();
                 }
@@ -183,8 +189,28 @@ public class OpActivity extends Activity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+            }else if (type.equals("docx")){
+                localurl += ".docx";
+                file = new File(localurl);
+                try {
+                    file = DownLoader.downloadFile(file, UrlUnicode.encode(url));
+                    addDB();
+                    return file;
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }else if (type.equals("ppt")){
                 localurl += ".ppt";
+                file = new File(localurl);
+                try {
+                    file = DownLoader.downloadFile(file,UrlUnicode.encode(url));
+                    addDB();
+                    return file;
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }else if (type.equals("pptx")){
+                localurl += ".pptx";
                 file = new File(localurl);
                 try {
                     file = DownLoader.downloadFile(file,UrlUnicode.encode(url));

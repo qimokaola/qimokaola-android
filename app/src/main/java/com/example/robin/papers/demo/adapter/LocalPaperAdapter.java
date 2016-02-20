@@ -70,6 +70,12 @@ public class LocalPaperAdapter extends BaseAdapter {
         if (type.equals("pdf")){
             typeImg.setImageResource(R.drawable.pdf);
         }
+        if (type.equals("pptx")){
+            typeImg.setImageResource(R.drawable.ppt);
+        }
+        if (type.equals("docx")){
+            typeImg.setImageResource(R.drawable.doc);
+        }
 
         return layout;
     }

@@ -101,6 +101,23 @@ public class PapersListActivity extends Activity {
     }
 
 
+
+
+
+
+    //以下代码废弃
+
+
+
+
+
+
+
+
+
+
+
+
     //显示下载还是发送到电脑的Dailog
     private void showDownPanel(final Context context,final String paperurl,final String paperName, final String type, final String wpurl) {
 
@@ -147,7 +164,7 @@ public class PapersListActivity extends Activity {
 
 
 
-        if (type.equals("doc")||type.equals("ppt")||type.equals("pdf")){
+        if (type.equals("doc")||type.equals("ppt")||type.equals("pdf")||type.equals("pptx")){
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle("选择");
         builder.setMessage("下载到手机,发送到电脑, 或按返回键返回");
@@ -208,17 +225,33 @@ public class PapersListActivity extends Activity {
                 localurl += ".doc";
                 file = new File(localurl);
                 try {
-                    Log.d("czw","xiazaiqian");
                     file = DownLoader.downloadFile(file,url);
-                    Log.d("czw","xiazaihou");
                     addDB();
-                    Log.d("czw", "addhou");
+                    return file;
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }else if (type.equals("docx")){
+                localurl += ".docx";
+                file = new File(localurl);
+                try {
+                    file = DownLoader.downloadFile(file,url);
+                    addDB();
                     return file;
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }else if (type.equals("ppt")){
                 localurl += ".ppt";
+                file = new File(localurl);
+                try {
+                    file = DownLoader.downloadFile(file,url);addDB();
+                    return file;
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }else if (type.equals("pptx")){
+                localurl += ".pptx";
                 file = new File(localurl);
                 try {
                     file = DownLoader.downloadFile(file,url);addDB();

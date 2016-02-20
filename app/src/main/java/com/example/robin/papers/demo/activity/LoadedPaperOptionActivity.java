@@ -44,7 +44,13 @@ public class LoadedPaperOptionActivity extends Activity {
         if (type.equals("doc")){
             ivType.setImageResource(R.drawable.doc);
         }
+        if (type.equals("docx")){
+            ivType.setImageResource(R.drawable.doc);
+        }
         if (type.equals("ppt")){
+            ivType.setImageResource(R.drawable.ppt);
+        }
+        if (type.equals("pptx")){
             ivType.setImageResource(R.drawable.ppt);
         }
         if (type.equals("pdf")){

@@ -51,7 +51,7 @@ public class PapersListActivity extends Activity {
     //试卷列表listView
     private ListView papersListView;
 
-    private ImageView backIv;
+    private ImageView backIv,upLoad;
     private LinearLayout shuxin2;
 
 
@@ -68,6 +68,18 @@ public class PapersListActivity extends Activity {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+
+        upLoad = (ImageView) findViewById(R.id.uploadImg_papersList);
+        upLoad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转至上传web
+                Intent toWebIntent = new Intent(PapersListActivity.this, WebViewActivity.class);
+                toWebIntent.putExtra("url", "http://robinchen.mikecrm.com/f.php?t=ZmhFim");
+                toWebIntent.putExtra("title", "上传你的资源");
+                startActivity(toWebIntent);
             }
         });
 

@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
@@ -46,6 +47,8 @@ public class FragmentResource extends Fragment {
     //刷新时转动的小圆圈
     private LinearLayout refreshCircle;
 
+    private ImageView uploadImg;
+
     //该页面每个item是 学院名 和 该学院的每个课程的 json文件路径  从roots里读取课程名 拼接left和right
 
     @Nullable
@@ -59,6 +62,18 @@ public class FragmentResource extends Fragment {
         refreshCircle = (LinearLayout) view.findViewById(R.id.shuxin1);
 
         academyNameListView = (ListView) view.findViewById(R.id.courseName);
+
+        uploadImg = (ImageView) view.findViewById(R.id.uploadImg_academy);
+        uploadImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转至上传web
+                Intent toWebIntent = new Intent(getActivity(), WebViewActivity.class);
+                toWebIntent.putExtra("url", "http://robinchen.mikecrm.com/f.php?t=ZmhFim");
+                toWebIntent.putExtra("title", "上传你的资源");
+                startActivity(toWebIntent);
+            }
+        });
 
         //加载列表时 显示刷新圈圈 隐藏列表  加载完毕显示列表 隐藏圈圈
         academyNameListView.setVisibility(View.GONE);

@@ -36,7 +36,7 @@ public class CourseListActivity extends Activity {
     //存放专业名的CourseName实体组
     private List<CourseName> majorNameList;
 
-    private ImageView backIv;
+    private ImageView backIv,upLoad;
     private LinearLayout shuxin;
 
 
@@ -46,6 +46,17 @@ public class CourseListActivity extends Activity {
         setContentView(R.layout.activity_major_list);
 
         backIv = (ImageView) findViewById(R.id.back_major_activity);
+        upLoad = (ImageView) findViewById(R.id.uploadImg_course);
+        upLoad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转至上传web
+                Intent toWebIntent = new Intent(CourseListActivity.this, WebViewActivity.class);
+                toWebIntent.putExtra("url", "http://robinchen.mikecrm.com/f.php?t=ZmhFim");
+                toWebIntent.putExtra("title", "上传你的资源");
+                startActivity(toWebIntent);
+            }
+        });
         shuxin = (LinearLayout) findViewById(R.id.refreshMajorList);
         shuxin.setVisibility(View.VISIBLE);
         backIv.setOnClickListener(new View.OnClickListener() {

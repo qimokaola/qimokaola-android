@@ -20,7 +20,7 @@ public class FragmentMe extends Fragment{
 
 
     //福大服务的名字
-    public String[] text_service = { "上传资源","成绩查询", "抢大物实验", "打印上门", "快递代领", "器材正装", "表白神器",
+    public String[] text_service = { "上传资源","成绩查询", "代抢实验", "打印上门", "快递代领", "器材正装", "表白神器",
              "服务入驻" ,"投诉反馈"};
     //福大服务是网页还是本地activity  1为网页 2为activity 3是无响应
     public int[] serviceWebOrActivity = {1,1,1,1,1,1,1,1,1};
@@ -34,7 +34,7 @@ public class FragmentMe extends Fragment{
             R.drawable.hdqczl,
             R.drawable.fxq,
             R.drawable.jyhhz,
-            R.drawable.jyhhz };
+            R.drawable.tousu };
     //福大服务的网页路径
     public String[] urls_service = {
             "http://robinchen.mikecrm.com/f.php?t=ZmhFim",
@@ -50,7 +50,7 @@ public class FragmentMe extends Fragment{
 
 
     //友情链接的图标和名字
-    public String[] text_links = { "Papers主页","空教室查询","百度翻译","新庭芳苑", "福大易班" ,"申请友链"
+    public String[] text_links = { "Papers官网","空教室查询","百度翻译","新庭芳苑", "福大易班" ,"申请友链"
             };
     //友情链接是网页还是本地activity  1为网页 2为activity 3是无响应
     public int[] linksWebOrActivity = {1,1,1,1,1,1};

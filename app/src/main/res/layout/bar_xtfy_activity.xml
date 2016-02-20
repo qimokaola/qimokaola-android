@@ -24,5 +24,32 @@
         android:textColor="#FFFFFF"
         android:layout_centerInParent="true"
         />
+    <ImageView
+        android:visibility="gone"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/qq_web"
+        android:src="@drawable/qq"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_centerVertical="true"/>
+    <ImageView
+        android:visibility="gone"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/alipay_web"
+        android:src="@drawable/alipay"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_centerVertical="true"/>
+    <ImageView
+        android:visibility="gone"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/phone_web"
+        android:src="@drawable/phone"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_centerVertical="true"/>
 
 </RelativeLayout>

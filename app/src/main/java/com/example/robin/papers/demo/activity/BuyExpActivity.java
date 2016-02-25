@@ -23,6 +23,7 @@ import org.json.JSONObject;
 //购买抢实验服务的Activity
 public class BuyExpActivity extends Activity {
 
+
     private ImageView back;
     private EditText xuehao,mima,dijizhou,shiyanming,xingqiji,shangxiawu,dijipi;
     private String xuehaos,mimas,dijizhous,shiyanmings,xingqijis,shangxiawus,dijipis;

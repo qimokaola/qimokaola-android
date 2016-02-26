@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TabHost;
 
 import com.example.robin.papers.R;
+import com.umeng.analytics.MobclickAgent;
 import com.umeng.update.UmengUpdateAgent;
 
 public class MainActivity extends FragmentActivity {
@@ -43,6 +44,15 @@ public class MainActivity extends FragmentActivity {
         UmengUpdateAgent.update(this);
         setContentView(R.layout.activity_main);
         initView();
+    }
+
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 
     private void initView() {

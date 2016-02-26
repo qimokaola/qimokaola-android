@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.robin.papers.R;
+import com.umeng.analytics.MobclickAgent;
 
 public class WebViewActivity extends Activity {
     private WebView webView;
@@ -110,6 +111,15 @@ public class WebViewActivity extends Activity {
 
         });
 
+    }
+
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 
 

@@ -25,6 +25,7 @@ import com.example.robin.papers.demo.adapter.PapersListAdapter;
 import com.example.robin.papers.demo.db.NotesDB;
 import com.example.robin.papers.demo.model.PapersInfo;
 import com.example.robin.papers.demo.util.DownLoader;
+import com.umeng.analytics.MobclickAgent;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -112,6 +113,15 @@ public class PapersListActivity extends Activity {
 
             }
         });
+    }
+
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 
 

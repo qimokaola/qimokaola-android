@@ -10,6 +10,7 @@ import android.view.animation.AlphaAnimation;
 import android.widget.LinearLayout;
 
 import com.example.robin.papers.R;
+import com.umeng.analytics.MobclickAgent;
 import com.umeng.update.UmengUpdateAgent;
 
 
@@ -83,6 +84,15 @@ public class SplashActivity extends Activity {
         }, 2000);
 
 
+    }
+
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 
 }

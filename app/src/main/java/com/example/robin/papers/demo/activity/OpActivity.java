@@ -19,6 +19,7 @@ import com.example.robin.papers.demo.db.NotesDB;
 import com.example.robin.papers.demo.db.OrderDB;
 import com.example.robin.papers.demo.util.DownLoader;
 import com.example.robin.papers.demo.util.UrlUnicode;
+import com.umeng.analytics.MobclickAgent;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -140,6 +141,15 @@ public class OpActivity extends Activity {
 
         //
         orderDB = new OrderDB(this);
+    }
+
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 
     //加入到打印订单(ordersDB)

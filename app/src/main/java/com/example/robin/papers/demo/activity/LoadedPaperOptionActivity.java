@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.example.robin.papers.R;
 import com.example.robin.papers.demo.db.NotesDB;
+import com.umeng.analytics.MobclickAgent;
 
 import java.io.File;
 
@@ -79,6 +80,15 @@ public class LoadedPaperOptionActivity extends Activity {
             }
         });
 
+    }
+
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 
     public void deleteDate(String ids) {

@@ -15,6 +15,7 @@ import com.example.robin.papers.R;
 import com.example.robin.papers.demo.adapter.CourseNameAdapter;
 import com.example.robin.papers.demo.model.CourseName;
 import com.example.robin.papers.demo.util.UrlUnicode;
+import com.umeng.analytics.MobclickAgent;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -86,6 +87,15 @@ public class CourseListActivity extends Activity {
             }
         });
 
+    }
+
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 
 

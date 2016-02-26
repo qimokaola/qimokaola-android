@@ -24,10 +24,10 @@ public class MainActivity extends FragmentActivity {
     private Class mFragmentArray[] = { FragmentResource.class,
             FragmentLocalResource.class, FragmentMe.class };
     //tab栏图标
-    private int mImageArray[] = { R.drawable.select_bar_ziyuan, R.drawable.select_bar_bendi,  R.drawable.select_img_bottom_bar_wolo};
+    private int mImageArray[] = { R.drawable.select_bar_ziyuan, R.drawable.select_bar_bendi,  R.drawable.select_img_bottom_bar_fuwu};
 
     //tab栏的字
-    private String mTextArray[] = { "资源", "本地", "我咯"};
+    private String mTextArray[] = { "资源", "本地", "服务"};
 
 
     @Override

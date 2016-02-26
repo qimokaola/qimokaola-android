@@ -17,7 +17,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="我的服务"
+        android:text="校内服务"
         android:textSize="22sp"
         android:textColor="#FFFFFF"
         android:layout_centerInParent="true"

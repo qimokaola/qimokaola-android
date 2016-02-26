@@ -17,6 +17,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.robin.papers.R;
@@ -51,7 +52,8 @@ public class PapersListActivity extends Activity {
     //试卷列表listView
     private ListView papersListView;
 
-    private ImageView backIv,upLoad;
+    private ImageView backIv;
+    private TextView baocuo;
     private LinearLayout shuxin2;
 
 
@@ -71,14 +73,14 @@ public class PapersListActivity extends Activity {
             }
         });
 
-        upLoad = (ImageView) findViewById(R.id.uploadImg_papersList);
-        upLoad.setOnClickListener(new View.OnClickListener() {
+        baocuo = (TextView) findViewById(R.id.uploadImg_papersList);
+        baocuo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //跳转至上传web
+                //跳转至报错web
                 Intent toWebIntent = new Intent(PapersListActivity.this, WebViewActivity.class);
-                toWebIntent.putExtra("url", "http://robinchen.mikecrm.com/f.php?t=ZmhFim");
-                toWebIntent.putExtra("title", "上传你的资源");
+                toWebIntent.putExtra("url", "http://robinchen.mikecrm.com/f.php?t=yFA9QI");
+                toWebIntent.putExtra("title", "报错");
                 startActivity(toWebIntent);
             }
         });

@@ -20,28 +20,28 @@ public class FragmentMe extends Fragment{
 
 
     //福大服务的名字
-    public String[] text_service = { "上传资源","成绩查询", "代抢实验", "打印上门", "快递代领", "器材正装", "表白神器",
-             "服务入驻" ,"投诉反馈"};
+    public String[] text_service = { "上传资源","成绩查询", "代抢实验", "打印上门",  "器材正装", "表白神器",
+             "服务入驻" ,"建议反馈","敬请期待"};
     //福大服务是网页还是本地activity  1为网页 2为activity 3是无响应
-    public int[] serviceWebOrActivity = {1,1,1,1,1,1,1,1,1};
+    public int[] serviceWebOrActivity = {1,1,1,1,1,1,1,1,3};
     //福大服务的图标
     public int[] imgs_service = {
             R.drawable.cim,
             R.drawable.zcpm,
             R.drawable.qsy,
             R.drawable.ydy,
-            R.drawable.kddl,
             R.drawable.hdqczl,
             R.drawable.fxq,
             R.drawable.jyhhz,
-            R.drawable.tousu };
+            R.drawable.tousu,
+            R.drawable.nothingicon
+    };
     //福大服务的网页路径
     public String[] urls_service = {
             "http://robinchen.mikecrm.com/f.php?t=ZmhFim",
             "http://112.124.54.19/Score/index.html?identity=3ABD9A9A6B4622BEFDD35CA21905C0CB",
             "http://robinchen.mikecrm.com/f.php?t=CFGtnt",
             "http://form.mikecrm.com/f.php?t=l7zy0t",
-            "http://form.mikecrm.com/f.php?t=39tiOz",
             "http://form.mikecrm.com/f.php?t=jFGpR4",
             "http://form.mikecrm.com/f.php?t=Q8R9Ag",
             "http://robinchen.mikecrm.com/f.php?t=ahOWL2",

@@ -90,9 +90,6 @@ public class WebViewActivity extends Activity {
         if (titles.equals("代抢实验")){
             alipay.setVisibility(View.VISIBLE);
         }
-        if (titles.equals("器材正装")){
-            phone.setVisibility(View.VISIBLE);
-        }
 
         title_tv.setText(titles);
 

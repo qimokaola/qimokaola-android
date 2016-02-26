@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.robin.papers.R;
 import com.example.robin.papers.demo.adapter.CourseNameAdapter;
@@ -36,7 +37,8 @@ public class CourseListActivity extends Activity {
     //存放专业名的CourseName实体组
     private List<CourseName> majorNameList;
 
-    private ImageView backIv,upLoad;
+    private ImageView backIv;
+    private TextView baocuo;
     private LinearLayout shuxin;
 
 
@@ -46,14 +48,14 @@ public class CourseListActivity extends Activity {
         setContentView(R.layout.activity_major_list);
 
         backIv = (ImageView) findViewById(R.id.back_major_activity);
-        upLoad = (ImageView) findViewById(R.id.uploadImg_course);
-        upLoad.setOnClickListener(new View.OnClickListener() {
+        baocuo = (TextView) findViewById(R.id.uploadImg_course);
+        baocuo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //跳转至上传web
+                //跳转至报错web
                 Intent toWebIntent = new Intent(CourseListActivity.this, WebViewActivity.class);
-                toWebIntent.putExtra("url", "http://robinchen.mikecrm.com/f.php?t=ZmhFim");
-                toWebIntent.putExtra("title", "上传你的资源");
+                toWebIntent.putExtra("url", "http://robinchen.mikecrm.com/f.php?t=yFA9QI");
+                toWebIntent.putExtra("title", "报错");
                 startActivity(toWebIntent);
             }
         });

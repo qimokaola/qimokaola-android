@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTabHost;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,8 @@ import android.widget.TabHost;
 
 import com.example.robin.papers.R;
 import com.umeng.analytics.MobclickAgent;
+import com.umeng.message.IUmengRegisterCallback;
+import com.umeng.message.PushAgent;
 import com.umeng.update.UmengUpdateAgent;
 
 public class MainActivity extends FragmentActivity {
@@ -35,15 +38,27 @@ public class MainActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        //透明状态栏   要搞沉浸式状态栏的 失败了 这几行代码
+
+
+        setContentView(R.layout.activity_main);
+        initView();
+
+        //        //透明状态栏   要搞沉浸式状态栏的 失败了 这几行代码
 //        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 //        //透明导航栏
 //        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
 
         UmengUpdateAgent.setUpdateOnlyWifi(false);
         UmengUpdateAgent.update(this);
-        setContentView(R.layout.activity_main);
-        initView();
+
+
+
+
+        //友盟推送
+        PushAgent mPushAgent = PushAgent.getInstance(this);
+        mPushAgent.enable();
+
+
     }
 
     public void onResume() {

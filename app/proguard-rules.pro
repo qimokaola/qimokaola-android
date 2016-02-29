@@ -15,3 +15,6 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+-keepclassmembers class * extends android.webkit.WebChromeClient{
+   public void openFileChooser(...);
+}

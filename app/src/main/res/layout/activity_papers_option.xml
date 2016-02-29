@@ -4,6 +4,7 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:background="#FFFFFF"
+    android:fitsSystemWindows="true"
     >
     <include layout="@layout/bar_papers_operation"/>
 

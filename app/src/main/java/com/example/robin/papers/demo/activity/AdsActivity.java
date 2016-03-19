@@ -48,7 +48,7 @@ public class AdsActivity extends Activity {
                 AdsActivity.this.finish();
             }
 
-        }, 3000);
+        }, 2000);
     }
 
 

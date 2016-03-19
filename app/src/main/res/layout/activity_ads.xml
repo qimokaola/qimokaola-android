@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.robin.papers.demo.activity.AdsActivity"
     android:id="@+id/ads_activity"
-    android:background="@drawable/ad2">
+    android:background="@drawable/ads">
 
     <TextView
         android:layout_width="wrap_content"

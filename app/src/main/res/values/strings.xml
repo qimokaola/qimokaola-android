@@ -33,4 +33,5 @@
     <string name="title_activity_qi_cai_zu_lin">QiCaiZuLinActivity</string>
     <string name="title_activity_kuai_di_dai_ling">KuaiDiDaiLingActivity</string>
     <string name="title_activity_fragment_service2">FragmentService2</string>
+    <string name="title_activity_ads">AdsActivity</string>
 </resources>

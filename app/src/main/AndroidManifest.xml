@@ -23,8 +23,7 @@
             android:value="56128c76e0f55aa3ff006c5c" />
         <meta-data
             android:name="UMENG_MESSAGE_SECRET"
-            android:value="c2541a3865a5219a99f86aa10cffd85d" >
-        </meta-data>
+            android:value="c2541a3865a5219a99f86aa10cffd85d"></meta-data>
         <meta-data
             android:name="UMENG_CHANNEL"
             android:value="Channel ID" />
@@ -55,10 +54,6 @@
             android:label="@string/title_activity_register"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".demo.activity.FragmentService"
-            android:label="@string/title_activity_up_papers"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".demo.activity.FragmentResource"
             android:label="科目名"
             android:screenOrientation="portrait" />
@@ -77,10 +72,6 @@
         <activity
             android:name=".demo.activity.LoadedPaperOptionActivity"
             android:label="@string/title_activity_paper_detail"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".demo.activity.UpLoadActivity"
-            android:label="@string/title_activity_buy"
             android:screenOrientation="portrait" />
 
         <service
@@ -103,41 +94,17 @@
             android:name=".demo.activity.OrderAddressActivity"
             android:label="@string/title_activity_order_info" />
         <activity
-            android:name=".demo.activity.BuyExpActivity"
-            android:label="@string/title_activity_buy_exp" />
-        <activity
-            android:name=".demo.activity.SubmitSuccessActivity"
-            android:label="@string/title_activity_submit_success" />
-        <activity
-            android:name=".demo.activity.SubmitFailActivity"
-            android:label="@string/title_activity_submit_fail" />
-        <activity
-            android:name=".demo.activity.CloudPrintActivity"
-            android:label="@string/title_activity_cloud_print" />
-        <activity
-            android:name=".demo.activity.KuaiDiActivity"
-            android:label="@string/title_activity_kuai_di" />
-        <activity
-            android:name=".demo.activity.FanKuiHeZuoActivity"
-            android:label="@string/title_activity_fan_kui_he_zuo" />
-        <activity
-            android:name=".demo.activity.HangPaiActivity"
-            android:label="@string/title_activity_web_activity_test" />
-        <activity
             android:name=".demo.activity.WebViewActivity"
             android:label="@string/title_activity_xtfy" />
-        <activity
-            android:name=".demo.activity.QiCaiZuLinActivity"
-            android:label="@string/title_activity_qi_cai_zu_lin" />
-        <activity
-            android:name=".demo.activity.KuaiDiDaiLingActivity"
-            android:label="@string/title_activity_kuai_di_dai_ling" />
         <activity
             android:name=".demo.activity.FragmentMe"
             android:label="@string/title_activity_fragment_service2"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".demo.activity.CourseListActivity" />
-        <activity android:name=".demo.activity.SinglePeriodGPA"></activity>
+        <activity android:name=".demo.activity.SinglePeriodGPA" />
+        <activity
+            android:name=".demo.activity.AdsActivity"
+            android:label="@string/title_activity_ads"></activity>
     </application>
 
 </manifest>

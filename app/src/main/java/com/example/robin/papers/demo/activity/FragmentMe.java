@@ -40,7 +40,7 @@ public class FragmentMe extends Fragment{
     public String[] urls_service = {
             "http://robinchen.mikecrm.com/f.php?t=ZmhFim",
             "http://112.124.54.19/Score/index.html?identity=3ABD9A9A6B4622BEFDD35CA21905C0CB",
-            "http://form.mikecrm.com/f.php?t=HIJjLT",//bushimao
+            "http://form.mikecrm.com/f.php?t=HIJjLT",//不是猫
             "http://form.mikecrm.com/f.php?t=l7zy0t",
             "http://form.mikecrm.com/f.php?t=jFGpR4",
             "http://form.mikecrm.com/f.php?t=Q8R9Ag",

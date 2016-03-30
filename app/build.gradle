@@ -21,16 +21,15 @@ android {
         checkReleaseBuilds false
         abortOnError false
     }
+
+
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':SMSSDK')
-    compile files('libs/umeng-update-v2.6.0.1.jar')
     compile 'com.android.support:appcompat-v7:22.2.1'
     compile 'com.android.support:design:22.2.1'
-    compile files('libs/umeng-analytics-v5.6.4.jar')
-    compile 'com.umeng.analytics:analytics:latest.integration'
 }
 
 

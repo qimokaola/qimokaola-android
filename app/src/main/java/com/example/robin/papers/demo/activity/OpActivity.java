@@ -9,7 +9,6 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Environment;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -23,7 +22,6 @@ import com.example.robin.papers.demo.db.NotesDB;
 import com.example.robin.papers.demo.db.OrderDB;
 import com.example.robin.papers.demo.util.DownLoader;
 import com.example.robin.papers.demo.util.SystemBarTintManager;
-import com.example.robin.papers.demo.util.UrlCoder;
 import com.example.robin.papers.demo.util.UrlUnicode;
 import com.umeng.analytics.MobclickAgent;
 
@@ -118,7 +116,7 @@ public class OpActivity extends Activity {
                     intent.setType("text/plain");
                     intent.setPackage("com.tencent.mobileqq");
                     intent.putExtra(Intent.EXTRA_SUBJECT, "分享");
-                    intent.putExtra(Intent.EXTRA_TEXT, paperName + ": " + UrlCoder.encode(wpurl));
+                    intent.putExtra(Intent.EXTRA_TEXT, paperName + ": " + UrlUnicode.encode(wpurl));
                     intent.putExtra(Intent.EXTRA_TITLE, "发至电脑");
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(Intent.createChooser(intent, "选择\"发送到我的电脑\""));

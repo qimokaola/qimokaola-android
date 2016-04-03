@@ -16,7 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.example.robin.papers.R;
-import com.example.robin.papers.demo.adapter.CourseNameAdapter;
+import com.example.robin.papers.demo.adapter.AcademyNameAdapter;
 import com.example.robin.papers.demo.model.CourseName;
 import com.example.robin.papers.demo.util.UrlUnicode;
 
@@ -163,7 +163,7 @@ public class FragmentResource extends Fragment {
         @Override
         protected void onPostExecute(List<CourseName> academyNameslist) {
             super.onPostExecute(academyNameslist);
-            CourseNameAdapter adapter = new CourseNameAdapter(getActivity(),academyNameslist);
+            AcademyNameAdapter adapter = new AcademyNameAdapter(getActivity(),academyNameslist);
             academyNameListView.setAdapter(adapter);
             refreshCircle.setVisibility(View.GONE);
             academyNameListView.setVisibility(View.VISIBLE);

@@ -16,7 +16,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.robin.papers.R;
-import com.example.robin.papers.demo.adapter.CourseNameAdapter;
+import com.example.robin.papers.demo.adapter.AcademyNameAdapter;
 import com.example.robin.papers.demo.model.CourseName;
 import com.example.robin.papers.demo.util.SystemBarTintManager;
 import com.example.robin.papers.demo.util.UrlUnicode;
@@ -193,7 +193,7 @@ public class CourseListActivity extends Activity {
         @Override
         protected void onPostExecute(List<CourseName> courseNameslist) {
             super.onPostExecute(courseNameslist);
-            CourseNameAdapter adapter = new CourseNameAdapter(CourseListActivity.this,courseNameslist);
+            AcademyNameAdapter adapter = new AcademyNameAdapter(CourseListActivity.this,courseNameslist);
             majorNameListView.setAdapter(adapter);
             shuxin.setVisibility(View.GONE);
             majorNameListView.setVisibility(View.VISIBLE);

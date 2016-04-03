@@ -16,12 +16,12 @@ import java.util.List;
  * Created by Robin on 2015/9/25.
  * 学院名列表适配器
  */
-public class CourseNameAdapter extends BaseAdapter {
+public class AcademyNameAdapter extends BaseAdapter {
 
     private List<CourseName> mlist;
     private LayoutInflater minflater;
 
-    public CourseNameAdapter(Context context, List<CourseName> data) {
+    public AcademyNameAdapter(Context context, List<CourseName> data) {
         mlist = data;
         minflater = LayoutInflater.from(context);
     }
@@ -47,7 +47,7 @@ public class CourseNameAdapter extends BaseAdapter {
         ViewHolder viewHolder = null;
         if (convertView==null){
             viewHolder = new ViewHolder();
-            convertView = minflater.inflate(R.layout.item_course_name,null);
+            convertView = minflater.inflate(R.layout.item_academy_name,null);
             viewHolder.tv_coursename = (TextView) convertView.findViewById(R.id.bookName);
             convertView.setTag(viewHolder);
         }else {

@@ -23,8 +23,8 @@
             android:layout_height="wrap_content"
             >
             <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:id="@+id/detailType"
                 android:src="@drawable/document_type_unknow"
                 android:layout_marginBottom="20dp"
@@ -34,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="hello world"
-                android:textSize="@dimen/abc_text_size_large_material"
+                android:textSize="18sp"
                 android:layout_marginTop="5dp"
                 android:id="@+id/detailname"
                 android:maxLines="2"

@@ -4,7 +4,8 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
 /**
- * Created by Robin on 2016/2/3.
+ * Created by Robin on 2016/3/30.
+ * 含中文的下载路径 的转码类
  */
 public class UrlUnicode {
     public static String encode(String url){

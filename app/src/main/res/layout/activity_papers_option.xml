@@ -26,7 +26,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:id="@+id/opDetailType"
-                android:src="@drawable/other"
+                android:src="@drawable/document_type_unknow"
                 android:layout_marginBottom="20dp"
                 />
 
@@ -34,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="opretion"
-                android:textSize="@dimen/abc_text_size_large_material"
+                android:textSize="18sp"
                 android:layout_marginTop="5dp"
                 android:id="@+id/opDetailname"
                 android:maxLines="2"

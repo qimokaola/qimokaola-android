@@ -35,6 +35,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+
+// 课程列表
 public class CourseListActivity extends Activity {
 
     //专业列表的listView

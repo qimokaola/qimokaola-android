@@ -97,7 +97,7 @@
             android:name=".demo.activity.WebViewActivity"
             android:label="@string/title_activity_xtfy" />
         <activity
-            android:name=".demo.activity.FragmentMe"
+            android:name=".demo.activity.FragmentService"
             android:label="@string/title_activity_fragment_service2"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".demo.activity.CourseListActivity" />

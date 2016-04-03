@@ -5,7 +5,7 @@
     android:background="#FFFFFF"
     >
 
-    <include layout="@layout/bar_my_fragment"/>
+    <include layout="@layout/bar_fragment_localresource"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

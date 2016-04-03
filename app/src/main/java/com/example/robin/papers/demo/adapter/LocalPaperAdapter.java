@@ -58,23 +58,23 @@ public class LocalPaperAdapter extends BaseAdapter {
         String name = cursor.getString(cursor.getColumnIndex(NotesDB.PAPERNAME));
         String time = cursor.getString(cursor.getColumnIndex(NotesDB.TIME));
         String type = cursor.getString(cursor.getColumnIndex(NotesDB.TYPE));
-        timeTv.setText("下载时间:"+time);
+        timeTv.setText(time);
         nameTv.setText(name);
-        typeImg.setImageResource(R.drawable.other);
+        typeImg.setImageResource(R.drawable.document_type_unknow);
         if (type.equals("doc")){
-            typeImg.setImageResource(R.drawable.doc);
+            typeImg.setImageResource(R.drawable.document_type_word);
         }
         if (type.equals("ppt")){
-            typeImg.setImageResource(R.drawable.ppt);
+            typeImg.setImageResource(R.drawable.document_type_ppt);
         }
         if (type.equals("pdf")){
-            typeImg.setImageResource(R.drawable.pdf);
+            typeImg.setImageResource(R.drawable.document_type_pdf);
         }
         if (type.equals("pptx")){
-            typeImg.setImageResource(R.drawable.ppt);
+            typeImg.setImageResource(R.drawable.document_type_ppt);
         }
         if (type.equals("docx")){
-            typeImg.setImageResource(R.drawable.doc);
+            typeImg.setImageResource(R.drawable.document_type_word);
         }
 
         return layout;

@@ -59,22 +59,22 @@ public class PapersListAdapter extends BaseAdapter {
         }
 
         if (mlist.get(position).type.equals("doc")){
-            viewHolder.docTypeImgView.setImageResource(R.drawable.doc);
+            viewHolder.docTypeImgView.setImageResource(R.drawable.document_type_word);
         }
         if (mlist.get(position).type.equals("docx")){
-            viewHolder.docTypeImgView.setImageResource(R.drawable.doc);
+            viewHolder.docTypeImgView.setImageResource(R.drawable.document_type_word);
         }
         if (mlist.get(position).type.equals("ppt")){
-            viewHolder.docTypeImgView.setImageResource(R.drawable.ppt);
+            viewHolder.docTypeImgView.setImageResource(R.drawable.document_type_ppt);
         }
         if (mlist.get(position).type.equals("pptx")){
-            viewHolder.docTypeImgView.setImageResource(R.drawable.ppt);
+            viewHolder.docTypeImgView.setImageResource(R.drawable.document_type_ppt);
         }
         if (mlist.get(position).type.equals("pdf")){
-            viewHolder.docTypeImgView.setImageResource(R.drawable.pdf);
+            viewHolder.docTypeImgView.setImageResource(R.drawable.document_type_pdf);
         }
         if (mlist.get(position).type.equals("zip")){
-            viewHolder.docTypeImgView.setImageResource(R.drawable.zip);
+            viewHolder.docTypeImgView.setImageResource(R.drawable.document_type_zip);
         }
 
 

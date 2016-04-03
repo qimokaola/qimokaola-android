@@ -8,13 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.Toast;
 
 import com.example.robin.papers.R;
 import com.example.robin.papers.demo.adapter.MyGridAdapter;
 import com.example.robin.papers.demo.util.MyGridView;
 
-public class FragmentMe extends Fragment{
+public class FragmentService extends Fragment{
 
     private MyGridView gridview_services,gridView_links;
 
@@ -56,7 +55,7 @@ public class FragmentMe extends Fragment{
     public int[] linksWebOrActivity = {1,1,1,1,1,1};
     public int[] imgs_links = { R.drawable.home,
             R.drawable.kong,
-            R.drawable.fanyi,
+            R.drawable.service_icon_translation,
             R.drawable.xtfy,
             R.drawable.yb,
             R.drawable.youlian

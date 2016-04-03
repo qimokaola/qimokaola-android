@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:background="#ffffff"
     >
-    <include layout="@layout/bar_resource_fragment"/>
+    <include layout="@layout/bar_fragment_resource"/>
 
     <LinearLayout
         android:id="@+id/shuxin1"

@@ -5,13 +5,15 @@
     android:orientation="horizontal"
     android:padding="4dp"
     android:background="#FFFFFF"
+    android:minHeight="56dp"
     >
 
     <ImageView
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:src="@drawable/other"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/document_type_unknow"
         android:id="@+id/docType"
+        android:layout_gravity="center_vertical"
         />
 
     <LinearLayout
@@ -28,19 +30,20 @@
             android:text="papersName"
             android:id="@+id/papersName"
             android:layout_marginLeft="4dp"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:maxLines="1"
             />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="papersSize"
+            android:text="downloadtime"
             android:id="@+id/papersSize"
             android:layout_marginLeft="4dp"
             android:textSize="14sp"
             android:maxLines="1"
             android:gravity="right"
+            android:layout_gravity="bottom"
             />
 
 

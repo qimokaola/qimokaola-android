@@ -61,22 +61,22 @@ public class OpActivity extends Activity {
 
         //设置类型图片
         if (type.equals("doc")){
-            typeIv.setImageResource(R.drawable.doc);
+            typeIv.setImageResource(R.drawable.document_type_word);
         }
         if (type.equals("docx")){
-            typeIv.setImageResource(R.drawable.doc);
+            typeIv.setImageResource(R.drawable.document_type_word);
         }
         if (type.equals("ppt")){
-            typeIv.setImageResource(R.drawable.ppt);
+            typeIv.setImageResource(R.drawable.document_type_ppt);
         }
         if (type.equals("pptx")){
-            typeIv.setImageResource(R.drawable.ppt);
+            typeIv.setImageResource(R.drawable.document_type_ppt);
         }
         if (type.equals("pdf")){
-            typeIv.setImageResource(R.drawable.pdf);
+            typeIv.setImageResource(R.drawable.document_type_pdf);
         }
         if (type.equals("zip")){
-            typeIv.setImageResource(R.drawable.zip);
+            typeIv.setImageResource(R.drawable.document_type_zip);
         }
 
         //返回按钮事件

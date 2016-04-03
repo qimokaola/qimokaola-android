@@ -7,7 +7,6 @@ import android.os.Build;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTabHost;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,7 +28,7 @@ public class MainActivity extends FragmentActivity {
 
     //三个切换的页面的fragment.
     private Class mFragmentArray[] = { FragmentResource.class,
-            FragmentLocalResource.class, FragmentMe.class };
+            FragmentLocalResource.class, FragmentService.class };
     //tab栏图标
     private int mImageArray[] = { R.drawable.select_bar_ziyuan, R.drawable.select_bar_bendi,  R.drawable.select_img_bottom_bar_fuwu};
 

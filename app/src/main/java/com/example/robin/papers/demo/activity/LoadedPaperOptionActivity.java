@@ -48,19 +48,19 @@ public class LoadedPaperOptionActivity extends Activity {
         tvName.setText(name);
 
         if (type.equals("doc")){
-            ivType.setImageResource(R.drawable.doc);
+            ivType.setImageResource(R.drawable.document_type_word);
         }
         if (type.equals("docx")){
-            ivType.setImageResource(R.drawable.doc);
+            ivType.setImageResource(R.drawable.document_type_word);
         }
         if (type.equals("ppt")){
-            ivType.setImageResource(R.drawable.ppt);
+            ivType.setImageResource(R.drawable.document_type_ppt);
         }
         if (type.equals("pptx")){
-            ivType.setImageResource(R.drawable.ppt);
+            ivType.setImageResource(R.drawable.document_type_ppt);
         }
         if (type.equals("pdf")){
-            ivType.setImageResource(R.drawable.pdf);
+            ivType.setImageResource(R.drawable.document_type_pdf);
         }
         back.setOnClickListener(new View.OnClickListener() {
             @Override

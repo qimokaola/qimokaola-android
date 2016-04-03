@@ -8,7 +8,7 @@
     <ImageView
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:background="@drawable/back"
+        android:background="@drawable/back_white"
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="10dp"
         android:layout_centerVertical="true"
@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="地址及联系"
-        android:textSize="22sp"
+        android:textSize="20sp"
         android:textColor="#FFFFFF"
         android:layout_centerInParent="true"
         />

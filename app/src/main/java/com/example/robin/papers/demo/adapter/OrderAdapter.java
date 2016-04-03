@@ -59,15 +59,15 @@ public class OrderAdapter extends BaseAdapter {
         double price_total = page * price;
         timeTv.setText("打印价 "+price_total+" 元 ");
         nameTv.setText(name);
-        typeImg.setImageResource(R.drawable.other);
+        typeImg.setImageResource(R.drawable.document_type_unknow);
         if (type.equals("doc")){
-            typeImg.setImageResource(R.drawable.doc);
+            typeImg.setImageResource(R.drawable.document_type_word);
         }
         if (type.equals("ppt")){
-            typeImg.setImageResource(R.drawable.ppt);
+            typeImg.setImageResource(R.drawable.document_type_ppt);
         }
         if (type.equals("pdf")){
-            typeImg.setImageResource(R.drawable.pdf);
+            typeImg.setImageResource(R.drawable.document_type_pdf);
         }
         return layout;
     }

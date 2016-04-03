@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:fitsSystemWindows="true"
     >
-    <include layout="@layout/bar_xtfy_activity"/>
+    <include layout="@layout/bar_activity_webpage"/>
 
     <WebView
         android:layout_width="match_parent"

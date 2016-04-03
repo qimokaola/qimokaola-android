@@ -6,14 +6,7 @@
     >
 
 
-    <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="@drawable/logo3"
-        android:layout_gravity="center_vertical"
-        android:layout_marginLeft="5dp"
-        android:layout_centerVertical="true"
-        />
+
 
     <LinearLayout
         android:id="@+id/zhoushu"
@@ -25,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="第20周"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:textColor="#FFFFFF"
             />
         <ImageView

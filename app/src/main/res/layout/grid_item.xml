@@ -10,12 +10,12 @@
         android:layout_height="fill_parent"
         android:layout_centerInParent="true"
         android:background="@drawable/bg_gv"
-        android:padding="12.0dip" >
+        android:padding="14dip" >
 
         <ImageView
             android:id="@+id/iv_item"
-            android:layout_width="42dip"
-            android:layout_height="42dip"
+            android:layout_width="38dip"
+            android:layout_height="38dip"
             android:layout_centerHorizontal="true"
             android:contentDescription="@string/app_name" />
 
@@ -28,7 +28,7 @@
             android:layout_marginTop="5.0dip"
             android:maxLines="1"
             android:textColor="@color/commo_text_color"
-            android:textSize="14.0sp" />
+            android:textSize="13sp" />
     </RelativeLayout>
 
 </RelativeLayout>

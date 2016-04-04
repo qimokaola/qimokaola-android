@@ -26,13 +26,13 @@ public class FragmentService extends Fragment{
     //福大服务的图标
     public int[] imgs_service = {
             R.drawable.cim,
-            R.drawable.zcpm,
+            R.drawable.service_cjcx,
             R.drawable.notcat,
-            R.drawable.ydy,
+            R.drawable.service_dysm,
             R.drawable.hdqczl,
             R.drawable.fxq,
-            R.drawable.jyhhz,
-            R.drawable.tousu,
+            R.drawable.service_fwrj,
+            R.drawable.service_jyfk,
             R.drawable.nothingicon
     };
     //福大服务的网页路径
@@ -56,9 +56,9 @@ public class FragmentService extends Fragment{
     public int[] imgs_links = { R.drawable.home,
             R.drawable.kong,
             R.drawable.service_icon_translation,
-            R.drawable.xtfy,
-            R.drawable.yb,
-            R.drawable.youlian
+            R.drawable.service_xtfy,
+            R.drawable.service_yb,
+            R.drawable.service_sqyl
             };
     public String[] urls_links = {
             "http://fzu2016.com/",

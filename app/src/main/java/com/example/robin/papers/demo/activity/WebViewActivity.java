@@ -47,7 +47,7 @@ public class WebViewActivity extends Activity {
 
 
 
-//        qq.setOnClickListener(new View.OnClickListener() {
+//        we.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
 //                //点击复制字符串到粘贴板

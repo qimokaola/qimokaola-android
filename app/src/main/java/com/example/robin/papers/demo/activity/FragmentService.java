@@ -25,15 +25,15 @@ public class FragmentService extends Fragment{
     public int[] serviceWebOrActivity = {1,1,1,1,1,1,1,1,3};
     //福大服务的图标
     public int[] imgs_service = {
-            R.drawable.cim,
+            R.drawable.service_sczy,
             R.drawable.service_cjcx,
-            R.drawable.notcat,
+            R.drawable.service_sphb,
             R.drawable.service_dysm,
-            R.drawable.hdqczl,
-            R.drawable.fxq,
+            R.drawable.service_qczz,
+            R.drawable.service_bbsq,
             R.drawable.service_fwrj,
             R.drawable.service_jyfk,
-            R.drawable.nothingicon
+            R.drawable.service_jqqd
     };
     //福大服务的网页路径
     public String[] urls_service = {
@@ -53,8 +53,8 @@ public class FragmentService extends Fragment{
             };
     //友情链接是网页还是本地activity  1为网页 2为activity 3是无响应
     public int[] linksWebOrActivity = {1,1,1,1,1,1};
-    public int[] imgs_links = { R.drawable.home,
-            R.drawable.kong,
+    public int[] imgs_links = { R.drawable.service_gg,
+            R.drawable.service_kjscx,
             R.drawable.service_icon_translation,
             R.drawable.service_xtfy,
             R.drawable.service_yb,

@@ -16,7 +16,7 @@
             android:layout_height="220dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/logosplashs"/>
+            android:src="@drawable/splash_first"/>
 
     </RelativeLayout>
 
@@ -29,7 +29,7 @@
             android:layout_width="170dp"
             android:layout_height="35.6dp"
             android:layout_centerInParent="true"
-            android:src="@drawable/shareba"/>
+            android:src="@drawable/splash_second"/>
 
         <!--<ImageView-->
             <!--android:layout_width="226.66dp"-->

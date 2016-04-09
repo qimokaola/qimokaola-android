@@ -56,6 +56,12 @@ public class OpActivity extends Activity {
         nameTv = (TextView) findViewById(R.id.opDetailname);
         opBack = (ImageView) findViewById(R.id.opBack);
 
+
+        //如果是压缩包,隐藏下载按钮
+        if (type.equals("zip")||type.equals("rar")||type.equals("7z")){
+            downloadBtn.setVisibility(View.GONE);
+        }
+
         //设置试卷名
         nameTv.setText(paperName);
 

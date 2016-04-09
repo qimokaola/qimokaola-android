@@ -49,20 +49,19 @@ public class FragmentService extends Fragment{
 
 
     //友情链接的图标和名字
-    public String[] text_links = { "Papers官网","空教室查询","百度翻译","新庭芳苑", "福大易班" ,"申请友链"
+    public String[] text_links = { "Papers官网","百度翻译","新庭芳苑", "福大易班" ,"申请友链","敬请期待"
             };
     //友情链接是网页还是本地activity  1为网页 2为activity 3是无响应
-    public int[] linksWebOrActivity = {1,1,1,1,1,1};
+    public int[] linksWebOrActivity = {1,1,1,1,1,3};
     public int[] imgs_links = { R.drawable.service_gg,
-            R.drawable.service_kjscx,
             R.drawable.service_icon_translation,
             R.drawable.service_xtfy,
             R.drawable.service_yb,
-            R.drawable.service_sqyl
+            R.drawable.service_sqyl,
+            R.drawable.service_jqqd
             };
     public String[] urls_links = {
             "http://fzu2016.com/",
-            "http://112.124.56.216:8080/Super/emptyClass/index.html?identity=3ABD9A9A6B4622BEFDD35CA21905C0CB",
             "http://fanyi.baidu.com/",
             "http://bbs.fzu.edu.cn/forum.php?forumlist=1&mobile=2",
             "http://59.77.233.33/",

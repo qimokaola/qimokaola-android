@@ -19,6 +19,7 @@ import com.example.robin.papers.demo.adapter.LocalPaperAdapter;
 import com.example.robin.papers.demo.db.NotesDB;
 import com.example.robin.papers.demo.db.OrderDB;
 
+// "已下载"页面    三个主tab之一
 public class FragmentLocalResource extends Fragment {
 
     private ListView localPapersListView;    //本地试卷列表view

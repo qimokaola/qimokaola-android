@@ -11,6 +11,8 @@ import android.widget.Button;
 import com.example.robin.papers.R;
 import com.umeng.update.UmengUpdateAgent;
 
+
+//快速注册页面  暂时弃用
 public class QuickLoginActivity extends Activity {
 
     private Button loginBtn;

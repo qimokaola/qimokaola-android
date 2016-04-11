@@ -13,6 +13,7 @@ import com.example.robin.papers.R;
 import com.example.robin.papers.demo.adapter.MyGridAdapter;
 import com.example.robin.papers.demo.util.MyGridView;
 
+// "校内服务"页面     三个主tab之一
 public class FragmentService extends Fragment{
 
     private MyGridView gridview_services,gridView_links;

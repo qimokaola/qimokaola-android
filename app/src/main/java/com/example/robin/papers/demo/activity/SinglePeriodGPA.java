@@ -1,6 +1,6 @@
 package com.example.robin.papers.demo.activity;
 
-// 单期绩点页
+// 单期绩点页面
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.os.Build;

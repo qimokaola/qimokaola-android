@@ -14,6 +14,7 @@ import com.example.robin.papers.R;
 import com.example.robin.papers.demo.adapter.OrderAdapter;
 import com.example.robin.papers.demo.db.OrderDB;
 
+//提交订单的页面
 public class OrdersSubmitActivity extends Activity {
 
     private Button submitOrdersBtn; //提交按钮

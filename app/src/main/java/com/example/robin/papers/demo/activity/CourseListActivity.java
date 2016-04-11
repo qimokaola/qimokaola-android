@@ -36,7 +36,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-// 课程列表
+// 课程列表页
 public class CourseListActivity extends Activity {
 
     //专业列表的listView

@@ -21,6 +21,8 @@ import com.umeng.analytics.MobclickAgent;
 
 import java.io.File;
 
+
+// "已下载" 页面里的文件操作页面    打开或者删除
 public class LoadedPaperOptionActivity extends Activity {
 
     private String type,ids,localurl,name;

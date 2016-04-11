@@ -13,6 +13,8 @@ import android.widget.RelativeLayout;
 import com.example.robin.papers.R;
 import com.umeng.analytics.MobclickAgent;
 
+
+//第二启动页 (放广告的页面)
 public class AdsActivity extends Activity {
     private RelativeLayout splash_layout;
 

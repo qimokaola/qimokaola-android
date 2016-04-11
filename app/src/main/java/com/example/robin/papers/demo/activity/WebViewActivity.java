@@ -26,6 +26,7 @@ import com.example.robin.papers.R;
 import com.example.robin.papers.demo.util.SystemBarTintManager;
 import com.umeng.analytics.MobclickAgent;
 
+//"校内服务"页面上的所有web链接打开的webview
 public class WebViewActivity extends Activity {
     private WebView webView;
     private ImageView webViewBack_Iv;

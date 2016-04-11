@@ -18,6 +18,8 @@ import com.example.robin.papers.R;
 import cn.smssdk.EventHandler;
 import cn.smssdk.SMSSDK;
 
+
+//注册页面  暂时弃用
 public class RegisterActivity extends Activity implements View.OnClickListener{
 
     private Button getCode,submit;

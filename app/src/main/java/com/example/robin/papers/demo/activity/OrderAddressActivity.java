@@ -9,6 +9,8 @@ import android.widget.ImageView;
 
 import com.example.robin.papers.R;
 
+
+//打印订单列表的页面   暂时弃用
 public class OrderAddressActivity extends Activity {
     private Button putBtn;
     private EditText userAddress,userName,userPhone, otherNeeds;

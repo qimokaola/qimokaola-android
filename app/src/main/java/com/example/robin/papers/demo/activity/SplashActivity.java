@@ -14,6 +14,7 @@ import com.umeng.analytics.MobclickAgent;
 import com.umeng.update.UmengUpdateAgent;
 
 
+// splash页面
 public class SplashActivity extends Activity {
 
     private LinearLayout splash_layout;

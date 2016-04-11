@@ -29,6 +29,8 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+
+// 资源页最后一级的 操作页面   下载到手机或者发送到电脑
 public class OpActivity extends Activity {
     private Button downloadBtn,sendBtn,printBtn;
     private ImageView typeIv,opBack;

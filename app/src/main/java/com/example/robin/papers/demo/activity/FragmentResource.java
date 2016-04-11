@@ -1,7 +1,7 @@
 package com.example.robin.papers.demo.activity;
 
 
-// "资源"fragment页面
+// "资源"页面       三个主tab之一
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.annotation.Nullable;

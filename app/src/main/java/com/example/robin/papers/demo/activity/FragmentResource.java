@@ -4,9 +4,10 @@ package com.example.robin.papers.demo.activity;
 // "资源"页面       三个主tab之一
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +19,15 @@ import android.widget.ListView;
 import com.example.robin.papers.R;
 import com.example.robin.papers.demo.adapter.AcademyNameAdapter;
 import com.example.robin.papers.demo.model.CourseName;
+import com.example.robin.papers.demo.model.PaperData;
+import com.example.robin.papers.demo.util.OkHttpClientManager;
 import com.example.robin.papers.demo.util.UrlUnicode;
+import com.google.gson.Gson;
+import com.squareup.okhttp.Call;
+import com.squareup.okhttp.Callback;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.Response;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -92,6 +101,27 @@ public class FragmentResource extends Fragment {
                 startActivity(toPapersListIntent);
             }
         });
+
+        OkHttpClientManager.getAsyn(getResources().getString(R.string.data_url),
+                new OkHttpClientManager.ResultCallback<PaperData>() {
+
+                    @Override
+                    public void onError(Request request, Exception e) {
+
+                    }
+
+                    @Override
+                    public void onResponse(PaperData data) {
+
+                        if (data != null) {
+                            Log.d("TestJson", "ss");
+                        }
+
+                    }
+                });
+
+
+
         return view;
     }
 
@@ -101,7 +131,6 @@ public class FragmentResource extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
-
 
 
     //给 json 文件的url地址 返回 塞满<实体类>的 List

@@ -38,6 +38,7 @@ public class OpActivity extends Activity {
     private String paperName, paperurl, wpurl, type;
     private OrderDB orderDB;
     private SQLiteDatabase dbWriter2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

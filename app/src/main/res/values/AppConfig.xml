@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="data_url">http://121.42.177.33:8082/files.json</string>
+
+</resources>

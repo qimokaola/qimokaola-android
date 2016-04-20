@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.TabHost;
 
 import com.example.robin.papers.R;
+import com.example.robin.papers.demo.ui.ResourceFragment;
 import com.example.robin.papers.demo.util.SystemBarTintManager;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.update.UmengUpdateAgent;

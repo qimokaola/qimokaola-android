@@ -98,6 +98,15 @@ public class OkHttpClientManager
         return execute.body().string();
     }
 
+    /**
+     * 同步的Get请求
+     * 并转化为具体类的对象
+     *
+     * @param url
+     * @param clazz
+     * @return Gson转换后的对象
+     * @throws IOException
+     */
     private <T> T _getAsObject(String url, Class<T> clazz) throws  IOException {
         return mGson.fromJson(_getAsString(url), clazz);
     }

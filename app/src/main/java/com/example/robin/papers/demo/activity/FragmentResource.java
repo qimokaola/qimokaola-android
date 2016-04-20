@@ -22,12 +22,9 @@ import com.example.robin.papers.demo.model.CourseName;
 import com.example.robin.papers.demo.model.PaperData;
 import com.example.robin.papers.demo.util.OkHttpClientManager;
 import com.example.robin.papers.demo.util.UrlUnicode;
-import com.google.gson.Gson;
-import com.squareup.okhttp.Call;
-import com.squareup.okhttp.Callback;
-import com.squareup.okhttp.OkHttpClient;
+
+
 import com.squareup.okhttp.Request;
-import com.squareup.okhttp.Response;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -46,6 +43,7 @@ public class FragmentResource extends Fragment {
 
     //学院列表的listView
     private ListView academyNameListView;
+
 
     //存放学院名的数组list
     private List<CourseName> academyNameList;
@@ -72,7 +70,7 @@ public class FragmentResource extends Fragment {
 
         academyNameListView = (ListView) view.findViewById(R.id.courseName);
 
-        uploadImg = (ImageView) view.findViewById(R.id.uploadImg_academy);
+        uploadImg = (ImageView) view.findViewById(R.id.uploadImage_Academy);
         uploadImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -101,26 +99,6 @@ public class FragmentResource extends Fragment {
                 startActivity(toPapersListIntent);
             }
         });
-
-        OkHttpClientManager.getAsyn(getResources().getString(R.string.data_url),
-                new OkHttpClientManager.ResultCallback<PaperData>() {
-
-                    @Override
-                    public void onError(Request request, Exception e) {
-
-                    }
-
-                    @Override
-                    public void onResponse(PaperData data) {
-
-                        if (data != null) {
-                            Log.d("TestJson", "ss");
-                        }
-
-                    }
-                });
-
-
 
         return view;
     }

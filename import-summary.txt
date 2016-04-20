@@ -7,26 +7,17 @@ The following files were *not* copied into the new Gradle project; you
 should evaluate whether these are still needed in your project and if
 so manually move them:
 
-* proguard-project.txt
+* LICENSE
+* pom.xml
 
 Moved Files:
 ------------
 Android Gradle projects use a different directory structure than ADT
 Eclipse projects. Here's how the projects were restructured:
 
-* AndroidManifest.xml => SMSSDK\src\main\AndroidManifest.xml
-* libs\arm64-v8a\libsmssdk.so => SMSSDK\src\main\jniLibs\arm64-v8a\libsmssdk.so
-* libs\armeabi-v7a\libsmssdk.so => SMSSDK\src\main\jniLibs\armeabi-v7a\libsmssdk.so
-* libs\armeabi\libsmssdk.so => SMSSDK\src\main\jniLibs\armeabi\libsmssdk.so
-* libs\mips64\libsmssdk.so => SMSSDK\src\main\jniLibs\mips64\libsmssdk.so
-* libs\mips\libsmssdk.so => SMSSDK\src\main\jniLibs\mips\libsmssdk.so
-* libs\MobLogCollector.jar => SMSSDK\libs\MobLogCollector.jar
-* libs\MobTools.jar => SMSSDK\libs\MobTools.jar
-* libs\SMSSDK-1.3.0.jar => SMSSDK\libs\SMSSDK-1.3.0.jar
-* libs\x86\libsmssdk.so => SMSSDK\src\main\jniLibs\x86\libsmssdk.so
-* libs\x86_64\libsmssdk.so => SMSSDK\src\main\jniLibs\x86_64\libsmssdk.so
-* res\ => SMSSDK\src\main\res\
-* src\ => SMSSDK\src\main\java\
+* AndroidManifest.xml => PullToRefresh/src/main/AndroidManifest.xml
+* res/ => PullToRefresh/src/main/res/
+* src/ => PullToRefresh/src/main/java/
 
 Next Steps:
 -----------

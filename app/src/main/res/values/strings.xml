@@ -34,4 +34,7 @@
     <string name="title_activity_kuai_di_dai_ling">KuaiDiDaiLingActivity</string>
     <string name="title_activity_fragment_service2">FragmentService2</string>
     <string name="title_activity_ads">AdsActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

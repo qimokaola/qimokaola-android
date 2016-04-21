@@ -23,7 +23,7 @@
             android:value="56128c76e0f55aa3ff006c5c" />
         <meta-data
             android:name="UMENG_MESSAGE_SECRET"
-            android:value="c2541a3865a5219a99f86aa10cffd85d"></meta-data>
+            android:value="c2541a3865a5219a99f86aa10cffd85d" />
         <meta-data
             android:name="UMENG_CHANNEL"
             android:value="Channel ID" />
@@ -104,7 +104,8 @@
         <activity android:name=".demo.activity.SinglePeriodGPA" />
         <activity
             android:name=".demo.activity.AdsActivity"
-            android:label="@string/title_activity_ads"></activity>
+            android:label="@string/title_activity_ads" />
+        <activity android:name=".demo.activity.PaperFileFolderActivity"></activity>
     </application>
 
 </manifest>

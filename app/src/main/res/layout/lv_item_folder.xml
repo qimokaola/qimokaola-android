@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:minHeight="50dp">
+    android:layout_height="60dp"
+    android:minHeight="60dp">
+
+    <ImageView
+        android:id="@+id/img_folder_icon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/document_type_folder"/>
 
     <TextView
-        android:id="@+id/tv_academy_name"
+        android:id="@+id/tv_folder_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="数学与计算机学院"
+        android:text="专业英语"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="15dp"/>
+        android:layout_toRightOf="@id/img_folder_icon"
+        android:layout_marginLeft="20dp"/>
 
     <ImageView
         android:layout_width="wrap_content"

@@ -25,6 +25,7 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.FrameLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -55,6 +56,33 @@ public class PullToRefreshListView extends PullToRefreshAdapterViewBase<ListView
 
 	public PullToRefreshListView(Context context, Mode mode, AnimationStyle style) {
 		super(context, mode, style);
+	}
+
+	/**
+	 * Pass-through method for {[url=home.php?mod=space&uid=91636]@link[/url] PullToRefreshBase#getRefreshableView()
+	 * getRefreshableView()}.
+	 * {@link AdapterView#setOnItemClickListener(OnItemClickListener)
+	 * setOnItemClickListener(listener)}. This is just for convenience!
+	 *
+	 * @param listener
+	 *            - OnItemClickListener to use
+	 */
+	public void setOnItemClickListener(final AdapterView.OnItemClickListener listener) {
+		mRefreshableView.setOnItemClickListener(listener);
+		if (listener == null) {
+			mRefreshableView.setOnItemClickListener(null);
+			return;
+		}
+
+		mRefreshableView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+									int position, long id) {
+				listener.onItemClick(parent, view,
+						position - mRefreshableView.getHeaderViewsCount(), id);
+			}
+		});
 	}
 
 	@Override

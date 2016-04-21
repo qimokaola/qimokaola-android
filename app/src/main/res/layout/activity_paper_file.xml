@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".demo.activity.PaperFileFolderActivity">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/bar_major_list_activity">
+
+    </include>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_list_view"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:gravity="fill"
+        android:layout_below="@id/title_bar"
+        ptr:ptrDrawable="@drawable/default_ptr_flip"
+        ptr:ptrAnimationStyle="flip" />
+
+</RelativeLayout>

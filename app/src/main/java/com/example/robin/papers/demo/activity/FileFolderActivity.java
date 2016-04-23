@@ -14,7 +14,8 @@ import android.widget.TextView;
 
 import com.example.robin.papers.R;
 import com.example.robin.papers.demo.model.PaperData;
-import com.example.robin.papers.demo.util.LogUtils;
+import com.example.robin.papers.demo.model.PaperFile;
+import com.example.robin.papers.demo.util.PaperFileUtils;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
@@ -24,15 +25,16 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class PaperFileFolderActivity extends BaseActivity {
+public class FileFolderActivity extends BaseActivity {
 
     public static String BasePath;
 
-    private static final String Tag = "PaperFileFolderActivityTag";
+    private static final String Tag = "FileFolderActivityTag";
 
     private List<PaperData.Files> mFiles;
     private List<PaperData.Folders> mFolders;
     private String mTitle;
+    private String mPath;
 
     private FileFolderAdapter mAdapter;
 
@@ -57,6 +59,7 @@ public class PaperFileFolderActivity extends BaseActivity {
         ButterKnife.bind(this);
         PaperData.Folders folder = getIntent().getParcelableExtra("folder");
         mTitle = folder.getName();
+        mPath = folder.getChild().getPath();
         mFiles = folder.getChild().getFiles();
         mFolders = folder.getChild().getFolders();
 
@@ -102,17 +105,27 @@ public class PaperFileFolderActivity extends BaseActivity {
                 if (isPositionInFolders(position)) {
 
                     PaperData.Folders folder = mFolders.get(position);
-                    Intent intent = new Intent(PaperFileFolderActivity.this, PaperFileFolderActivity.class);
+                    Intent intent = new Intent(FileFolderActivity.this, FileFolderActivity.class);
                     intent.putExtra("folder", folder);
                     startActivity(intent);
 
                 } else {
 
                     PaperData.Files file = mFiles.get(position - mFolders.size());
+                    PaperFile paperFile = new PaperFile(file, BasePath + mPath, mTitle);
+
+                    Intent intent = new Intent(FileFolderActivity.this, FileDetailActivity.class);
+                    intent.putExtra("file", paperFile);
+                    startActivityForResult(intent, 0);
                 }
 
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     private class FileFolderAdapter extends BaseAdapter {
@@ -203,7 +216,7 @@ public class PaperFileFolderActivity extends BaseActivity {
                 PaperData.Files file = mFiles.get(position - mFolders.size());
 
                 fileViewHolder.tvFileName.setText(file.getName());
-                fileViewHolder.tvFileSize.setText(file.getSize());
+                fileViewHolder.tvFileSize.setText(PaperFileUtils.sizeWithDouble(Double.valueOf(file.getSize())));
             }
 
             return convertView;

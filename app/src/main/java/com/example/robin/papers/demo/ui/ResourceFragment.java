@@ -16,7 +16,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.robin.papers.R;
-import com.example.robin.papers.demo.activity.PaperFileFolderActivity;
+import com.example.robin.papers.demo.activity.FileFolderActivity;
 import com.example.robin.papers.demo.model.PaperData;
 import com.example.robin.papers.demo.util.LogUtils;
 import com.example.robin.papers.demo.util.OkHttpClientManager;
@@ -84,10 +84,10 @@ public class ResourceFragment extends Fragment {
         pullRefreshListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getActivity(), PaperFileFolderActivity.class);
+                Intent intent = new Intent(getActivity(), FileFolderActivity.class);
                 PaperData.Folders folder = mData.getFolders().get(position);
                 intent.putExtra("folder", folder);
-                PaperFileFolderActivity.BasePath = mData.getBase();
+                FileFolderActivity.BasePath = mData.getBase();
                 startActivity(intent);
             }
         });

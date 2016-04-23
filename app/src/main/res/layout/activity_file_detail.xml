@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.example.robin.papers.demo.activity.FileDetailActivity">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/bar_major_list_activity"/>
+
+
+    <ImageView
+        android:id="@+id/img_file_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/document_type_movie"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/title_bar"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/tv_file_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="数据结构期末复习.zip"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/img_file_icon"
+        android:layout_marginTop="30dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_file_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="14.09MB"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp"
+        android:layout_below="@id/tv_file_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#f6f6f6">
+
+        <Button
+            android:id="@+id/btn_download"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/selector_universal_button"
+            android:text="下载至手机"
+            android:textColor="@color/white"
+            android:layout_marginLeft="40dp"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@drawable/selector_universal_button"
+            android:text="发送至电脑"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:layout_centerVertical="true"/>
+
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/pb_progress"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:max="100"
+            android:progressDrawable="@drawable/progress_bar_color"
+            android:visibility="invisible"/>
+
+
+        <TextView
+            android:id="@+id/tv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下载中...(0M/13.8M)"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/pb_progress"
+            android:layout_marginBottom="10dp"
+            android:visibility="invisible"/>
+
+
+        <ImageButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/cancel"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:visibility="invisible"/>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/black"
+        android:layout_above="@id/rl_tool_bar"/>
+
+</RelativeLayout>

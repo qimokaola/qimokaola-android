@@ -105,7 +105,8 @@
         <activity
             android:name=".demo.activity.AdsActivity"
             android:label="@string/title_activity_ads" />
-        <activity android:name=".demo.activity.PaperFileFolderActivity"></activity>
+        <activity android:name=".demo.activity.FileFolderActivity" />
+        <activity android:name=".demo.activity.FileDetailActivity"></activity>
     </application>
 
 </manifest>

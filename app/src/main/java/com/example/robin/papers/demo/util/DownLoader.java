@@ -1,6 +1,9 @@
 package com.example.robin.papers.demo.util;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
+import android.os.AsyncTask;
+import android.widget.ProgressBar;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -12,6 +15,14 @@ import java.net.URL;
  * Created by Robin on 2015/9/29.
  */
 public class DownLoader {
+
+    public interface DownloadTaskCallback {
+        public void onProgress(int hasWrite, int totalExpected);
+        public void onSuccess();
+        public void onFailure(Exception e);
+    }
+
+
     public static File downloadUpdate(String url, File file, ProgressDialog pd)  throws Exception{
         URL downloadURL = new URL(url);
         HttpURLConnection connection = (HttpURLConnection) downloadURL.openConnection();
@@ -34,6 +45,74 @@ public class DownLoader {
         os.close();
         is.close();
         return file;
+    }
+
+    public static Thread downloadPaperFile(final String url, final String destination, final DownloadTaskCallback callback) {
+        return new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+                InputStream is = null;
+                FileOutputStream os = null;
+                HttpURLConnection connection = null;
+                try {
+                    URL downloadURL = new URL(UrlUnicode.encode(url));
+                    connection = (HttpURLConnection) downloadURL.openConnection();
+                    connection.setRequestMethod("GET");
+                    connection.setReadTimeout(5000);
+                    connection.setConnectTimeout(3000);
+                    connection.setDoInput(true);
+                    connection.connect();
+                    is = connection.getInputStream();
+                    File file = new File(destination);
+                    os = new FileOutputStream(file);
+                    byte[] buffer = new byte[1024];
+                    int len;
+                    int totalLen = connection.getContentLength();
+                    int progress = 0;
+
+                    while((len = is.read(buffer)) != -1)  {
+                        os.write(buffer, 0, len);
+                        progress += len;
+
+                        if (callback instanceof DownloadTaskCallback) {
+                            callback.onProgress(progress, totalLen);
+                        }
+                    }
+                    os.flush();
+
+                    if (callback instanceof DownloadTaskCallback) {
+                        callback.onSuccess();
+                    }
+
+                }catch (Exception e) {
+
+                    if (callback instanceof DownloadTaskCallback) {
+                        callback.onFailure(e);
+                    }
+
+                } finally {
+
+                    try {
+
+                        if (os != null) {
+                            os.close();
+                        }
+
+                        if (is != null) {
+                            is.close();
+                        }
+
+                        if (connection != null) {
+                            connection.disconnect();
+                        }
+
+                    } catch (Exception e) {
+
+                    }
+                }
+            }
+        });
     }
 
     /**

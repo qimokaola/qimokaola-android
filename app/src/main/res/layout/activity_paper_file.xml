@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".demo.activity.PaperFileFolderActivity">
+    tools:context=".demo.activity.FileFolderActivity">
 
     <include
         android:id="@+id/title_bar"
-        layout="@layout/bar_major_list_activity">
+        layout="@layout/bar_major_list_activity"/>
 
-    </include>
+
 
     <com.handmark.pulltorefresh.library.PullToRefreshListView
         xmlns:ptr="http://schemas.android.com/apk/res-auto"

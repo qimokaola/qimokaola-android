@@ -217,6 +217,7 @@ public class FileFolderActivity extends BaseActivity {
 
                 fileViewHolder.tvFileName.setText(file.getName());
                 fileViewHolder.tvFileSize.setText(PaperFileUtils.sizeWithDouble(Double.valueOf(file.getSize())));
+                fileViewHolder.imgFileType.setImageResource(PaperFileUtils.parseImageResource(PaperFileUtils.typeWithFileName(file.getName())));
             }
 
             return convertView;

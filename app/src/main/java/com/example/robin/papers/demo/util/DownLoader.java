@@ -20,6 +20,7 @@ public class DownLoader {
         public void onProgress(int hasWrite, int totalExpected);
         public void onSuccess();
         public void onFailure(Exception e);
+        public void onInterruption();
     }
 
 
@@ -55,6 +56,7 @@ public class DownLoader {
                 InputStream is = null;
                 FileOutputStream os = null;
                 HttpURLConnection connection = null;
+                File file = null;
                 try {
                     URL downloadURL = new URL(UrlUnicode.encode(url));
                     connection = (HttpURLConnection) downloadURL.openConnection();
@@ -64,14 +66,14 @@ public class DownLoader {
                     connection.setDoInput(true);
                     connection.connect();
                     is = connection.getInputStream();
-                    File file = new File(destination);
+                    file = new File(destination);
                     os = new FileOutputStream(file);
                     byte[] buffer = new byte[1024];
                     int len;
                     int totalLen = connection.getContentLength();
                     int progress = 0;
 
-                    while((len = is.read(buffer)) != -1)  {
+                    while((len = is.read(buffer)) != -1 && ! Thread.currentThread().isInterrupted())  {
                         os.write(buffer, 0, len);
                         progress += len;
 
@@ -79,15 +81,29 @@ public class DownLoader {
                             callback.onProgress(progress, totalLen);
                         }
                     }
+
                     os.flush();
 
-                    if (callback instanceof DownloadTaskCallback) {
+                    if (Thread.currentThread().isInterrupted()) {
+
+                        //若停止下载,则删除存在的下载文件
+
+                        if (file != null && file.exists()) {
+                            file.delete();
+                        }
+
+                        if (callback instanceof DownloadTaskCallback) {
+                            callback.onInterruption();
+                        }
+                    }
+
+                    if (callback instanceof DownloadTaskCallback && ! Thread.currentThread().isInterrupted()) {
                         callback.onSuccess();
                     }
 
                 }catch (Exception e) {
 
-                    if (callback instanceof DownloadTaskCallback) {
+                    if (callback instanceof DownloadTaskCallback && ! Thread.currentThread().isInterrupted()) {
                         callback.onFailure(e);
                     }
 

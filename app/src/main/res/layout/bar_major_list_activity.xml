@@ -12,18 +12,7 @@
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="10dp"
         android:layout_centerVertical="true"
-        android:id="@+id/back_major_activity"
-        />
-
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="课程列表"
-        android:textSize="20sp"
-        android:textColor="#FFFFFF"
-        android:layout_centerInParent="true"
-        />
+        android:id="@+id/back_major_activity" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -36,5 +25,24 @@
         android:layout_centerVertical="true"
         android:id="@+id/uploadImg_course"
         />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/back_major_activity"
+        android:layout_toLeftOf="@id/uploadImg_course"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:ellipsize="middle"
+        android:singleLine="true"
+        android:text="课程列表"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        />
+
+
 
 </RelativeLayout>

@@ -18,7 +18,7 @@ public class DownLoader {
 
     public interface DownloadTaskCallback {
         public void onProgress(int hasWrite, int totalExpected);
-        public void onSuccess();
+        public void onSuccess(String successName);
         public void onFailure(Exception e);
         public void onInterruption();
     }
@@ -57,6 +57,8 @@ public class DownLoader {
                 FileOutputStream os = null;
                 HttpURLConnection connection = null;
                 File file = null;
+                String fileName = null;
+                String mPath = null;
                 try {
                     URL downloadURL = new URL(UrlUnicode.encode(url));
                     connection = (HttpURLConnection) downloadURL.openConnection();
@@ -66,7 +68,19 @@ public class DownLoader {
                     connection.setDoInput(true);
                     connection.connect();
                     is = connection.getInputStream();
+
                     file = new File(destination);
+                    fileName = file.getName();
+                    LogUtils.d("ActivityTag", "file name :" + fileName);
+                    mPath = destination.replace(fileName, "");
+                    LogUtils.d("ActivityTag", "file path :" + mPath);
+                    int suffix = 0;
+                    while (file.exists()) {
+                        String name = addSuffix(fileName, ++ suffix);
+                        LogUtils.d("ActivityTag", "文件名重复, 尝试使用:" + name);
+                        file = new File(mPath + name);
+                    }
+
                     os = new FileOutputStream(file);
                     byte[] buffer = new byte[1024];
                     int len;
@@ -98,13 +112,17 @@ public class DownLoader {
                     }
 
                     if (callback instanceof DownloadTaskCallback && ! Thread.currentThread().isInterrupted()) {
-                        callback.onSuccess();
+                        callback.onSuccess(file.getName());
                     }
 
                 }catch (Exception e) {
 
                     if (callback instanceof DownloadTaskCallback && ! Thread.currentThread().isInterrupted()) {
                         callback.onFailure(e);
+                    }
+
+                    if (file.exists()) {
+                        file.delete();
                     }
 
                 } finally {
@@ -129,6 +147,18 @@ public class DownLoader {
                 }
             }
         });
+    }
+
+    /**
+     * 为下载文件适当添加后缀以确定下载文件的储存名唯一
+     *
+     * @param name
+     * @return
+     */
+    public static String addSuffix(String name, int suffix) {
+        StringBuffer buffer = new StringBuffer(name);
+        int index = buffer.lastIndexOf(".");
+        return buffer.replace(index, index + 1, "(" + suffix + ").").toString();
     }
 
     /**

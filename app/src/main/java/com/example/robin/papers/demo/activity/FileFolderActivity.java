@@ -13,6 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.robin.papers.R;
+import com.example.robin.papers.demo.db.DownloadDB;
 import com.example.robin.papers.demo.model.PaperData;
 import com.example.robin.papers.demo.model.PaperFile;
 import com.example.robin.papers.demo.util.PaperFileUtils;
@@ -36,6 +37,8 @@ public class FileFolderActivity extends BaseActivity {
     private String mTitle;
     private String mPath;
 
+    private DownloadDB downloadDB;
+
     private FileFolderAdapter mAdapter;
 
     @Bind(R.id.back_major_activity)
@@ -57,6 +60,9 @@ public class FileFolderActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_paper_file);
         ButterKnife.bind(this);
+
+        downloadDB = DownloadDB.getInstance(getApplicationContext());
+
         PaperData.Folders folder = getIntent().getParcelableExtra("folder");
         mTitle = folder.getName();
         mPath = folder.getChild().getPath();
@@ -113,6 +119,7 @@ public class FileFolderActivity extends BaseActivity {
 
                     PaperData.Files file = mFiles.get(position - mFolders.size());
                     PaperFile paperFile = new PaperFile(file, BasePath + mPath, mTitle);
+                    paperFile.setDownload(downloadDB.isDownloaded(paperFile.getUrl()));
 
                     Intent intent = new Intent(FileFolderActivity.this, FileDetailActivity.class);
                     intent.putExtra("file", paperFile);
@@ -218,6 +225,7 @@ public class FileFolderActivity extends BaseActivity {
                 fileViewHolder.tvFileName.setText(file.getName());
                 fileViewHolder.tvFileSize.setText(PaperFileUtils.sizeWithDouble(Double.valueOf(file.getSize())));
                 fileViewHolder.imgFileType.setImageResource(PaperFileUtils.parseImageResource(PaperFileUtils.typeWithFileName(file.getName())));
+                fileViewHolder.tvFileDownloadTag.setVisibility(downloadDB.isDownloaded(BasePath + mPath + file.getName()) ? View.VISIBLE : View.INVISIBLE);
             }
 
             return convertView;

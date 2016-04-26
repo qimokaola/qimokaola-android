@@ -3,8 +3,10 @@ package com.example.robin.papers.demo.util;
 import com.example.robin.papers.R;
 
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
@@ -98,6 +100,11 @@ public class PaperFileUtils {
         } else {
             return (int)types.get("unknow");
         }
+    }
+
+    public static String getCurrentTime() {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        return simpleDateFormat.format(new Date());
     }
 
 }

@@ -24,7 +24,7 @@ public class PaperFile implements Parcelable {
         this.type = PaperFileUtils.typeWithFileName(this.name);
         this.size = PaperFileUtils.sizeWithDouble(Double.valueOf(file.getSize()));
         this.course = course;
-        this.download = Math.random() * 100 < 50.0;
+        this.download = false;
     }
 
     public String getName() {

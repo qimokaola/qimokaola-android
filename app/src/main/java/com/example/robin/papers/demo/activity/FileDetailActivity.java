@@ -9,12 +9,15 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.robin.papers.R;
+import com.example.robin.papers.demo.db.DownloadDB;
 import com.example.robin.papers.demo.model.PaperFile;
 import com.example.robin.papers.demo.util.DownLoader;
 import com.example.robin.papers.demo.util.LogUtils;
 import com.example.robin.papers.demo.util.PaperFileUtils;
 import com.example.robin.papers.demo.util.SDCardUtils;
 import com.example.robin.papers.demo.util.ToastUtils;
+
+import java.util.Arrays;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -23,9 +26,11 @@ import butterknife.OnClick;
 public class FileDetailActivity extends BaseActivity {
     public static final String Tag = "FileDetailActivityTag";
 
+    private DownloadDB downloadDB;
 
     private PaperFile mFile;
-    private boolean isDownload = false;
+    private String fileName = null;
+    private boolean isDownloading = false;
 
     private Thread downloadTask;
 
@@ -85,6 +90,8 @@ public class FileDetailActivity extends BaseActivity {
         setContentView(R.layout.activity_file_detail);
         ButterKnife.bind(this);
 
+        downloadDB = DownloadDB.getInstance(getApplicationContext());
+
         mFile = getIntent().getParcelableExtra("file");
 
         tvTitle.setText(mFile.getCourse());
@@ -94,7 +101,7 @@ public class FileDetailActivity extends BaseActivity {
         imgFileIcon.setImageResource(PaperFileUtils.parseImageResource(mFile.getType()));
 
         String type = mFile.getType().toLowerCase();
-        if (type.equals("zip") || type.equals("rar") || type.equals("7z")) {
+        if (Arrays.asList(new String[]{"zip", "rar", "7z"}).contains(type.toLowerCase())) {
             btnDownload.setEnabled(false);
         } else {
             btnDownload.setText(mFile.isDownload() ? "WPS打开" : "下载至手机");
@@ -106,7 +113,6 @@ public class FileDetailActivity extends BaseActivity {
         if (!mFile.isDownload()) {
 
             //未下载 执行下载进程
-
             setDownloadViewVisiablity();
             downloadTask = DownLoader.downloadPaperFile(mFile.getUrl(),
                     SDCardUtils.getDownloadPath() + mFile.getName(),
@@ -128,12 +134,17 @@ public class FileDetailActivity extends BaseActivity {
                         }
 
                         @Override
-                        public void onSuccess() {
+                        public void onSuccess(final String successName) {
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    LogUtils.d(Tag, "下载完成: " + mFile.getName());
+                                    LogUtils.d(Tag, "下载完成: " + successName);
+                                    fileName = successName;
+                                    mFile.setName(successName);
                                     mFile.setDownload(true);
+
+                                    downloadDB.addDownloadInfo(mFile);
+
                                     setDownloadViewVisiablity();
                                     downloadTask = null;
                                 }
@@ -165,6 +176,7 @@ public class FileDetailActivity extends BaseActivity {
                         }
                     });
             downloadTask.start();
+
         } else {
 
             //已下载打开文件
@@ -185,16 +197,16 @@ public class FileDetailActivity extends BaseActivity {
     }
 
     private void setDownloadViewVisiablity() {
-        isDownload = !isDownload;
+        isDownloading = !isDownloading;
 
         btnDownload.setText(mFile.isDownload() ? "WPS打开" : "下载至手机");
 
-        btnDownload.setVisibility(isDownload ? View.INVISIBLE : View.VISIBLE);
-        btnSend.setVisibility(isDownload ? View.INVISIBLE : View.VISIBLE);
+        btnDownload.setVisibility(isDownloading ? View.INVISIBLE : View.VISIBLE);
+        btnSend.setVisibility(isDownloading ? View.INVISIBLE : View.VISIBLE);
 
-        tvProgress.setVisibility(isDownload ? View.VISIBLE : View.INVISIBLE);
-        pbProgress.setVisibility(isDownload ? View.VISIBLE : View.INVISIBLE);
-        btnCancel.setVisibility(isDownload ? View.VISIBLE : View.INVISIBLE);
+        tvProgress.setVisibility(isDownloading ? View.VISIBLE : View.INVISIBLE);
+        pbProgress.setVisibility(isDownloading ? View.VISIBLE : View.INVISIBLE);
+        btnCancel.setVisibility(isDownloading ? View.VISIBLE : View.INVISIBLE);
     }
 
     @Override

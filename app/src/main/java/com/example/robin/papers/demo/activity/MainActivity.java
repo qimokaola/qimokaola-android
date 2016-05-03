@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.TabHost;
 
 import com.example.robin.papers.R;
+import com.example.robin.papers.demo.ui.DownloadedFragment;
 import com.example.robin.papers.demo.ui.ResourceFragment;
 import com.example.robin.papers.demo.util.SystemBarTintManager;
 import com.umeng.analytics.MobclickAgent;
@@ -29,7 +30,7 @@ public class MainActivity extends FragmentActivity {
 
     //三个切换的页面的fragment.
     private Class mFragmentArray[] = { ResourceFragment.class,
-            FragmentLocalResource.class, FragmentService.class };
+            DownloadedFragment.class, FragmentService.class };
     //tab栏图标
     private int mImageArray[] = { R.drawable.select_bar_ziyuan, R.drawable.select_bar_bendi,  R.drawable.select_img_bottom_bar_fuwu};
 

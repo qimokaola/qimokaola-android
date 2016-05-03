@@ -32,6 +32,8 @@ public class FileFolderActivity extends BaseActivity {
 
     private static final String Tag = "FileFolderActivityTag";
 
+    private static final int GO_TO_DETAIL = 0;
+
     private List<PaperData.Files> mFiles;
     private List<PaperData.Folders> mFolders;
     private String mTitle;
@@ -123,7 +125,7 @@ public class FileFolderActivity extends BaseActivity {
 
                     Intent intent = new Intent(FileFolderActivity.this, FileDetailActivity.class);
                     intent.putExtra("file", paperFile);
-                    startActivityForResult(intent, 0);
+                    startActivityForResult(intent, GO_TO_DETAIL);
                 }
 
             }
@@ -133,6 +135,19 @@ public class FileFolderActivity extends BaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode != RESULT_OK) {
+            return;
+        }
+
+        switch (requestCode) {
+            case GO_TO_DETAIL:
+
+                mAdapter.notifyDataSetChanged();
+
+                break;
+        }
+
     }
 
     private class FileFolderAdapter extends BaseAdapter {

@@ -147,7 +147,9 @@ public class ResourceFragment extends Fragment {
 
                         }
 
-                        pullRefreshListView.onRefreshComplete();
+                        if (pullRefreshListView != null) {
+                            pullRefreshListView.onRefreshComplete();
+                        }
 
                     }
                 });
@@ -159,7 +161,7 @@ public class ResourceFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
+       ButterKnife.unbind(this);
     }
 
     private class AcademyAdapter extends BaseAdapter {

@@ -1,6 +1,9 @@
 package com.example.robin.papers.demo.activity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -17,6 +20,7 @@ import com.example.robin.papers.demo.util.PaperFileUtils;
 import com.example.robin.papers.demo.util.SDCardUtils;
 import com.example.robin.papers.demo.util.ToastUtils;
 
+import java.io.File;
 import java.util.Arrays;
 
 import butterknife.Bind;
@@ -34,12 +38,12 @@ public class FileDetailActivity extends BaseActivity {
 
     private Thread downloadTask;
 
-    @Bind(R.id.back_major_activity)
-    ImageView backMajorActivity;
+    @Bind(R.id.iv_exit)
+    ImageView ivExit;
+    @Bind(R.id.tv_delete)
+    TextView tvDelete;
     @Bind(R.id.tv_title)
     TextView tvTitle;
-    @Bind(R.id.uploadImg_course)
-    TextView uploadImgCourse;
     @Bind(R.id.img_file_icon)
     ImageView imgFileIcon;
     @Bind(R.id.tv_file_name)
@@ -57,9 +61,16 @@ public class FileDetailActivity extends BaseActivity {
     @Bind(R.id.tv_file_size)
     TextView tvFileSize;
 
-    @OnClick(R.id.back_major_activity)
-    public void goBack() {
-        finish();
+    @OnClick({R.id.iv_exit, R.id.tv_delete})
+    public void barItemClicked(View view) {
+        switch (view.getId()) {
+            case  R.id.iv_exit:
+                finish();
+                break;
+            case  R.id.tv_delete:
+                deleteDownloadedFile();
+                break;
+        }
     }
 
     @OnClick({R.id.btn_download, R.id.btn_send, R.id.btn_cancel})
@@ -105,8 +116,35 @@ public class FileDetailActivity extends BaseActivity {
             btnDownload.setEnabled(false);
         } else {
             btnDownload.setText(mFile.isDownload() ? "WPS打开" : "下载至手机");
+            tvDelete.setVisibility(mFile.isDownload() ? View.VISIBLE : View.INVISIBLE);
         }
 
+    }
+
+    private void deleteDownloadedFile() {
+        new AlertDialog.Builder(this)
+                .setMessage("删除已下载文件?")
+                .setCancelable(true)
+                .setNegativeButton("取消", null)
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        File file = new File(SDCardUtils.getDownloadPath() + downloadDB.getFileName(mFile.getUrl()));
+                        if (file.exists()) {
+                            file.delete();
+                            LogUtils.d(Tag, "删除文件: " + file.getName());
+                        }
+                        downloadDB.removeDownloadInfo(mFile.getUrl());
+                        LogUtils.d(Tag, "清除数据库信息: " + mFile.getUrl());
+
+                        mFile.setDownload(false);
+
+                        refreshDownloadState();
+
+                        setResult(RESULT_OK);
+                    }
+                }).create().show();
     }
 
     private void startDownloadProcess() {
@@ -138,6 +176,9 @@ public class FileDetailActivity extends BaseActivity {
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
+
+                                    setResult(RESULT_OK);
+
                                     LogUtils.d(Tag, "下载完成: " + successName);
                                     fileName = successName;
                                     mFile.setName(successName);
@@ -179,12 +220,14 @@ public class FileDetailActivity extends BaseActivity {
 
         } else {
 
-            //已下载打开文件
+            // TODO: 16/5/3 添加打开文件逻辑
 
         }
     }
 
     private void sendToComputer() {
+
+        // TODO: 16/5/3 添加发送至电脑逻辑 
 
     }
 
@@ -199,7 +242,7 @@ public class FileDetailActivity extends BaseActivity {
     private void setDownloadViewVisiablity() {
         isDownloading = !isDownloading;
 
-        btnDownload.setText(mFile.isDownload() ? "WPS打开" : "下载至手机");
+        refreshDownloadState();
 
         btnDownload.setVisibility(isDownloading ? View.INVISIBLE : View.VISIBLE);
         btnSend.setVisibility(isDownloading ? View.INVISIBLE : View.VISIBLE);
@@ -207,6 +250,11 @@ public class FileDetailActivity extends BaseActivity {
         tvProgress.setVisibility(isDownloading ? View.VISIBLE : View.INVISIBLE);
         pbProgress.setVisibility(isDownloading ? View.VISIBLE : View.INVISIBLE);
         btnCancel.setVisibility(isDownloading ? View.VISIBLE : View.INVISIBLE);
+    }
+
+    private void refreshDownloadState() {
+        tvDelete.setVisibility(mFile.isDownload() ? View.VISIBLE : View.INVISIBLE);
+        btnDownload.setText(mFile.isDownload() ? "WPS打开" : "下载至手机");
     }
 
     @Override

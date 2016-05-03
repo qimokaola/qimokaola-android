@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:minHeight="60dp">
+
+    <ImageView
+        android:id="@+id/img_file_type"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/document_type_word"
+        android:scaleType="fitXY"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_file_name"
+        android:layout_toRightOf="@id/img_file_type"
+        android:layout_alignTop="@id/img_file_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="普通化学B复习题"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:padding="1dp"/>
+
+    <TextView
+        android:id="@+id/tv_download_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2015-10-22"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/img_file_type"
+        android:layout_marginRight="15dp"/>
+
+    <TextView
+        android:id="@+id/tv_course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="旧网盘数据"
+        android:textSize="14sp"
+        android:layout_alignBottom="@id/img_file_type"
+        android:layout_alignLeft="@id/tv_file_name"/>
+
+</RelativeLayout>

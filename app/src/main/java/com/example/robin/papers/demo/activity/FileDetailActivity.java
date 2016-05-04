@@ -2,6 +2,8 @@ package com.example.robin.papers.demo.activity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,6 +12,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.robin.papers.R;
 import com.example.robin.papers.demo.db.DownloadDB;
@@ -19,6 +22,7 @@ import com.example.robin.papers.demo.util.LogUtils;
 import com.example.robin.papers.demo.util.PaperFileUtils;
 import com.example.robin.papers.demo.util.SDCardUtils;
 import com.example.robin.papers.demo.util.ToastUtils;
+import com.example.robin.papers.demo.util.UrlUnicode;
 
 import java.io.File;
 import java.util.Arrays;
@@ -222,12 +226,32 @@ public class FileDetailActivity extends BaseActivity {
 
             // TODO: 16/5/3 添加打开文件逻辑
 
+            Uri uri = Uri.fromFile(new File(SDCardUtils.getDownloadPath() + downloadDB.getFileName(mFile.getUrl())));
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(uri);
+            startActivity(intent);
+
         }
     }
 
     private void sendToComputer() {
 
-        // TODO: 16/5/3 添加发送至电脑逻辑 
+        // TODO: 16/5/3 添加发送至电脑逻辑
+
+        try {
+
+            //发送paperurl到我的电脑;
+            Intent intent=new Intent(Intent.ACTION_SEND);
+            intent.setType("text/plain");
+            intent.setPackage("com.tencent.mobileqq");
+            intent.putExtra(Intent.EXTRA_SUBJECT, "分享");
+            intent.putExtra(Intent.EXTRA_TEXT, downloadDB.getFileName(mFile.getUrl()) + ": " + UrlUnicode.encode(mFile.getUrl()));
+            intent.putExtra(Intent.EXTRA_TITLE, "发至电脑");
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(Intent.createChooser(intent, "选择\"发送到我的电脑\""));
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(),"你没有安装QQ",Toast.LENGTH_LONG).show();
+        }
 
     }
 

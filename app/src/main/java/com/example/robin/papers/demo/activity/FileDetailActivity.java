@@ -224,7 +224,6 @@ public class FileDetailActivity extends BaseActivity {
 
         } else {
 
-            // TODO: 16/5/3 添加打开文件逻辑
 
             Uri uri = Uri.fromFile(new File(SDCardUtils.getDownloadPath() + downloadDB.getFileName(mFile.getUrl())));
             Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -236,7 +235,6 @@ public class FileDetailActivity extends BaseActivity {
 
     private void sendToComputer() {
 
-        // TODO: 16/5/3 添加发送至电脑逻辑
 
         try {
 

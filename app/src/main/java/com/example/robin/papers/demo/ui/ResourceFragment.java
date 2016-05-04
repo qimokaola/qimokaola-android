@@ -122,37 +122,44 @@ public class ResourceFragment extends Fragment {
     //加载文件数据
     private void loadPaperData() {
 
-        OkHttpClientManager.getAsyn(getResources().getString(R.string.data_url),
-                new OkHttpClientManager.ResultCallback<PaperData>() {
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
 
-                    @Override
-                    public void onError(Request request, Exception e) {
-                        ToastUtils.showShort(getActivity(), "获取数据失败,请确认网络连接正常");
-                    }
+                OkHttpClientManager.getAsyn(getResources().getString(R.string.data_url),
+                        new OkHttpClientManager.ResultCallback<PaperData>() {
 
-                    @Override
-                    public void onResponse(PaperData response) {
-
-                        if (response != null) {
-
-                            if (mData == null || ! mData.equals(response)) {
-
-                                LogUtils.d(Tag, "加载新数据");
-
-                                mData = response;
-                                mAdapter.notifyDataSetChanged();
-                            } else {
-                                LogUtils.d(Tag, "无最新数据,使用原本数据");
+                            @Override
+                            public void onError(Request request, Exception e) {
+                                ToastUtils.showShort(getActivity(), "获取数据失败,请确认网络连接正常");
                             }
 
-                        }
+                            @Override
+                            public void onResponse(PaperData response) {
 
-                        if (pullRefreshListView != null) {
-                            pullRefreshListView.onRefreshComplete();
-                        }
+                                if (response != null) {
 
-                    }
-                });
+                                    if (mData == null || ! mData.equals(response)) {
+
+                                        LogUtils.d(Tag, "加载新数据");
+
+                                        mData = response;
+                                        mAdapter.notifyDataSetChanged();
+                                    } else {
+                                        LogUtils.d(Tag, "无最新数据,使用原本数据");
+                                    }
+
+                                }
+
+                                if (pullRefreshListView != null) {
+                                    pullRefreshListView.onRefreshComplete();
+                                }
+
+                            }
+                        });
+
+            }
+        }, 1000);
 
     }
 

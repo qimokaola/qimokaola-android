@@ -91,6 +91,16 @@ public class SDCardUtils {
         return dbPath;
     }
 
+    public static String getADImagePath() {
+        String adImagePath = getAppPath() + "ad" + File.separator;
+        checkPath(adImagePath);
+        return adImagePath;
+    }
+
+    public static String getADImage() {
+        return getADImagePath() + "ad.png";
+    }
+
     /**
      * 获取SD卡的剩余容量 单位byte
      *

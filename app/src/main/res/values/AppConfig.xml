@@ -2,5 +2,7 @@
 <resources>
 
     <string name="data_url">http://121.42.177.33:8082/files.json</string>
+    <string name="remote_app_info_url">http://121.42.177.33/ads/ads-android.json</string>
+    <string name="ad_image_url">http://121.42.177.33/ads/ads.png</string>
 
 </resources>

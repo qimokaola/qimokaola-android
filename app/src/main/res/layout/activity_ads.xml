@@ -4,16 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.robin.papers.demo.activity.AdsActivity"
-    android:id="@+id/ads_activity"
-    android:background="@drawable/ads">
+    android:id="@+id/ads_activity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="广告:"
-        android:textSize="@dimen/abc_text_size_large_material"
-        android:textColor="@color/gray1"
-        android:layout_margin="10dp"
-        />
+    <ImageView
+        android:id="@+id/iv_ad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"/>
 
 </RelativeLayout>

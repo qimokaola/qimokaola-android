@@ -22,4 +22,5 @@
         ptr:ptrDrawable="@drawable/default_ptr_flip"
         ptr:ptrAnimationStyle="flip" />
 
+
 </RelativeLayout>

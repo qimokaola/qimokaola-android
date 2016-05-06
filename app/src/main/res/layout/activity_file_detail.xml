@@ -92,7 +92,6 @@
             android:id="@+id/tv_progress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="下载中...(0M/13.8M)"
             android:layout_centerHorizontal="true"
             android:layout_above="@id/pb_progress"
             android:layout_marginBottom="10dp"

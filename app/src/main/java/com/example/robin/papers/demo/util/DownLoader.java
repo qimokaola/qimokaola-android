@@ -2,6 +2,7 @@ package com.example.robin.papers.demo.util;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.nfc.Tag;
 import android.os.AsyncTask;
 import android.widget.ProgressBar;
 
@@ -117,11 +118,13 @@ public class DownLoader {
 
                 }catch (Exception e) {
 
+                    LogUtils.d("ActivityTag", e.getMessage());
+
                     if (callback instanceof DownloadTaskCallback && ! Thread.currentThread().isInterrupted()) {
                         callback.onFailure(e);
                     }
 
-                    if (file.exists()) {
+                    if (file != null && file.exists()) {
                         file.delete();
                     }
 

@@ -21,8 +21,6 @@ import com.example.robin.papers.demo.util.LogUtils;
 import com.example.robin.papers.demo.util.OkHttpClientManager;
 import com.example.robin.papers.demo.util.SDCardUtils;
 import com.squareup.okhttp.Request;
-import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Target;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.update.UmengUpdateAgent;
 

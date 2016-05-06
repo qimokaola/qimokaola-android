@@ -10,7 +10,6 @@ import android.widget.RelativeLayout;
 
 import com.example.robin.papers.R;
 import com.example.robin.papers.demo.util.SDCardUtils;
-import com.squareup.picasso.Picasso;
 import com.umeng.analytics.MobclickAgent;
 
 import java.io.File;

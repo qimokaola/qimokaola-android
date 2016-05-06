@@ -18,13 +18,16 @@ import com.example.robin.papers.demo.model.PaperData;
 import com.example.robin.papers.demo.model.PaperFile;
 import com.example.robin.papers.demo.util.PaperFileUtils;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
-import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
 import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import in.srain.cube.views.ptr.PtrFrameLayout;
+import in.srain.cube.views.ptr.PtrHandler;
+import in.srain.cube.views.ptr.header.StoreHouseHeader;
+import in.srain.cube.views.ptr.util.PtrLocalDisplay;
 
 public class FileFolderActivity extends BaseActivity {
 
@@ -49,8 +52,10 @@ public class FileFolderActivity extends BaseActivity {
     TextView tvTitle;
     @Bind(R.id.uploadImg_course)
     TextView uploadImgCourse;
-    @Bind(R.id.pull_refresh_list_view)
-    PullToRefreshListView pullRefreshListView;
+    @Bind(R.id.lv_file_folder)
+    ListView lvFileFolder;
+    @Bind(R.id.ptr_frame)
+    PtrFrameLayout ptrFrame;
 
     @OnClick(R.id.back_major_activity)
     public void goBack() {
@@ -74,42 +79,10 @@ public class FileFolderActivity extends BaseActivity {
         tvTitle.setText(mTitle);
 
         mAdapter = new FileFolderAdapter(this);
-        pullRefreshListView.setAdapter(mAdapter);
-        pullRefreshListView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ListView>() {
-            @Override
-            public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
-
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-
-                        try {
-                            Thread.sleep(1000);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                pullRefreshListView.onRefreshComplete();
-                            }
-                        });
-
-                    }
-                }).start();
-
-            }
-
-            @Override
-            public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
-
-            }
-        });
-        pullRefreshListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        lvFileFolder.setAdapter(mAdapter);
+        lvFileFolder.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
                 if (isPositionInFolders(position)) {
 
                     PaperData.Folders folder = mFolders.get(position);
@@ -127,7 +100,28 @@ public class FileFolderActivity extends BaseActivity {
                     intent.putExtra("file", paperFile);
                     startActivityForResult(intent, GO_TO_DETAIL);
                 }
+            }
+        });
 
+        final StoreHouseHeader header = new StoreHouseHeader(this);
+        header.setPadding(0,  PtrLocalDisplay.dp2px(15), 0, 0);
+        header.setTextColor(R.color.black);
+        header.initWithString("Papers");
+        ptrFrame.setHeaderView(header);
+        ptrFrame.addPtrUIHandler(header);
+        ptrFrame.setPtrHandler(new PtrHandler() {
+            @Override
+            public boolean checkCanDoRefresh(PtrFrameLayout frame, View content, View header) {
+                return true;
+            }
+            @Override
+            public void onRefreshBegin(final PtrFrameLayout frame) {
+                frame.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        frame.refreshComplete();
+                    }
+                }, 1000);
             }
         });
     }
@@ -222,7 +216,7 @@ public class FileFolderActivity extends BaseActivity {
                 if (type == FolderType) {
                     folderViewHolder = (FolderViewHolder) convertView.getTag();
                 } else {
-                    fileViewHolder = (FileViewHolder)convertView.getTag();
+                    fileViewHolder = (FileViewHolder) convertView.getTag();
                 }
 
             }

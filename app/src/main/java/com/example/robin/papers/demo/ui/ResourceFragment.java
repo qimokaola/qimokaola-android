@@ -337,7 +337,12 @@ public class ResourceFragment extends Fragment {
 
             }
         });
-        ptrFrame.autoRefresh(true);
+        ptrFrame.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+              ptrFrame.autoRefresh();
+            }
+        }, 100)
 
         return view;
     }

@@ -342,7 +342,7 @@ public class ResourceFragment extends Fragment {
             public void run() {
               ptrFrame.autoRefresh();
             }
-        }, 100)
+        }, 100);
 
         return view;
     }

@@ -17,7 +17,6 @@ import com.example.robin.papers.demo.db.DownloadDB;
 import com.example.robin.papers.demo.model.PaperData;
 import com.example.robin.papers.demo.model.PaperFile;
 import com.example.robin.papers.demo.util.PaperFileUtils;
-import com.handmark.pulltorefresh.library.PullToRefreshBase;
 
 import java.util.List;
 

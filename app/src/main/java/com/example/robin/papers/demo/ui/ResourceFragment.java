@@ -26,6 +26,7 @@ import com.squareup.okhttp.Request;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import in.srain.cube.views.ptr.PtrDefaultHandler;
 import in.srain.cube.views.ptr.PtrFrameLayout;
 import in.srain.cube.views.ptr.PtrHandler;
 import in.srain.cube.views.ptr.header.StoreHouseHeader;
@@ -228,7 +229,7 @@ import in.srain.cube.views.ptr.util.PtrLocalDisplay;
 //}
 
 
-public class ResourceFragment extends Fragment {
+public class ResourceFragment extends Fragment  {
 
     //为方便将Fragment在Tag中改为Activity,方便LogCat的过滤
     private static final String Tag = "ResourceActivityTag";
@@ -281,8 +282,8 @@ public class ResourceFragment extends Fragment {
             }
         });
 
-        final StoreHouseHeader header = new StoreHouseHeader(getActivity());
-        header.setPadding(0,  PtrLocalDisplay.dp2px(15), 0, 0);
+        StoreHouseHeader header = new StoreHouseHeader(getActivity());
+        header.setPadding(0, PtrLocalDisplay.dp2px(15), 0, PtrLocalDisplay.dp2px(15));
         header.initWithString("Papers");
         header.setTextColor(R.color.black);
         ptrFrame.setHeaderView(header);
@@ -290,7 +291,7 @@ public class ResourceFragment extends Fragment {
         ptrFrame.setPtrHandler(new PtrHandler() {
             @Override
             public boolean checkCanDoRefresh(PtrFrameLayout frame, View content, View header) {
-                return true;
+                return PtrDefaultHandler.checkContentCanBePulledDown(frame, content, header);
             }
             @Override
             public void onRefreshBegin(final PtrFrameLayout frame) {
@@ -302,6 +303,13 @@ public class ResourceFragment extends Fragment {
                             @Override
                             public void onError(Request request, Exception e) {
                                 ToastUtils.showShort(getActivity(), "获取数据失败,请确认网络连接正常");
+
+                                frame.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        frame.refreshComplete();
+                                    }
+                                }, 100);
                             }
 
                             @Override

@@ -23,6 +23,7 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import in.srain.cube.views.ptr.PtrDefaultHandler;
 import in.srain.cube.views.ptr.PtrFrameLayout;
 import in.srain.cube.views.ptr.PtrHandler;
 import in.srain.cube.views.ptr.header.StoreHouseHeader;
@@ -111,7 +112,7 @@ public class FileFolderActivity extends BaseActivity {
         ptrFrame.setPtrHandler(new PtrHandler() {
             @Override
             public boolean checkCanDoRefresh(PtrFrameLayout frame, View content, View header) {
-                return true;
+                return PtrDefaultHandler.checkContentCanBePulledDown(frame, content, header);
             }
             @Override
             public void onRefreshBegin(final PtrFrameLayout frame) {

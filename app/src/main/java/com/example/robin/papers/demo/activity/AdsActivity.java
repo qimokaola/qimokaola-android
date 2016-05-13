@@ -34,6 +34,7 @@ public class AdsActivity extends Activity {
         setContentView(R.layout.activity_ads);
         ButterKnife.bind(this);
 
+
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 

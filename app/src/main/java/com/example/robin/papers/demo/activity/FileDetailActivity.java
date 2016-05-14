@@ -243,7 +243,7 @@ public class FileDetailActivity extends BaseActivity {
             intent.setType("text/plain");
             intent.setPackage("com.tencent.mobileqq");
             intent.putExtra(Intent.EXTRA_SUBJECT, "分享");
-            intent.putExtra(Intent.EXTRA_TEXT, mFile.isDownload() ? downloadDB.getFileName(mFile.getUrl()) : mFile.getName() + ": " + UrlUnicode.encode(mFile.getUrl()));
+            intent.putExtra(Intent.EXTRA_TEXT, (mFile.isDownload() ? downloadDB.getFileName(mFile.getUrl()) : mFile.getName()) + ": " + UrlUnicode.encode(mFile.getUrl()));
             intent.putExtra(Intent.EXTRA_TITLE, "发至电脑");
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(Intent.createChooser(intent, "选择\"发送到我的电脑\""));

@@ -127,7 +127,7 @@ public class FileDetailActivity extends BaseActivity {
 
     private void deleteDownloadedFile() {
         new AlertDialog.Builder(this)
-                .setMessage("删除已下载文件?")
+                .setMessage("删除该文件?")
                 .setCancelable(true)
                 .setNegativeButton("取消", null)
                 .setPositiveButton("确定", new DialogInterface.OnClickListener() {
@@ -276,7 +276,7 @@ public class FileDetailActivity extends BaseActivity {
 
     private void refreshDownloadState() {
         tvDelete.setVisibility(mFile.isDownload() ? View.VISIBLE : View.INVISIBLE);
-        btnDownload.setText(mFile.isDownload() ? "WPS打开" : "下载至手机");
+        btnDownload.setText(mFile.isDownload() ? "打开文件" : "下载至手机");
     }
 
     @Override

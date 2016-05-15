@@ -31,6 +31,11 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+/**
+ *
+ * 文件详情页,在此可下载,分享,删除,打开文件
+ *
+ */
 public class FileDetailActivity extends BaseActivity {
     public static final String Tag = "FileDetailActivityTag";
 
@@ -118,13 +123,10 @@ public class FileDetailActivity extends BaseActivity {
         imgFileIcon.setImageResource(PaperFileUtils.parseImageResource(mFile.getType()));
 
         String type = mFile.getType().toLowerCase();
-        if (Arrays.asList(new String[]{"zip", "rar", "7z"}).contains(type.toLowerCase())) {
-            btnDownload.setEnabled(false);
-        } else {
-            btnDownload.setText(mFile.isDownload() ? "打开文件" : "下载到手机");
-            fileOpenTip.setVisibility(mFile.isDownload()? View.VISIBLE:View.INVISIBLE);
-            tvDelete.setVisibility(mFile.isDownload() ? View.VISIBLE : View.INVISIBLE);
-        }
+
+        btnDownload.setText(mFile.isDownload() ? "打开文件" : "下载到手机");
+        fileOpenTip.setVisibility(mFile.isDownload()? View.VISIBLE:View.INVISIBLE);
+        tvDelete.setVisibility(mFile.isDownload() ? View.VISIBLE : View.INVISIBLE);
 
     }
 
@@ -229,11 +231,13 @@ public class FileDetailActivity extends BaseActivity {
         } else {
 
 
-            Uri uri = Uri.fromFile(new File(SDCardUtils.getDownloadPath() + downloadDB.getFileName(mFile.getUrl())));
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(uri);
-            startActivity(intent);
+//            Uri uri = Uri.fromFile(new File(SDCardUtils.getDownloadPath() + downloadDB.getFileName(mFile.getUrl())));
+//            Intent intent = new Intent(Intent.ACTION_VIEW);
+//            intent.setData(uri);
+//            startActivity(intent);
 
+            File file = new File(SDCardUtils.getDownloadPath() + downloadDB.getFileName(mFile.getUrl()));
+            openFile(file);
         }
     }
 

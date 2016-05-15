@@ -25,6 +25,18 @@
         android:layout_centerInParent="true"
         />
 
+    <TextView
+        android:id="@+id/fqpc_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发起拼车"
+        android:visibility="gone"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        />
+
 
 
 </RelativeLayout>

@@ -48,7 +48,7 @@ public class FragmentService extends Fragment{
             "http://form.mikecrm.com/f.php?t=jFGpR4",
 
             "http://form.mikecrm.com/f.php?t=jFGpR4",
-            "http://form.mikecrm.com/f.php?t=jFGpR4",
+            "http://weixinpinpin.duapp.com/pinpinPage/index2.jsp",
             "http://form.mikecrm.com/f.php?t=jFGpR4",
 
             "http://form.mikecrm.com/f.php?t=Q8R9Ag",

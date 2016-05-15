@@ -30,7 +30,7 @@ import com.umeng.analytics.MobclickAgent;
 public class WebViewActivity extends Activity {
     private WebView webView;
     private ImageView webViewBack_Iv;
-    private TextView title_tv;
+    private TextView title_tv,fqpc_tv;
 
     private ValueCallback<Uri> mUploadMessage;
     private ValueCallback<Uri[]> mUploadCallbackAboveL;
@@ -45,7 +45,7 @@ public class WebViewActivity extends Activity {
 
         webViewBack_Iv = (ImageView) findViewById(R.id.xtfy_activity_back_iv);
         webView = (WebView) findViewById(R.id.xtfyWebView);
-
+        fqpc_tv = (TextView) findViewById(R.id.fqpc_tv);
 
 
 //        we.setOnClickListener(new View.OnClickListener() {

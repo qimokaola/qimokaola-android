@@ -37,6 +37,8 @@ public class FileFolderActivity extends BaseActivity {
 
     private static final int GO_TO_DETAIL = 0;
 
+    private TextView baocuo;
+
     private List<PaperData.Files> mFiles;
     private List<PaperData.Folders> mFolders;
     private String mTitle;
@@ -69,6 +71,18 @@ public class FileFolderActivity extends BaseActivity {
         ButterKnife.bind(this);
 
         downloadDB = DownloadDB.getInstance(getApplicationContext());
+
+        baocuo = (TextView) findViewById(R.id.uploadImg_course);
+        baocuo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转至报错web
+                Intent toWebIntent = new Intent(FileFolderActivity.this, WebViewActivity.class);
+                toWebIntent.putExtra("url", "http://robinchen.mikecrm.com/f.php?t=yFA9QI");
+                toWebIntent.putExtra("title", "报错");
+                startActivity(toWebIntent);
+            }
+        });
 
         PaperData.Folders folder = getIntent().getParcelableExtra("folder");
         mTitle = folder.getName();

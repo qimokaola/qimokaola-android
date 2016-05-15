@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.example.robin.papers.R;
 import com.example.robin.papers.demo.activity.FileFolderActivity;
+import com.example.robin.papers.demo.activity.WebViewActivity;
 import com.example.robin.papers.demo.model.PaperData;
 import com.example.robin.papers.demo.util.LogUtils;
 import com.example.robin.papers.demo.util.OkHttpClientManager;
@@ -240,6 +241,7 @@ public class ResourceFragment extends Fragment  {
     //数据适配器
     private AcademyAdapter mAdapter;
 
+    private ImageView uploadImg;
 
 
     /**
@@ -268,6 +270,18 @@ public class ResourceFragment extends Fragment  {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_resource2, container, false);
         ButterKnife.bind(this, view);
+
+        uploadImg = (ImageView) view.findViewById(R.id.uploadImage_Academy);
+        uploadImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转至上传web
+                Intent toWebIntent = new Intent(getActivity(), WebViewActivity.class);
+                toWebIntent.putExtra("url", "http://robinchen.mikecrm.com/f.php?t=ZmhFim");
+                toWebIntent.putExtra("title", "上传你的资源");
+                startActivity(toWebIntent);
+            }
+        });
 
         mAdapter = new AcademyAdapter();
         lvAcademy.setAdapter(mAdapter);

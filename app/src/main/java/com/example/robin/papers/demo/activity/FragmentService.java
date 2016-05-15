@@ -21,9 +21,9 @@ public class FragmentService extends Fragment{
 
     //福大服务的名字
     public String[] text_service = { "上传资源","成绩查询", "视频海报", "打印上门",  "器材正装", "表白神器",
-             "服务入驻" ,"建议反馈","敬请期待"};
+             "福大拼车","纪念品定制","相片文印","二手市场","服务入驻" ,"建议反馈"};
     //福大服务是网页还是本地activity  1为网页 2为activity 3是无响应
-    public int[] serviceWebOrActivity = {1,1,1,1,1,1,1,1,3};
+    public int[] serviceWebOrActivity = {1,1,1,1,1,1,1,1,1,1,1,1};
     //福大服务的图标
     public int[] imgs_service = {
             R.drawable.service_sczy,
@@ -32,9 +32,12 @@ public class FragmentService extends Fragment{
             R.drawable.service_dysm,
             R.drawable.service_qczz,
             R.drawable.service_bbsq,
+            R.drawable.service_fdpc,
+            R.drawable.service_jnpdz,
+            R.drawable.service_xpwy,
+            R.drawable.service_essc,
             R.drawable.service_fwrj,
-            R.drawable.service_jyfk,
-            R.drawable.service_jqqd
+            R.drawable.service_jyfk
     };
     //福大服务的网页路径
     public String[] urls_service = {
@@ -43,6 +46,12 @@ public class FragmentService extends Fragment{
             "http://form.mikecrm.com/f.php?t=HIJjLT",//不是猫
             "http://form.mikecrm.com/f.php?t=l7zy0t",
             "http://form.mikecrm.com/f.php?t=jFGpR4",
+
+            "http://form.mikecrm.com/f.php?t=jFGpR4",
+            "http://form.mikecrm.com/f.php?t=jFGpR4",
+            "http://form.mikecrm.com/f.php?t=jFGpR4",
+
+            "http://form.mikecrm.com/f.php?t=Q8R9Ag",
             "http://form.mikecrm.com/f.php?t=Q8R9Ag",
             "http://robinchen.mikecrm.com/f.php?t=ahOWL2",
             "http://robinchen.mikecrm.com/f.php?t=Fc00ps"
@@ -50,22 +59,17 @@ public class FragmentService extends Fragment{
 
 
     //友情链接的图标和名字
-    public String[] text_links = { "Papers官网","百度翻译","新庭芳苑", "福大易班" ,"申请友链","敬请期待"
+    public String[] text_links = { "Papers官网","百度翻译","申请友链"
             };
     //友情链接是网页还是本地activity  1为网页 2为activity 3是无响应
-    public int[] linksWebOrActivity = {1,1,1,1,1,3};
+    public int[] linksWebOrActivity = {1,1,1};
     public int[] imgs_links = { R.drawable.service_gg,
             R.drawable.service_icon_translation,
-            R.drawable.service_xtfy,
-            R.drawable.service_yb,
-            R.drawable.service_sqyl,
-            R.drawable.service_jqqd
+            R.drawable.service_sqyl
             };
     public String[] urls_links = {
             "http://fzu2016.com/",
             "http://fanyi.baidu.com/",
-            "http://bbs.fzu.edu.cn/forum.php?forumlist=1&mobile=2",
-            "http://59.77.233.33/",
             "http://robinchen.mikecrm.com/f.php?t=foqK6Y"
     };
 

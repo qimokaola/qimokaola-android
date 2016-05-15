@@ -39,6 +39,7 @@ public class FileDetailActivity extends BaseActivity {
     private PaperFile mFile;
     private String fileName = null;
     private boolean isDownloading = false;
+    private TextView fileOpenTip;
 
     private Thread downloadTask;
 
@@ -105,6 +106,7 @@ public class FileDetailActivity extends BaseActivity {
         setContentView(R.layout.activity_file_detail);
         ButterKnife.bind(this);
 
+        fileOpenTip = (TextView) findViewById(R.id.fileOpenTip);
         downloadDB = DownloadDB.getInstance(getApplicationContext());
 
         mFile = getIntent().getParcelableExtra("file");
@@ -119,7 +121,8 @@ public class FileDetailActivity extends BaseActivity {
         if (Arrays.asList(new String[]{"zip", "rar", "7z"}).contains(type.toLowerCase())) {
             btnDownload.setEnabled(false);
         } else {
-            btnDownload.setText(mFile.isDownload() ? "WPS打开" : "下载至手机");
+            btnDownload.setText(mFile.isDownload() ? "打开文件" : "下载到手机");
+            fileOpenTip.setVisibility(mFile.isDownload()? View.VISIBLE:View.INVISIBLE);
             tvDelete.setVisibility(mFile.isDownload() ? View.VISIBLE : View.INVISIBLE);
         }
 
@@ -147,6 +150,7 @@ public class FileDetailActivity extends BaseActivity {
                         refreshDownloadState();
 
                         setResult(RESULT_OK);
+                        finish();
                     }
                 }).create().show();
     }
@@ -276,7 +280,7 @@ public class FileDetailActivity extends BaseActivity {
 
     private void refreshDownloadState() {
         tvDelete.setVisibility(mFile.isDownload() ? View.VISIBLE : View.INVISIBLE);
-        btnDownload.setText(mFile.isDownload() ? "打开文件" : "下载至手机");
+        btnDownload.setText(mFile.isDownload() ? "打开文件" : "下载到手机");
     }
 
     @Override

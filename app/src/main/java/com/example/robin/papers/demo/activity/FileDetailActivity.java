@@ -44,7 +44,7 @@ public class FileDetailActivity extends BaseActivity {
     private PaperFile mFile;
     private String fileName = null;
     private boolean isDownloading = false;
-    private TextView fileOpenTip;
+    private TextView fileOpenTip,fileLocalTip;
 
     private Thread downloadTask;
 
@@ -112,6 +112,7 @@ public class FileDetailActivity extends BaseActivity {
         ButterKnife.bind(this);
 
         fileOpenTip = (TextView) findViewById(R.id.fileOpenTip);
+        fileLocalTip = (TextView) findViewById(R.id.fileLocalTip);
         downloadDB = DownloadDB.getInstance(getApplicationContext());
 
         mFile = getIntent().getParcelableExtra("file");
@@ -126,7 +127,9 @@ public class FileDetailActivity extends BaseActivity {
 
         btnDownload.setText(mFile.isDownload() ? "打开文件" : "下载到手机");
         fileOpenTip.setVisibility(mFile.isDownload()? View.VISIBLE:View.INVISIBLE);
+        fileLocalTip.setVisibility(mFile.isDownload()? View.INVISIBLE:View.VISIBLE);
         tvDelete.setVisibility(mFile.isDownload() ? View.VISIBLE : View.INVISIBLE);
+
 
     }
 

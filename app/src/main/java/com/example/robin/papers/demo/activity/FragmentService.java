@@ -20,7 +20,7 @@ public class FragmentService extends Fragment{
 
 
     //福大服务的名字
-    public String[] text_service = { "上传资源","成绩查询", "视频海报", "打印上门",  "器材正装", "表白神器",
+    public String[] text_service = { "上传资源","成绩查询", "视频海报", "打印上门",  "器材正装", "无人机服务",
              "福大拼车","纪念品定制","相片文印","二手市场","服务入驻" ,"建议反馈"};
     //福大服务是网页还是本地activity  1为网页 2为activity 3是无响应
     public int[] serviceWebOrActivity = {1,1,1,1,1,1,1,1,1,1,1,1};
@@ -46,13 +46,11 @@ public class FragmentService extends Fragment{
             "http://form.mikecrm.com/f.php?t=HIJjLT",//不是猫
             "http://form.mikecrm.com/f.php?t=l7zy0t",
             "http://form.mikecrm.com/f.php?t=jFGpR4",
-
             "http://form.mikecrm.com/f.php?t=jFGpR4",
             "http://weixinpinpin.duapp.com/pinpinPage/index2.jsp",
-            "http://form.mikecrm.com/f.php?t=jFGpR4",
-
-            "http://form.mikecrm.com/f.php?t=Q8R9Ag",
-            "http://form.mikecrm.com/f.php?t=Q8R9Ag",
+            "http://form.mikecrm.com/EpubV4",
+            "http://form.mikecrm.com/eVSwqa",
+            "http://bbs.fzu.edu.cn/forum.php?mod=forumdisplay&fid=311",
             "http://robinchen.mikecrm.com/f.php?t=ahOWL2",
             "http://robinchen.mikecrm.com/f.php?t=Fc00ps"
     };

@@ -103,6 +103,20 @@ public class WebViewActivity extends Activity {
             }
         });
 
+        Intent intent  = getIntent();
+        if (intent.getStringExtra("title").equals("福大拼车")){
+            fqpc_tv.setVisibility(View.VISIBLE);
+        }
+        fqpc_tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toWebIntent = new Intent(WebViewActivity.this, WebViewActivity.class);
+                toWebIntent.putExtra("url", "http://weixinpinpin.duapp.com/pinpinPage/creatTill.jsp");
+                toWebIntent.putExtra("title", "发布拼车帖");
+                startActivity(toWebIntent);
+            }
+        });
+
         webView.loadUrl(urls);
         webView.setWebViewClient(new WebViewClient() {
             @Override

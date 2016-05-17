@@ -69,9 +69,9 @@
             android:id="@+id/btn_send"
             android:layout_width="120dp"
             android:layout_height="50dp"
-            android:background="@drawable/selector_universal_button"
+            android:background="@drawable/selector_universal_white_button"
             android:text="发送到电脑"
-            android:textColor="@color/white"
+            android:textColor="@color/btn_blue"
             android:layout_alignParentRight="true"
             android:layout_marginRight="40dp"
             android:layout_centerVertical="true"/>

@@ -16,4 +16,5 @@
     <color name="commo_text_color">#ff333333</color>
     <color name="line">#ffd3dde6</color>
     <color name="black">#000000</color>
+    <color name="btn_blue">#1BBAF1</color>
 </resources>

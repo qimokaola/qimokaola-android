@@ -132,6 +132,29 @@ public class SplashActivity extends Activity {
 
                         LogUtils.d(Tag, response.getAdversion() + "");
 
+                        if (!response.isDisplay()) {
+
+                            new Thread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    try {
+                                        Thread.sleep(1000);
+                                    } catch (InterruptedException e) {
+                                        e.printStackTrace();
+                                    }
+
+                                    runOnUiThread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            nextActivity(MainActivity.class);
+                                        }
+                                    });
+                                }
+                            }).start();
+
+                            return;
+                        }
+
                         int loaclAdVersion = sp.getInt("ad_version", 0);
 
                         if (loaclAdVersion < response.getAdversion()) {

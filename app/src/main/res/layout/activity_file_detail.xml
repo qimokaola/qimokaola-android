@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:fitsSystemWindows="true"
-    tools:context="com.example.robin.papers.demo.activity.FileDetailActivity">
+    tools:context=".activity.FileDetailActivity">
 
     <include
         android:id="@+id/title_bar"

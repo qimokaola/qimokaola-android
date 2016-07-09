@@ -29,7 +29,7 @@
             android:value="Channel ID" />
 
         <activity
-            android:name=".demo.activity.SplashActivity"
+            android:name=".activity.SplashActivity"
             android:label="福大历年卷"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -39,7 +39,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".demo.activity.QuickLoginActivity"
+            android:name=".activity.QuickLoginActivity"
             android:label="登录"
             android:screenOrientation="portrait" />
         //添加短信验证所需的activity信息
@@ -50,19 +50,19 @@
             android:theme="@android:style/Theme.NoTitleBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".demo.activity.RegisterActivity"
+            android:name=".activity.RegisterActivity"
             android:label="@string/title_activity_register"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".demo.activity.PapersListActivity"
+            android:name=".activity.PapersListActivity"
             android:label="@string/title_activity_papers_list"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".demo.activity.MainActivity"
+            android:name=".activity.MainActivity"
             android:label="@string/title_activity_main"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".demo.activity.LoadedPaperOptionActivity"
+            android:name=".activity.LoadedPaperOptionActivity"
             android:label="@string/title_activity_paper_detail"
             android:screenOrientation="portrait" />
 
@@ -74,27 +74,27 @@
             android:name="com.umeng.update.UpdateDialogActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
-            android:name=".demo.activity.OpActivity"
+            android:name=".activity.OpActivity"
             android:label="@string/title_activity_op" />
         <activity
-            android:name=".demo.activity.OrdersSubmitActivity"
+            android:name=".activity.OrdersSubmitActivity"
             android:label="@string/title_activity_orders" />
         <activity
-            android:name=".demo.activity.OrderAddressActivity"
+            android:name=".activity.OrderAddressActivity"
             android:label="@string/title_activity_order_info" />
         <activity
-            android:name=".demo.activity.WebViewActivity"
+            android:name=".activity.WebViewActivity"
             android:label="@string/title_activity_xtfy" />
-        <activity android:name=".demo.activity.CourseListActivity" />
-        <activity android:name=".demo.activity.SinglePeriodGPA" />
+        <activity android:name=".activity.CourseListActivity" />
+        <activity android:name=".activity.SinglePeriodGPA" />
         <activity
-            android:name=".demo.activity.AdsActivity"
+            android:name=".activity.AdsActivity"
             android:label="@string/title_activity_ads" />
         <activity
-            android:name=".demo.activity.FileFolderActivity" />
+            android:name=".activity.FileFolderActivity" />
 
         <activity
-            android:name=".demo.activity.FileDetailActivity">
+            android:name=".activity.FileDetailActivity">
 
         </activity>
     </application>

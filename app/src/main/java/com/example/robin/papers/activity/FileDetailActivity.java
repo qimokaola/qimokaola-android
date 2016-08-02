@@ -35,9 +35,7 @@ import butterknife.OnClick;
  */
 public class FileDetailActivity extends BaseActivity {
     public static final String Tag = "FileDetailActivityTag";
-
     private DownloadDB downloadDB;
-
     private PaperFile mFile;
     private String fileName = null;
     private boolean isDownloading = false;

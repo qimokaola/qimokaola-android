@@ -10,9 +10,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="校内服务"
+        android:text="我和发现"
         android:textSize="20sp"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/blue"
         android:layout_centerInParent="true"
         />
 

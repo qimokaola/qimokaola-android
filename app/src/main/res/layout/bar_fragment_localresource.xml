@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="已下载"
         android:textSize="20sp"
-        android:textColor="@color/black"
+        android:textColor="@color/blue"
         android:layout_centerInParent="true"
         />
 

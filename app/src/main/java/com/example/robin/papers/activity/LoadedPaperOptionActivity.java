@@ -92,7 +92,7 @@ public class LoadedPaperOptionActivity extends Activity {
             SystemBarTintManager tintManager = new SystemBarTintManager(this);
             tintManager.setStatusBarTintEnabled(true);
             //使StatusBarTintView 和 actionbar的颜色保持一致，风格统一。
-            tintManager.setStatusBarTintResource(R.color.barcolor);
+            tintManager.setStatusBarTintResource(R.color.barcolorAndContent);
             // 设置状态栏的文字颜色
             tintManager.setStatusBarDarkMode(true, this);
         }

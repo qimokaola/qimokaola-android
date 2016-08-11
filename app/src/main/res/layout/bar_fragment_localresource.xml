@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="52dp"
-    android:background="@color/barcolor"
+    android:background="@color/barcolorAndContent"
     >
 
 
@@ -12,27 +12,9 @@
         android:layout_height="wrap_content"
         android:text="已下载"
         android:textSize="20sp"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/black"
         android:layout_centerInParent="true"
         />
 
-    <!--<ImageView-->
-        <!--android:layout_width="33dp"-->
-        <!--android:layout_height="33dp"-->
-        <!--android:id="@+id/printShop"-->
-        <!--android:src="@drawable/shopwite"-->
-        <!--android:layout_alignParentRight="true"-->
-        <!--android:layout_marginRight="15dp"-->
-        <!--android:layout_centerVertical="true"/>-->
-
-    <!--<ImageView-->
-        <!--android:visibility="gone"-->
-        <!--android:layout_width="33dp"-->
-        <!--android:layout_height="33dp"-->
-        <!--android:id="@+id/printShop"-->
-        <!--android:src="@drawable/shopwite"-->
-        <!--android:layout_alignParentRight="true"-->
-        <!--android:layout_marginRight="15dp"-->
-        <!--android:layout_centerVertical="true"/>-->
 
 </RelativeLayout>

@@ -40,6 +40,8 @@ public class SystemBarTintManager {
     private View mStatusBarTintView;
     private View mNavBarTintView;
     private static boolean sIsMiuiV6;
+    private static boolean sIsMiuiV8;
+    private static boolean sIsMiuiV7;
     private static String sNavBarOverride = null;
 
     static {
@@ -48,6 +50,8 @@ public class SystemBarTintManager {
             Class<?> sysClass = Class.forName("android.os.SystemProperties");
             methodGetter = sysClass.getDeclaredMethod("get", String.class);
             sIsMiuiV6 = "V6".equals((String) methodGetter.invoke(sysClass, "ro.miui.ui.version.name"));
+            sIsMiuiV7 = "V7".equals((String) methodGetter.invoke(sysClass, "ro.miui.ui.version.name"));
+            sIsMiuiV8 = "V8".equals((String) methodGetter.invoke(sysClass, "ro.miui.ui.version.name"));
         } catch (Exception e) {
             e.printStackTrace();
         }finally{
@@ -128,7 +132,7 @@ public class SystemBarTintManager {
      * @param activity
      */
     public void setStatusBarDarkMode(boolean darkmode, Activity activity) {
-        if (sIsMiuiV6) {
+        if (sIsMiuiV6||sIsMiuiV7||sIsMiuiV8) {
             Class<? extends Window> clazz = activity.getWindow().getClass();
             try {
                 int darkModeFlag = 0;

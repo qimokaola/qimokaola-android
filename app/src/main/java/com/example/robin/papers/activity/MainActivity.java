@@ -1,8 +1,6 @@
 package com.example.robin.papers.activity;
 
 import android.annotation.TargetApi;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.os.Build;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
@@ -41,8 +39,7 @@ public class MainActivity extends FragmentActivity {
     //tab栏的字
     private String mTextArray[] = { "资源", "本地", "服务"};
 
-    private static Boolean isExit = false;
-
+    private static Boolean isExit = false; //是否退出
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +56,7 @@ public class MainActivity extends FragmentActivity {
             SystemBarTintManager tintManager = new SystemBarTintManager(this);
             tintManager.setStatusBarTintEnabled(true);
             //使StatusBarTintView 和 actionbar的颜色保持一致，风格统一。
-            tintManager.setStatusBarTintResource(R.color.barcolor);
+            tintManager.setStatusBarTintResource(R.color.barcolorAndContent);
             // 设置状态栏的文字颜色
             tintManager.setStatusBarDarkMode(true, this);
         }

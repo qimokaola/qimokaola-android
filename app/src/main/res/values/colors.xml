@@ -4,6 +4,13 @@
 
 
 
+    <color name="barcolorAndContent">#F9F9F9</color>
+    <color name="background">#F9F9F9</color>
+    <color name="blue">#508CEE</color>
+    <color name="black">#2E2E2E</color>
+    <color name="gray">#929292</color>
+
+
 
 
     <color name="blue1">#077BD2</color>
@@ -15,12 +22,10 @@
     <color name="gray1">#FAFAFA</color>
     <color name="white">#ffffff</color>
     <color name="gray2">#F8F9FB</color>
-    <color name="barcolor">#199EFD</color>
-    <color name="bottombarcolor1">#F9F9F9</color>
     <color name="xixian">#A9ADB9</color>
     <color name="griditems_bg">#ffe8ecef</color>
     <color name="commo_text_color">#ff333333</color>
     <color name="line">#ffd3dde6</color>
-    <color name="black">#000000</color>
     <color name="btn_blue">#1BBAF1</color>
+
 </resources>

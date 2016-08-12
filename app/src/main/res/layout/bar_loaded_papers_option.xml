@@ -8,7 +8,7 @@
     <ImageView
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:background="@drawable/back_white"
+        android:background="@mipmap/back_blue"
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="10dp"
         android:layout_centerVertical="true"
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:text="详情"
         android:textSize="20sp"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/blue"
         android:layout_centerInParent="true"
         />
 

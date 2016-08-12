@@ -8,7 +8,7 @@
     <ImageView
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:background="@drawable/back_white"
+        android:background="@mipmap/back_blue"
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="10dp"
         android:layout_centerVertical="true"
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:text="报错"
         android:textSize="17sp"
-        android:textColor="#ffffff"
+        android:textColor="@color/blue"
         android:layout_alignParentRight="true"
         android:layout_marginRight="15dp"
         android:layout_centerVertical="true"
@@ -38,7 +38,7 @@
         android:singleLine="true"
         android:text="课程列表"
         android:textSize="20sp"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/blue"
         android:gravity="center"
         android:layout_centerInParent="true"
         />

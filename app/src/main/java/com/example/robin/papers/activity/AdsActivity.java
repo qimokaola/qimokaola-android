@@ -37,42 +37,6 @@ public class AdsActivity extends Activity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-
-//        //找到splash整个页面的linearlayout
-//        splash_layout = (RelativeLayout) findViewById(R.id.ads_activity);
-//
-//        //渐进的效果 两秒钟
-//        AlphaAnimation aa = new AlphaAnimation(0.0f, 1.0f);
-//        aa.setDuration(1000);
-//        splash_layout.startAnimation(aa);
-//        // 完成窗体的全屏显示 // 取消掉状态栏
-//
-//        //用线程让splash页面停留2秒钟再进入RegistActivity
-//        new Handler().postDelayed(new Runnable() {
-//
-//            @Override
-//            public void run() {
-////                Intent intent = new Intent();
-////                Class clazz;
-////                if (loginState){
-////                    clazz = MainActivity.class;
-////                }else{
-////                    clazz = QuickLoginActivity.class;
-////                }
-////                intent.setClass(SplashActivity.this,clazz);
-////                startActivity(intent);
-//                startActivity(new Intent(AdsActivity.this, MainActivity.class));
-//                AdsActivity.this.finish();
-//            }
-//
-//        }, 2000);
-
-
-//        Picasso.with(AdsActivity.this)
-//                .load(new File(SDCardUtils.getADImage()))
-//                .into(ivAd);
-
-
         File adImageFile = new File(SDCardUtils.getADImage());
 
         if (adImageFile.exists()) {

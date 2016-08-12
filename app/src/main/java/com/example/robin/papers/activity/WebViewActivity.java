@@ -45,16 +45,7 @@ public class WebViewActivity extends Activity {
         fqpc_tv = (TextView) findViewById(R.id.fqpc_tv);
 
 
-//        we.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                //点击复制字符串到粘贴板
-//                ClipboardManager copy = (ClipboardManager) WebViewActivity.this
-//                        .getSystemService(Context.CLIPBOARD_SERVICE);
-//                copy.setText("596954885");
-//                Toast.makeText(getApplicationContext(), "QQ号已复制到粘帖板", Toast.LENGTH_SHORT).show();
-//            }
-//        });
+
 
 
 

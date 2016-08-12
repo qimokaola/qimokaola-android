@@ -1,44 +1,14 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:id="@+id/splash_layout"
-    android:background="#199EFD"
+    android:background="@mipmap/splash"
     >
 
-    <RelativeLayout
-        android:paddingBottom="0dp"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="220dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/splash_first"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-        
-        <ImageView
-            android:layout_width="170dp"
-            android:layout_height="35.6dp"
+    <ImageView
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:src="@mipmap/ic_launcher"
             android:layout_centerInParent="true"
-            android:src="@drawable/splash_second"/>
-
-        <!--<ImageView-->
-            <!--android:layout_width="226.66dp"-->
-            <!--android:layout_height="25dp"-->
-            <!--android:layout_alignParentBottom="true"-->
-            <!--android:layout_centerHorizontal="true"-->
-            <!--android:src="@drawable/wangzhi"/>-->
-
-    </RelativeLayout>
-
-
-</LinearLayout>
+    />
+</RelativeLayout>

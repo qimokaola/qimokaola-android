@@ -34,7 +34,6 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -47,15 +46,15 @@
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name=".activity.PapersListActivity"
-            android:label="@string/title_activity_papers_list"
+            android:label="期末考啦"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.MainActivity"
-            android:label="@string/title_activity_main"
+            android:label="期末考啦"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.LoadedPaperOptionActivity"
-            android:label="@string/title_activity_paper_detail"
+            android:label="期末考啦"
             android:screenOrientation="portrait" />
 
         <service
@@ -67,21 +66,30 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
             android:name=".activity.OpActivity"
-            android:label="@string/title_activity_op" />
+            android:label="期末考啦"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity.WebViewActivity"
-            android:label="@string/title_activity_xtfy" />
-        <activity android:name=".activity.CourseListActivity" />
+            android:label="期末考啦"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.CourseListActivity"
+            android:label="期末考啦"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".activity.AdsActivity"
-            android:label="@string/title_activity_ads" />
+            android:label="期末考啦"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.FileFolderActivity" />
+            android:name=".activity.FileFolderActivity"
+            android:label="期末考啦"
+            android:screenOrientation="portrait"/>
 
         <activity
-            android:name=".activity.FileDetailActivity">
-
+            android:name=".activity.FileDetailActivity"
+            android:label="期末考啦"
+            android:screenOrientation="portrait">
         </activity>
+
     </application>
 
 </manifest>

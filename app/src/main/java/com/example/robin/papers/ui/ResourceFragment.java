@@ -77,6 +77,8 @@ public class ResourceFragment extends Fragment  {
         View view = inflater.inflate(R.layout.fragment_resource2, container, false);
         ButterKnife.bind(this, view);
 
+
+        //上传资源按钮
         uploadImg = (ImageView) view.findViewById(R.id.uploadImage_Academy);
         uploadImg.setOnClickListener(new View.OnClickListener() {
             @Override

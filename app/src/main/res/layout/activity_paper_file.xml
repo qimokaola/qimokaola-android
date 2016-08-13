@@ -8,7 +8,7 @@
 
     <include
         android:id="@+id/title_bar"
-        layout="@layout/bar_major_list_activity"/>
+        layout="@layout/bar_all_list_activity"/>
 
 
 

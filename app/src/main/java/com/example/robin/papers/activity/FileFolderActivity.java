@@ -100,7 +100,7 @@ public class FileFolderActivity extends BaseActivity {
                 if (isPositionInFolders(position)) {
 
                     PaperData.Folders folder = mFolders.get(position);
-                    Intent intent = new Intent(FileFolderActivity.this, FileFolderActivity.class);
+                    Intent intent = new Intent(FileFolderActivity.this, FileFolderActivity.class);   //进入下一级文件夹
                     intent.putExtra("folder", folder);
                     startActivity(intent);
 
@@ -110,7 +110,7 @@ public class FileFolderActivity extends BaseActivity {
                     PaperFile paperFile = new PaperFile(file, BasePath + mPath, mTitle);
                     paperFile.setDownload(downloadDB.isDownloaded(paperFile.getUrl()));
 
-                    Intent intent = new Intent(FileFolderActivity.this, FileDetailActivity.class);
+                    Intent intent = new Intent(FileFolderActivity.this, FileDetailActivity.class);   //直接进入文件详情
                     intent.putExtra("file", paperFile);
                     startActivityForResult(intent, GO_TO_DETAIL);
                 }

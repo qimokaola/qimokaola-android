@@ -50,7 +50,6 @@ public class BaseActivity extends Activity {
     }
 
     protected void openFile(File file){
-
         Intent intent = new Intent();
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         //设置intent的Action属性
@@ -61,7 +60,6 @@ public class BaseActivity extends Activity {
         intent.setDataAndType(/*uri*/Uri.fromFile(file), type);
         //跳转
         startActivity(Intent.createChooser(intent, "打开方式"));     //这里最好try一下，有可能会报错。 //比如说你的MIME类型是打开邮箱，但是你手机里面没装邮箱客户端，就会报错。
-
     }
 
     /**
@@ -69,7 +67,6 @@ public class BaseActivity extends Activity {
      * @param file
      */
     private String getMIMEType(File file) {
-
         String type="*/*";
         String fName = file.getName();
         //获取后缀名前的分隔符"."在fName中的位置。

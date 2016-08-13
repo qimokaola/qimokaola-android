@@ -36,7 +36,7 @@
         android:layout_marginRight="10dp"
         android:ellipsize="middle"
         android:singleLine="true"
-        android:text="课程列表"
+        android:text="文件详情"
         android:textSize="20sp"
         android:textColor="@color/blue"
         android:gravity="center"

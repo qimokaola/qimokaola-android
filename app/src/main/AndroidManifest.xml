@@ -46,10 +46,6 @@
             android:theme="@android:style/Theme.NoTitleBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".activity.PapersListActivity"
-            android:label="期末考啦"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".activity.MainActivity"
             android:label="期末考啦"
             android:screenOrientation="portrait" />
@@ -61,10 +57,6 @@
         <activity
             android:name="com.umeng.update.UpdateDialogActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-        <activity
-            android:name=".activity.OpActivity"
-            android:label="期末考啦"
-            android:screenOrientation="portrait" />
         <activity
             android:name=".activity.WebViewActivity"
             android:label="期末考啦"

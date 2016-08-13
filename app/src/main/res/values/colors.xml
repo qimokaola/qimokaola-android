@@ -4,9 +4,10 @@
 
 
 
-    <color name="barcolorAndContent">#F9F9F9</color>
+    <color name="white_content">#F9F9F9</color>
     <color name="background">#F9F9F9</color>
     <color name="blue">#508CEE</color>
+    <color name="bar_color">#508CEE</color>
     <color name="black">#2E2E2E</color>
     <color name="gray">#929292</color>
     <color name="xixian">#dea9adb9</color>

@@ -2,13 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="52dp"
-    android:background="@color/barcolorAndContent"
+    android:background="@color/bar_color"
     >
 
     <ImageView
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:background="@mipmap/back_blue"
+        android:background="@mipmap/back_white"
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="10dp"
         android:layout_centerVertical="true"
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:text="删除"
         android:textSize="17sp"
-        android:textColor="@color/blue"
+        android:textColor="@color/white"
         android:layout_alignParentRight="true"
         android:layout_marginRight="15dp"
         android:layout_centerVertical="true"
@@ -28,7 +28,7 @@
 
     <TextView
         android:id="@+id/tv_title"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/iv_exit"
         android:layout_toLeftOf="@id/tv_delete"
@@ -38,7 +38,7 @@
         android:singleLine="true"
         android:text="文件详情"
         android:textSize="20sp"
-        android:textColor="@color/blue"
+        android:textColor="@color/white_content"
         android:gravity="center"
         android:layout_centerInParent="true"
         />

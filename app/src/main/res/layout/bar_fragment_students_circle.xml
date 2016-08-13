@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="52dp"
-    android:background="@color/barcolorAndContent"
+    android:background="@color/bar_color"
     >
 
 
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="学生圈"
         android:textSize="20sp"
-        android:textColor="@color/blue"
+        android:textColor="@color/white_content"
         android:layout_centerInParent="true"
         />
 

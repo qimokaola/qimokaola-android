@@ -41,8 +41,12 @@ public class MainActivity extends FragmentActivity {
             };
 
     //tab栏图标
-    private int mImageArray[] = { R.drawable.select_bar_ziyuan, R.drawable.select_bar_bendi,  R.drawable.select_img_bottom_bar_fuwu,
-            R.drawable.select_img_bottom_bar_fuwu,R.drawable.select_img_bottom_bar_fuwu};
+    private int mImageArray[] = {
+            R.drawable.tab_resource,
+            R.drawable.tab_downloaded,
+            R.drawable.tab_students,
+            R.drawable.tab_discovery
+    };
 
     //tab栏的字
     private String mTextArray[] = { "资源", "已下载", "学生圈", "发现"};
@@ -64,7 +68,7 @@ public class MainActivity extends FragmentActivity {
             SystemBarTintManager tintManager = new SystemBarTintManager(this);
             tintManager.setStatusBarTintEnabled(true);
             //使StatusBarTintView 和 actionbar的颜色保持一致，风格统一。
-            tintManager.setStatusBarTintResource(R.color.barcolorAndContent);
+            tintManager.setStatusBarTintResource(R.color.blue);
             // 设置状态栏的文字颜色
             tintManager.setStatusBarDarkMode(true, this);
         }
@@ -103,7 +107,7 @@ public class MainActivity extends FragmentActivity {
             TabHost.TabSpec tabSpec = mTabHost.newTabSpec(mTextArray[i])
                     .setIndicator(getTabItemView(i));
             mTabHost.addTab(tabSpec, mFragmentArray[i], null);
-            mTabHost.getTabWidget().getChildAt(i).setBackgroundResource(R.drawable.selector_tab_background);
+            mTabHost.getTabWidget().getChildAt(i).setBackgroundResource(R.drawable.tab_background);
         }
     }
 

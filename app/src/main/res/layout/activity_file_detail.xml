@@ -29,9 +29,10 @@
         android:text="fileName.zip"
         android:textColor="@color/black"
         android:textSize="18sp"
+        android:gravity="center"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/img_file_icon"
-        android:layout_marginTop="10dp"/>
+        android:layout_margin="10dp"/>
 
 
     <TextView
@@ -42,8 +43,7 @@
         android:textColor="@android:color/darker_gray"
         android:textSize="16sp"
         android:layout_below="@id/tv_file_name"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"/>
+        android:layout_centerHorizontal="true"/>
 
 
 
@@ -53,7 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:background="#f6f6f6">
+        android:background="@color/background">
 
         <Button
             android:id="@+id/btn_download"
@@ -136,10 +136,6 @@
         android:layout_above="@id/rl_tool_bar"
         />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:background="@color/black"
-        android:layout_above="@id/rl_tool_bar"/>
+
 
 </RelativeLayout>

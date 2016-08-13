@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="52dp"
-    android:background="@color/barcolorAndContent"
+    android:background="@color/bar_color"
     >
 
     <LinearLayout
@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:text="福建农林大学"
             android:textSize="20sp"
-            android:textColor="@color/blue"
+            android:textColor="@color/white_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:layout_gravity="center_vertical"
@@ -24,7 +24,7 @@
         <ImageView
             android:layout_width="18dp"
             android:layout_height="28dp"
-            android:src="@mipmap/choose_school"
+            android:src="@mipmap/choose_school_white"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="3dp"
             />
@@ -34,7 +34,7 @@
     <ImageView
         android:layout_width="38dp"
         android:layout_height="38dp"
-        android:src="@mipmap/change_sort"
+        android:src="@mipmap/change_sort_white"
         android:layout_centerVertical="true"
         android:id="@+id/change_sort"
         android:layout_alignParentRight="true"
@@ -44,7 +44,7 @@
     <ImageView
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:src="@mipmap/search_course"
+        android:src="@mipmap/search_course_white"
         android:layout_centerVertical="true"
         android:id="@+id/search_course"
         android:layout_toLeftOf="@+id/uploadImage_Academy"
@@ -55,7 +55,7 @@
         android:layout_width="30dp"
         android:layout_height="35dp"
         android:id="@+id/uploadImage_Academy"
-        android:src="@drawable/upload"
+        android:src="@mipmap/upload_white"
         android:layout_centerVertical="true"
         android:layout_toLeftOf="@+id/change_sort"
         android:layout_marginRight="5dp"

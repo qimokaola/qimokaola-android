@@ -3,7 +3,7 @@
     android:layout_height="match_parent"
     android:id="@+id/splash_layout"
     android:orientation="vertical"
-    android:background="@mipmap/splashs"
+    android:background="@mipmap/splash"
     >
     <LinearLayout
         android:layout_width="match_parent"

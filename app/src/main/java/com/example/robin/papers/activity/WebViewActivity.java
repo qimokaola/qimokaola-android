@@ -24,10 +24,10 @@ import com.example.robin.papers.util.SystemBarTintManager;
 import com.umeng.analytics.MobclickAgent;
 
 //"校内服务"页面上的所有web链接打开的webview
-public class WebViewActivity extends Activity {
+public class WebViewActivity extends BaseActivity {
     private WebView webView;
     private ImageView webViewBack_Iv;
-    private TextView title_tv,fqpc_tv;
+    private TextView title_tv;
 
     private ValueCallback<Uri> mUploadMessage;
     private ValueCallback<Uri[]> mUploadCallbackAboveL;
@@ -42,7 +42,6 @@ public class WebViewActivity extends Activity {
 
         webViewBack_Iv = (ImageView) findViewById(R.id.xtfy_activity_back_iv);
         webView = (WebView) findViewById(R.id.xtfyWebView);
-        fqpc_tv = (TextView) findViewById(R.id.fqpc_tv);
 
 
 
@@ -92,18 +91,6 @@ public class WebViewActivity extends Activity {
         });
 
         Intent intent  = getIntent();
-        if (intent.getStringExtra("title").equals("福大拼车")){
-            fqpc_tv.setVisibility(View.VISIBLE);
-        }
-        fqpc_tv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent toWebIntent = new Intent(WebViewActivity.this, WebViewActivity.class);
-                toWebIntent.putExtra("url", "http://weixinpinpin.duapp.com/pinpinPage/creatTill.jsp");
-                toWebIntent.putExtra("title", "发布拼车帖");
-                startActivity(toWebIntent);
-            }
-        });
 
         webView.loadUrl(urls);
         webView.setWebViewClient(new WebViewClient() {
@@ -160,17 +147,6 @@ public class WebViewActivity extends Activity {
             }
         });
 
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            //状态栏透明 需要在创建SystemBarTintManager 之前调用。
-            setTranslucentStatus(true);
-            SystemBarTintManager tintManager = new SystemBarTintManager(this);
-            tintManager.setStatusBarTintEnabled(true);
-            //使StatusBarTintView 和 actionbar的颜色保持一致，风格统一。
-            tintManager.setStatusBarTintResource(R.color.barcolorAndContent);
-            // 设置状态栏的文字颜色
-            tintManager.setStatusBarDarkMode(true, this);
-        }
 
     }
 

@@ -34,6 +34,7 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -52,10 +53,6 @@
             android:name=".activity.MainActivity"
             android:label="期末考啦"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity.LoadedPaperOptionActivity"
-            android:label="期末考啦"
-            android:screenOrientation="portrait" />
 
         <service
             android:name="com.umeng.update.net.DownloadingService"
@@ -72,9 +69,6 @@
             android:name=".activity.WebViewActivity"
             android:label="期末考啦"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.CourseListActivity"
-            android:label="期末考啦"
-            android:screenOrientation="portrait"/>
         <activity
             android:name=".activity.AdsActivity"
             android:label="期末考啦"
@@ -82,14 +76,13 @@
         <activity
             android:name=".activity.FileFolderActivity"
             android:label="期末考啦"
-            android:screenOrientation="portrait"/>
-
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity.FileDetailActivity"
             android:label="期末考啦"
-            android:screenOrientation="portrait">
-        </activity>
-
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.DiscoveryFragment" />
+        <activity android:name=".ui.StudentsCircleFragment"></activity>
     </application>
 
 </manifest>

@@ -88,12 +88,6 @@ public class BaseActivity extends Activity {
         return type;
     }
 
-
-
-
-
-
-
     //MIME_MapTable是所有文件的后缀名所对应的MIME类型的一个String数组：
     private final String[][] MIME_MapTable={
             //{后缀名，MIME类型}

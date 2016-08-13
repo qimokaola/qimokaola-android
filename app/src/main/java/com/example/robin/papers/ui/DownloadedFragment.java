@@ -27,6 +27,7 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
+//主页面4个tab之一: "已下载"页面
 public class DownloadedFragment extends Fragment {
 
     private static final String Tag = "DownloadedActivityTag";

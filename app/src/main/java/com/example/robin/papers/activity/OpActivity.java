@@ -32,7 +32,7 @@ import java.util.Date;
 
 // 资源页最后一级的 操作页面   下载到手机或者发送到电脑
 public class OpActivity extends Activity {
-    private Button downloadBtn,sendBtn,printBtn;
+    private Button downloadBtn,sendBtn;
     private ImageView typeIv,opBack;
     private TextView nameTv;
     private String paperName, paperurl, wpurl, type;
@@ -54,7 +54,6 @@ public class OpActivity extends Activity {
         //初始化各控件
         downloadBtn = (Button) findViewById(R.id.opDownload);
         sendBtn = (Button) findViewById(R.id.opSend);
-        printBtn = (Button) findViewById(R.id.addToPrint);
         typeIv = (ImageView) findViewById(R.id.opDetailType);
         nameTv = (TextView) findViewById(R.id.opDetailname);
         opBack = (ImageView) findViewById(R.id.opBack);
@@ -135,28 +134,6 @@ public class OpActivity extends Activity {
             }
         });
 
-        //加入打印订单
-        printBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                //TODO: Check Error
-//                SQLiteDatabase dbWriter;
-//                dbWriter = orderDB.getWritableDatabase();
-//                ContentValues cv = new ContentValues();
-//                cv.put(OrderDB.PAPERNAME, paperName);
-//                cv.put(OrderDB.PAGE, -1);
-//                cv.put(OrderDB.COUNT, 1);
-//                dbWriter.insert(OrderDB.TABLE_NAME, null, cv);
-                  if (!type.equals("zip")){
-                      addToOrderDB();
-                  }else {
-                      Toast.makeText(getApplicationContext(),"zip文件不支持打印!!",Toast.LENGTH_LONG).show();
-                  }
-
-            }
-        });
-
-        //
         orderDB = new OrderDB(this);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
@@ -169,7 +146,6 @@ public class OpActivity extends Activity {
             // 设置状态栏的文字颜色
             tintManager.setStatusBarDarkMode(true, this);
         }
-
     }
 
     @TargetApi(19)

@@ -18,7 +18,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 
-//第二启动页 (放广告的页面)
+//第二启动页 (放广告的页面 缺省)
 public class AdsActivity extends Activity {
 
     @Bind(R.id.iv_ad)

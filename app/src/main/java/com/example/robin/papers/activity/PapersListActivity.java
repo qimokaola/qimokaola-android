@@ -151,24 +151,6 @@ public class PapersListActivity extends Activity {
         MobclickAgent.onPause(this);
     }
 
-
-
-
-
-
-    //以下代码废弃
-
-
-
-
-
-
-
-
-
-
-
-
     //显示下载还是发送到电脑的Dailog
     private void showDownPanel(final Context context,final String paperurl,final String paperName, final String type, final String wpurl) {
 

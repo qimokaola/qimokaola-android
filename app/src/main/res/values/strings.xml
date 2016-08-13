@@ -1,40 +1,20 @@
 <resources>
     <string name="app_name">期末考啦</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_regist">RegistActivity</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="title_activity_register">RegisterActivity</string>
-    <string name="title_activity_register2">RegisterActivity2</string>
-    <string name="title_activity_login">Login</string>
     <string name="title_activity_up_papers">UpPapers</string>
     <string name="title_activity_down_papers">DownPapers</string>
     <string name="title_activity_subject_name">SubjectName</string>
     <string name="title_activity_papers_list">PapersListActivity</string>
-    <string name="title_activity_my">My</string>
     <string name="button1">获取验证码</string>
     <string name="button2">已发送,注意接收</string>
     <string name="title_activity_paper_detail">PaperDetailActivity</string>
     <string name="title_activity_up_detail">upDetail</string>
-    <string name="title_activity_buy">BuyActivity</string>
     <string name="title_activity_op">OpActivity</string>
-    <string name="title_activity_print_shop">PrintShop</string>
-    <string name="title_activity_orders">OrdersActivity</string>
-    <string name="title_activity_time_table">TimeTable</string>
-    <string name="title_activity_order_info">OrderInfo</string>
-    <string name="title_activity_xtfy">Xtfy</string>
-    <string name="title_activity_buy_exp">BuyExp</string>
-    <string name="title_activity_submit_success">Submit_success</string>
-    <string name="title_activity_submit_fail">Submit_fail</string>
-    <string name="title_activity_cloud_print">CloudPrintActivity</string>
-    <string name="title_activity_kuai_di">KuaiDiActivity</string>
-    <string name="title_activity_fan_kui_he_zuo">FanKuiHeZuo</string>
     <string name="title_activity_web_activity_test">WebActivityTest</string>
-    <string name="title_activity_qi_cai_zu_lin">QiCaiZuLinActivity</string>
-    <string name="title_activity_kuai_di_dai_ling">KuaiDiDaiLingActivity</string>
-    <string name="title_activity_fragment_service2">FragmentService2</string>
     <string name="title_activity_ads">AdsActivity</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

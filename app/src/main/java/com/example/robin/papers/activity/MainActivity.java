@@ -15,8 +15,10 @@ import android.widget.TabHost;
 import android.widget.Toast;
 
 import com.example.robin.papers.R;
+import com.example.robin.papers.ui.DiscoveryFragment;
 import com.example.robin.papers.ui.DownloadedFragment;
 import com.example.robin.papers.ui.ResourceFragment;
+import com.example.robin.papers.ui.StudentsCircleFragment;
 import com.example.robin.papers.util.SystemBarTintManager;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.update.UmengUpdateAgent;
@@ -30,14 +32,20 @@ public class MainActivity extends FragmentActivity {
     private FragmentTabHost mTabHost;
     private LayoutInflater mLayoutInflater;
 
-    //三个切换的页面的fragment.
-    private Class mFragmentArray[] = { ResourceFragment.class,
-            DownloadedFragment.class, FragmentService.class };
+    //4个切换的页面的fragment.
+    private Class mFragmentArray[] = {
+            ResourceFragment.class,
+            DownloadedFragment.class,
+            StudentsCircleFragment.class,
+            DiscoveryFragment.class
+            };
+
     //tab栏图标
-    private int mImageArray[] = { R.drawable.select_bar_ziyuan, R.drawable.select_bar_bendi,  R.drawable.select_img_bottom_bar_fuwu};
+    private int mImageArray[] = { R.drawable.select_bar_ziyuan, R.drawable.select_bar_bendi,  R.drawable.select_img_bottom_bar_fuwu,
+            R.drawable.select_img_bottom_bar_fuwu,R.drawable.select_img_bottom_bar_fuwu};
 
     //tab栏的字
-    private String mTextArray[] = { "资源", "本地", "服务"};
+    private String mTextArray[] = { "资源", "已下载", "学生圈", "发现"};
 
     private static Boolean isExit = false; //是否退出
 

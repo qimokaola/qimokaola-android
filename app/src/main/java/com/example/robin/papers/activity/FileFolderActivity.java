@@ -67,7 +67,7 @@ public class FileFolderActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_paper_file);
+        setContentView(R.layout.activity_all_list);
         ButterKnife.bind(this);
 
         downloadDB = DownloadDB.getInstance(getApplicationContext());

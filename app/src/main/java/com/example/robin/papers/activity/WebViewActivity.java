@@ -38,7 +38,7 @@ public class WebViewActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_web_page);
+        setContentView(R.layout.activity_web);
 
         webViewBack_Iv = (ImageView) findViewById(R.id.xtfy_activity_back_iv);
         webView = (WebView) findViewById(R.id.xtfyWebView);

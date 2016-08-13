@@ -3,9 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.DownloadedFragment">
+    tools:context=".ui.DownloadedFragment"
+    android:background="@color/background"
+    >
 
-    <include layout="@layout/bar_fragment_localresource"/>
+    <include layout="@layout/bar_fragment_downloaded"/>
 
     <FrameLayout
         android:layout_width="match_parent"

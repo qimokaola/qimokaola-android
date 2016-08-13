@@ -10,14 +10,6 @@ import com.example.robin.papers.util.PaperFileUtils;
  */
 public class PaperFile implements Parcelable {
 
-//    public static final String TABLE_NAME = "download_info";
-//    public static final String ID = "id";
-//    public static final String NAME = "name";
-//    public static final String COURSE = "course";
-//    public static final String SIZE = "size";
-//    public static final String TYPE = "type";
-//    public static final String URL = "url";
-//    public static final String TIME = "time";
 
     private String name;
     private String url;

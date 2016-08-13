@@ -16,7 +16,7 @@
         android:id="@+id/tv_folder_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="专业英语"
+        android:text="文件夹名"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:layout_centerVertical="true"

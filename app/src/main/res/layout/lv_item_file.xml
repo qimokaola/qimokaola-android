@@ -18,7 +18,7 @@
         android:id="@+id/tv_file_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="普通化学B复习题"
+        android:text="文件名"
         android:textColor="@color/black"
         android:textSize="17sp"
         android:singleLine="true"

@@ -2,21 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@color/barcolorAndContent"
     android:gravity="center">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.5px"
-        android:background="@color/xixian"
-        ></View>
+
 
     <ImageView
         android:id="@+id/imageview"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:focusable="false"
-        android:background="@color/background"
         />
 
     <!--<TextView-->

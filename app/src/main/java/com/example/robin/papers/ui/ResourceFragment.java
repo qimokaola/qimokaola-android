@@ -106,7 +106,7 @@ public class ResourceFragment extends Fragment  {
 
         StoreHouseHeader header = new StoreHouseHeader(getActivity());
         header.setPadding(0, PtrLocalDisplay.dp2px(15), 0, PtrLocalDisplay.dp2px(15));
-        header.initWithString("Papers");
+        header.initWithString("finalexam.cn");
         header.setTextColor(R.color.black);
         ptrFrame.setHeaderView(header);
         ptrFrame.addPtrUIHandler(header);

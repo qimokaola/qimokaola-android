@@ -9,7 +9,7 @@
         android:id="@+id/tv_academy_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="数学与计算机学院"
+        android:text="学院名称"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:layout_centerVertical="true"

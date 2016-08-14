@@ -23,10 +23,6 @@ public class AdsActivity extends Activity {
 
     @Bind(R.id.iv_ad)
     ImageView ivAd;
-    @Bind(R.id.ads_activity)
-    RelativeLayout adsActivity;
-
-    private RelativeLayout splash_layout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -22,7 +22,7 @@ public class BaseActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setColor();
     }
 
     public void setBarColor(int resID) {
@@ -37,6 +37,10 @@ public class BaseActivity extends Activity {
             // 设置状态栏的文字颜色
             tintManager.setStatusBarDarkMode(true, this);
         }
+    }
+
+    public void setColor(){
+        setBarColor(R.color.blue);
     }
 
     @TargetApi(19)

@@ -45,7 +45,8 @@ public class LoginActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setBarColor(getResources().getColor(R.color.white)); //沉浸式状态栏设置颜色
+
+        setBarColor(R.color.white); //沉浸式状态栏设置颜色
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
 

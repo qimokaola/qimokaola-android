@@ -38,13 +38,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        //添加短信验证所需的activity信息
-        <activity
-            android:name="com.mob.tools.MobUIShell"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:windowSoftInputMode="stateHidden|adjustResize" />
+
         <activity
             android:name=".activity.MainActivity"
             android:label="期末考啦"
@@ -73,8 +67,12 @@
             android:name=".activity.FileDetailActivity"
             android:label="期末考啦"
             android:screenOrientation="portrait" />
-        <activity android:name=".ui.DiscoveryFragment" />
-        <activity android:name=".ui.StudentsCircleFragment"></activity>
+        <activity android:name=".ui.DiscoveryFragment"
+            android:label="期末考啦"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.StudentsCircleFragment"
+            android:label="期末考啦"
+            android:screenOrientation="portrait" ></activity>
     </application>
 
 </manifest>

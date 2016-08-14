@@ -20,7 +20,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.robin.papers.R;
-import com.example.robin.papers.util.SystemBarTintManager;
 import com.umeng.analytics.MobclickAgent;
 
 //"校内服务"页面上的所有web链接打开的webview
@@ -38,16 +37,11 @@ public class WebViewActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setBarColor(getResources().getColor(R.color.blue)); //沉浸式状态栏设置颜色
         setContentView(R.layout.activity_web);
 
         webViewBack_Iv = (ImageView) findViewById(R.id.xtfy_activity_back_iv);
-        webView = (WebView) findViewById(R.id.xtfyWebView);
-
-
-
-
-
-
+        webView = (WebView) findViewById(R.id.web_view);
         title_tv = (TextView) findViewById(R.id.webview_title);
 
         WebSettings settings = webView.getSettings();

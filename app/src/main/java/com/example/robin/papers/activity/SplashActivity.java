@@ -170,7 +170,7 @@ public class SplashActivity extends Activity {
 
         File adImageFile = new File(SDCardUtils.getADImage());
 
-        Class clazz = adImageFile.exists() ? AdsActivity.class : MainActivity.class;    //本地图片不存在, 跳转至mainactivity
+        Class clazz = adImageFile.exists() ? AdsActivity.class : LoginActivity.class;    //本地图片不存在, 跳转至mainactivity
 
         nextActivity(clazz);
 

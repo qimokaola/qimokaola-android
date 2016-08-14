@@ -67,6 +67,7 @@ public class FileFolderActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setBarColor(getResources().getColor(R.color.blue)); //沉浸式状态栏设置颜色
         setContentView(R.layout.activity_all_list);
         ButterKnife.bind(this);
 

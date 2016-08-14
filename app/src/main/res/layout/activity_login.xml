@@ -21,8 +21,9 @@
         android:text="帐号登录"
         android:layout_centerHorizontal="true"
         android:textColor="@color/black"
-        android:textSize="18sp"
-        android:layout_marginTop="90dp"
+        android:textSize="22sp"
+        android:layout_above="@+id/user_info"
+        android:layout_marginBottom="40dp"
         />
     <LinearLayout
         android:id="@+id/user_info"
@@ -34,26 +35,29 @@
 
         <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <android.support.v7.widget.AppCompatAutoCompleteTextView
             android:id="@+id/user_phone_num"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/user_phone_num_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="帐号(手机号)"
-            android:textSize="15sp"
-            />
+            android:inputType="phone"
+            android:textSize="18sp"/>
     </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
+            android:id="@+id/user_psw"
             android:layout_height="wrap_content">
-            <android.support.v7.widget.AppCompatAutoCompleteTextView
-                android:id="@+id/user_psw"
+            <EditText
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="密码"
-                android:textSize="15sp"
-                />
+                android:inputType="textPassword"
+                android:textSize="18sp" />
+
         </android.support.design.widget.TextInputLayout>
 
         <Button

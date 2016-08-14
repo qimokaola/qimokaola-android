@@ -8,7 +8,7 @@
 
     <WebView
         android:layout_width="match_parent"
-        android:id="@+id/xtfyWebView"
+        android:id="@+id/web_view"
         android:layout_height="match_parent">
 
     </WebView>

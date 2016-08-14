@@ -23,17 +23,20 @@ public class BaseActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+    }
+
+    public void setBarColor(int resID) {
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             //状态栏透明 需要在创建SystemBarTintManager 之前调用。
             setTranslucentStatus(true);
             SystemBarTintManager tintManager = new SystemBarTintManager(this);
             tintManager.setStatusBarTintEnabled(true);
             //使StatusBarTintView 和 actionbar的颜色保持一致，风格统一。
-            tintManager.setStatusBarTintResource(R.color.blue);
+            tintManager.setStatusBarTintResource(resID);
             // 设置状态栏的文字颜色
             tintManager.setStatusBarDarkMode(true, this);
         }
-
     }
 
     @TargetApi(19)

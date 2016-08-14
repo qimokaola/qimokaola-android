@@ -59,6 +59,7 @@ public class MainActivity extends FragmentActivity {
         setContentView(R.layout.activity_main);
         initView();
 
+        //友盟升级, 已失效
         UmengUpdateAgent.setUpdateOnlyWifi(false);
         UmengUpdateAgent.update(this);
 

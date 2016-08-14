@@ -63,7 +63,7 @@ public class SplashActivity extends Activity {
                                     runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
-                                            nextActivity(MainActivity.class);
+                                            nextActivity(LoginActivity.class);   //不显示广告,跳入mainactivity
                                         }
                                     });
                                 }
@@ -86,10 +86,7 @@ public class SplashActivity extends Activity {
                                         DownLoader.downloadFile(new File(SDCardUtils.getADImage()),
                                                 getResources().getString(R.string.ad_image_url));
 
-
-
                                         sp.edit().putInt("ad_version", response.getAdversion()).apply();
-
 
                                         runOnUiThread(new Runnable() {
                                             @Override
@@ -173,7 +170,7 @@ public class SplashActivity extends Activity {
 
         File adImageFile = new File(SDCardUtils.getADImage());
 
-        Class clazz = adImageFile.exists() ? AdsActivity.class : MainActivity.class;
+        Class clazz = adImageFile.exists() ? AdsActivity.class : MainActivity.class;    //本地图片不存在, 跳转至mainactivity
 
         nextActivity(clazz);
 

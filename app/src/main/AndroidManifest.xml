@@ -38,7 +38,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".activity.MainActivity"
             android:label="期末考啦"
@@ -67,12 +66,15 @@
             android:name=".activity.FileDetailActivity"
             android:label="期末考啦"
             android:screenOrientation="portrait" />
-        <activity android:name=".ui.DiscoveryFragment"
+        <activity
+            android:name=".ui.DiscoveryFragment"
             android:label="期末考啦"
             android:screenOrientation="portrait" />
-        <activity android:name=".ui.StudentsCircleFragment"
+        <activity
+            android:name=".ui.StudentsCircleFragment"
             android:label="期末考啦"
-            android:screenOrientation="portrait" ></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.LoginActivity"></activity>
     </application>
 
 </manifest>

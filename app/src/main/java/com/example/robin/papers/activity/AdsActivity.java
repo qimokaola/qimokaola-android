@@ -41,6 +41,7 @@ public class AdsActivity extends Activity {
             getSharedPreferences("AppConfig", MODE_PRIVATE).edit().putInt("ad_version", 0);
         }
 
+
         new Thread(new Runnable() {
             @Override
             public void run() {

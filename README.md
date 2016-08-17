@@ -1,2 +1,1 @@
-# qimokaola-android
-期末考啦app  -- Android代码
+期末考啦 - Android
